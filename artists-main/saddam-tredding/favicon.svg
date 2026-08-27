@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#12161B"/>
+  <!-- Outer Gear Teeth -->
+  <path d="M24 6l2.1 4.2 4.7-.7.9 4.6 4.7 1.4-1.2 4.6 3.6 3.1-3.1 3.6 1.4 4.7-4.6.9.7 4.7-4.7 2.1-2.1-4.2-4.7.7-.9-4.6-4.7-1.4 1.2-4.6-3.6-3.1 3.1-3.6-1.4-4.7 4.6-.9-.7-4.7 4.7-2.1 2.1 4.2z" fill="#E8590C"/>
+  <!-- Inner Ring & Hub -->
+  <circle cx="24" cy="24" r="14" fill="#1B222A"/>
+  <circle cx="24" cy="24" r="9.5" stroke="#8FACC4" stroke-width="2.5"/>
+  <!-- Center Spoke / Axle -->
+  <circle cx="24" cy="24" r="4.5" fill="#E8590C"/>
+  <circle cx="24" cy="24" r="2" fill="#FFFFFF"/>
+</svg>

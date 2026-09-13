@@ -1,0 +1,3820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MD MAHAMUDUL HASAN — Contemporary Visual Artist &amp; Doctoral Researcher
+    </title>
+    <meta
+      name="description"
+      content="Official portfolio and curriculum vitae of MD MAHAMUDUL HASAN, Bangladeshi contemporary visual artist and doctoral researcher specializing in watercolour, acrylic, river culture, rural life, and landscape narratives."
+    />
+    <meta name="author" content="MD MAHAMUDUL HASAN" />
+    <meta
+      name="keywords"
+      content="MD Mahamudul Hasan, contemporary visual artist, Bangladeshi artist, watercolour on paper, river culture, Dhaka University Fine Arts, PhD fine arts, landscape painting"
+    />
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="MD MAHAMUDUL HASAN — Contemporary Visual Artist"
+    />
+    <meta
+      property="og:description"
+      content="Official portfolio &amp; CV of Bangladeshi visual artist Md Mahamudul Hasan. Exploring river culture, rural life, and atmospheric watercolour narratives."
+    />
+    <meta property="og:image" content="assets/work-01-riverside-story-3.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome 6 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      /* ==========================================================================
+           ROOT VARIABLES & DESIGN SYSTEM (River Mist & Terracotta Silk Palette)
+           ========================================================================== */
+      :root {
+        /* Palette */
+        --bg-canvas: #faf7f0;
+        --bg-subtle: #f2ede2;
+        --bg-card: #ffffff;
+        --bg-card-alt: #f8f4ea;
+
+        --ink-primary: #0d161f;
+        --ink-secondary: #3d4a55;
+        --ink-muted: #6b7b88;
+        --ink-faint: #9eaab4;
+
+        --river-dark: #0b141b;
+        --river-teal: #1e464a;
+        --river-teal-light: #2d6368;
+        --river-wash: #e3ebeb;
+
+        --terracotta: #c85a32;
+        --terracotta-hover: #b24b25;
+        --terracotta-soft: rgba(200, 90, 50, 0.08);
+        --terracotta-glow: rgba(200, 90, 50, 0.25);
+
+        --amber-ochre: #d4a359;
+        --amber-light: #f7ead0;
+
+        --border-light: rgba(13, 22, 31, 0.08);
+        --border-medium: rgba(13, 22, 31, 0.14);
+        --border-gold: rgba(212, 163, 89, 0.35);
+
+        --shadow-sm: 0 2px 8px rgba(11, 20, 27, 0.04);
+        --shadow-md: 0 10px 30px rgba(11, 20, 27, 0.07);
+        --shadow-lg: 0 20px 50px rgba(11, 20, 27, 0.12);
+        --shadow-card-hover: 0 24px 60px rgba(11, 20, 27, 0.14);
+
+        /* Typography */
+        --font-display: "Cinzel", Georgia, serif;
+        --font-serif: "Cormorant Garamond", Garamond, Georgia, serif;
+        --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+
+        /* Spacing & Layout */
+        --container-max: 1280px;
+        --header-h: 84px;
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 14px;
+        --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* ==========================================================================
+           RESET & GLOBAL STYLES
+           ========================================================================== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-h);
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        background-color: var(--bg-canvas);
+        color: var(--ink-secondary);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.7;
+        font-weight: 400;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: var(--transition-smooth);
+      }
+
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        background: none;
+        transition: var(--transition-smooth);
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding: 0 40px;
+        }
+      }
+
+      /* ==========================================================================
+           TYPOGRAPHY & SECTION HEADERS
+           ========================================================================== */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--ink-primary);
+        font-family: var(--font-display);
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+      }
+
+      .section-padding {
+        padding: 100px 0;
+      }
+
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 65px 0;
+        }
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 780px;
+        margin: 0 auto 60px;
+      }
+
+      .section-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--terracotta);
+        font-weight: 600;
+        margin-bottom: 14px;
+        background: var(--terracotta-soft);
+        padding: 6px 16px;
+        border-radius: 100px;
+        border: 1px solid rgba(200, 90, 50, 0.18);
+      }
+
+      .section-title {
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 700;
+        color: var(--ink-primary);
+        margin-bottom: 18px;
+      }
+
+      .section-desc {
+        font-family: var(--font-serif);
+        font-size: 20px;
+        color: var(--ink-muted);
+        font-style: italic;
+        line-height: 1.6;
+      }
+
+      .decorative-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .decorative-divider span {
+        height: 1px;
+        width: 48px;
+        background: var(--amber-ochre);
+        opacity: 0.5;
+      }
+
+      .decorative-divider i {
+        color: var(--amber-ochre);
+        font-size: 10px;
+      }
+
+      /* ==========================================================================
+           BUTTONS & BADGES
+           ========================================================================== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        font-family: var(--font-sans);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-radius: var(--radius-sm);
+        transition: var(--transition-smooth);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-primary {
+        background-color: var(--terracotta);
+        color: #ffffff;
+        border: 1px solid var(--terracotta);
+        box-shadow: 0 6px 18px var(--terracotta-glow);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--terracotta-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(200, 90, 50, 0.35);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--ink-primary);
+        border: 1px solid var(--border-medium);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--terracotta);
+        color: var(--terracotta);
+        background: var(--terracotta-soft);
+        transform: translateY(-2px);
+      }
+
+      .btn-sm {
+        padding: 8px 16px;
+        font-size: 12px;
+        gap: 6px;
+      }
+
+      /* ==========================================================================
+           NAVIGATION BAR
+           ========================================================================== */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-h);
+        z-index: 1000;
+        background: rgba(250, 247, 240, 0.92);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border-light);
+        transition: var(--transition-smooth);
+      }
+
+      .header.scrolled {
+        background: rgba(250, 247, 240, 0.98);
+        box-shadow: var(--shadow-sm);
+        height: 74px;
+      }
+
+      .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .brand-logo {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand-name {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: var(--ink-primary);
+      }
+
+      .brand-title {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--terracotta);
+        font-weight: 600;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .nav-link {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--ink-secondary);
+        position: relative;
+        padding: 6px 0;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: var(--terracotta);
+        transition: var(--transition-smooth);
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--terracotta);
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .nav-toggle-btn {
+        display: none;
+        font-size: 22px;
+        color: var(--ink-primary);
+        padding: 8px;
+      }
+
+      @media (max-width: 991px) {
+        .nav-toggle-btn {
+          display: block;
+        }
+
+        .nav-menu {
+          position: fixed;
+          top: var(--header-h);
+          left: 0;
+          width: 100%;
+          background: var(--bg-card);
+          flex-direction: column;
+          gap: 0;
+          padding: 24px 0;
+          border-bottom: 1px solid var(--border-medium);
+          box-shadow: var(--shadow-lg);
+          transform: translateY(-150%);
+          opacity: 0;
+          visibility: hidden;
+          transition: var(--transition-smooth);
+        }
+
+        .nav-menu.open {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .nav-menu li {
+          width: 100%;
+          text-align: center;
+        }
+
+        .nav-link {
+          display: block;
+          padding: 14px 24px;
+          font-size: 15px;
+        }
+
+        .nav-link::after {
+          display: none;
+        }
+
+        .nav-actions .btn-contact {
+          display: none;
+        }
+      }
+
+      /* ==========================================================================
+           HERO SECTION
+           ========================================================================== */
+      .hero-section {
+        padding-top: calc(var(--header-h) + 40px);
+        padding-bottom: 90px;
+        background: linear-gradient(
+          180deg,
+          var(--bg-canvas) 0%,
+          var(--bg-subtle) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45vw;
+        height: 100%;
+        background: radial-gradient(
+          circle at 70% 30%,
+          rgba(200, 90, 50, 0.05) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      @media (max-width: 991px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+
+      .hero-badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #ffffff;
+        padding: 8px 18px;
+        border-radius: 50px;
+        border: 1px solid var(--border-medium);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--river-teal);
+        font-weight: 600;
+        margin-bottom: 24px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .hero-badge-pill .pulse-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--terracotta);
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(200, 90, 50, 0.2);
+        animation: pulseDot 2s infinite;
+      }
+
+      @keyframes pulseDot {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(200, 90, 50, 0.4);
+        }
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 6px rgba(200, 90, 50, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(200, 90, 50, 0);
+        }
+      }
+
+      .hero-name {
+        font-size: clamp(34px, 4.5vw, 56px);
+        font-weight: 800;
+        color: var(--ink-primary);
+        letter-spacing: 0.02em;
+        margin-bottom: 12px;
+        line-height: 1.15;
+      }
+
+      .hero-tagline {
+        font-family: var(--font-serif);
+        font-size: clamp(19px, 2.2vw, 24px);
+        color: var(--terracotta);
+        font-weight: 600;
+        margin-bottom: 22px;
+        font-style: italic;
+      }
+
+      .hero-quote-card {
+        background: #ffffff;
+        border-left: 3px solid var(--amber-ochre);
+        padding: 20px 24px;
+        border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        margin-bottom: 28px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .hero-quote-card p {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        font-style: italic;
+        color: var(--ink-primary);
+        line-height: 1.55;
+        margin: 0;
+      }
+
+      .hero-desc {
+        font-size: 16px;
+        color: var(--ink-secondary);
+        margin-bottom: 36px;
+        max-width: 600px;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+
+      .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-medium);
+      }
+
+      .metric-item .metric-num {
+        font-family: var(--font-display);
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--ink-primary);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .metric-item .metric-lbl {
+        font-size: 12px;
+        font-family: var(--font-mono);
+        color: var(--ink-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* Hero Media / Frame */
+      .hero-visual-card {
+        position: relative;
+      }
+
+      .hero-image-frame {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        border: 8px solid #ffffff;
+        background: #ffffff;
+      }
+
+      .hero-image-frame img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform 0.6s ease;
+      }
+
+      .hero-image-frame:hover img {
+        transform: scale(1.03);
+      }
+
+      .hero-floating-card {
+        position: absolute;
+        bottom: -24px;
+        left: -20px;
+        background: #ffffff;
+        padding: 16px 22px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-gold);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        z-index: 2;
+      }
+
+      .floating-icon-box {
+        width: 44px;
+        height: 44px;
+        background: var(--amber-light);
+        color: var(--amber-ochre);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      .floating-text h4 {
+        font-size: 13px;
+        font-family: var(--font-sans);
+        font-weight: 700;
+        margin-bottom: 2px;
+        color: var(--ink-primary);
+      }
+
+      .floating-text p {
+        font-size: 11px;
+        font-family: var(--font-mono);
+        color: var(--terracotta);
+        margin: 0;
+        font-weight: 500;
+      }
+
+      @media (max-width: 576px) {
+        .hero-floating-card {
+          position: static;
+          margin-top: 16px;
+        }
+        .hero-image-frame img {
+          height: 380px;
+        }
+        .hero-metrics {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+
+      /* ==========================================================================
+           ABOUT & ARTIST STATEMENT SECTION
+           ========================================================================== */
+      .about-section {
+        background-color: var(--bg-canvas);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 48px;
+      }
+
+      @media (max-width: 991px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .profile-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 36px 28px;
+        border: 1px solid var(--border-medium);
+        box-shadow: var(--shadow-md);
+        text-align: center;
+        height: fit-content;
+        position: sticky;
+        top: calc(var(--header-h) + 24px);
+      }
+
+      .profile-avatar-box {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        padding: 5px;
+        background: linear-gradient(
+          135deg,
+          var(--terracotta),
+          var(--amber-ochre),
+          var(--river-teal)
+        );
+        box-shadow: 0 8px 20px rgba(200, 90, 50, 0.2);
+      }
+
+      .profile-avatar-box img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #ffffff;
+      }
+
+      .profile-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .profile-subtitle {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--terracotta);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 24px;
+        font-weight: 600;
+      }
+
+      .profile-fact-list {
+        text-align: left;
+        border-top: 1px solid var(--border-light);
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .fact-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 13.5px;
+      }
+
+      .fact-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        background: var(--bg-subtle);
+        color: var(--river-teal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .fact-content strong {
+        display: block;
+        font-size: 11px;
+        font-family: var(--font-mono);
+        color: var(--ink-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .fact-content span {
+        color: var(--ink-primary);
+        font-weight: 500;
+      }
+
+      .statement-content {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 44px;
+        border: 1px solid var(--border-medium);
+        box-shadow: var(--shadow-sm);
+      }
+
+      @media (max-width: 576px) {
+        .statement-content {
+          padding: 24px;
+        }
+      }
+
+      .statement-header-box {
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .statement-header-box h3 {
+        font-size: 26px;
+        color: var(--ink-primary);
+        margin-bottom: 8px;
+      }
+
+      .statement-header-box p {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        color: var(--terracotta);
+        font-style: italic;
+      }
+
+      .statement-body p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 22px;
+        color: var(--ink-secondary);
+      }
+
+      .statement-body p.lead {
+        font-family: var(--font-serif);
+        font-size: 20px;
+        color: var(--ink-primary);
+        line-height: 1.65;
+        font-style: italic;
+      }
+
+      .statement-highlight {
+        background: var(--bg-subtle);
+        border-left: 4px solid var(--terracotta);
+        padding: 20px 24px;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        margin: 32px 0;
+      }
+
+      .statement-highlight h4 {
+        font-size: 14px;
+        font-family: var(--font-mono);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--terracotta);
+        margin-bottom: 8px;
+      }
+
+      .statement-highlight p {
+        font-size: 15px;
+        margin: 0;
+        color: var(--ink-primary);
+      }
+
+      /* ==========================================================================
+           EDUCATION & ACADEMIC FORMATION
+           ========================================================================== */
+      .education-section {
+        background: linear-gradient(
+          180deg,
+          var(--bg-subtle) 0%,
+          var(--bg-canvas) 100%
+        );
+      }
+
+      .edu-timeline-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+
+      @media (max-width: 991px) {
+        .edu-timeline-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .edu-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 32px;
+        border: 1px solid var(--border-medium);
+        box-shadow: var(--shadow-sm);
+        position: relative;
+        transition: var(--transition-smooth);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .edu-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--border-gold);
+      }
+
+      .edu-card-badge {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 4px;
+        background: var(--river-wash);
+        color: var(--river-teal);
+        margin-bottom: 16px;
+        width: fit-content;
+      }
+
+      .edu-card.ongoing .edu-card-badge {
+        background: var(--terracotta-soft);
+        color: var(--terracotta);
+        border: 1px solid rgba(200, 90, 50, 0.2);
+      }
+
+      .edu-card-title {
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--ink-primary);
+      }
+
+      .edu-institution {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--ink-secondary);
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      .edu-institution i {
+        color: var(--amber-ochre);
+      }
+
+      .edu-footer-tag {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--ink-muted);
+        border-top: 1px dashed var(--border-light);
+        padding-top: 14px;
+        margin-top: 14px;
+      }
+
+      /* ==========================================================================
+           CURATED GALLERY / SELECTED WORKS
+           ========================================================================== */
+      .gallery-section {
+        background-color: var(--bg-canvas);
+      }
+
+      .gallery-filter-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 48px;
+      }
+
+      .filter-btn {
+        padding: 10px 22px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-radius: 50px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-medium);
+        color: var(--ink-secondary);
+        transition: var(--transition-smooth);
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--terracotta);
+        color: #ffffff;
+        border-color: var(--terracotta);
+        box-shadow: 0 4px 14px var(--terracotta-glow);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 32px;
+      }
+
+      @media (max-width: 576px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .artwork-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid var(--border-medium);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition-smooth);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .artwork-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-card-hover);
+        border-color: var(--border-gold);
+      }
+
+      .artwork-thumb-wrap {
+        position: relative;
+        background: #eae6dc;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        cursor: pointer;
+      }
+
+      .artwork-thumb-wrap.portrait-aspect {
+        aspect-ratio: 3 / 4;
+      }
+
+      .artwork-thumb-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .artwork-card:hover .artwork-thumb-wrap img {
+        transform: scale(1.06);
+      }
+
+      .artwork-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(13, 22, 31, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        backdrop-filter: blur(3px);
+        transition: var(--transition-smooth);
+      }
+
+      .artwork-card:hover .artwork-overlay {
+        opacity: 1;
+      }
+
+      .overlay-view-btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #ffffff;
+        color: var(--terracotta);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        box-shadow: var(--shadow-md);
+        transform: scale(0.8);
+        transition: var(--transition-smooth);
+      }
+
+      .artwork-card:hover .overlay-view-btn {
+        transform: scale(1);
+      }
+
+      .artwork-info {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .artwork-header-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .artwork-year {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--terracotta);
+      }
+
+      .artwork-category-badge {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        background: var(--bg-subtle);
+        color: var(--river-teal);
+        padding: 3px 8px;
+        border-radius: 3px;
+      }
+
+      .artwork-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--ink-primary);
+      }
+
+      .artwork-specs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: var(--ink-muted);
+        margin-bottom: 14px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .spec-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .artwork-note {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--ink-secondary);
+        margin-bottom: 16px;
+      }
+
+      .artwork-action-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-top: 12px;
+      }
+
+      .btn-inspect {
+        font-size: 12px;
+        font-family: var(--font-mono);
+        font-weight: 600;
+        color: var(--terracotta);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .btn-inspect:hover {
+        color: var(--terracotta-hover);
+        transform: translateX(3px);
+      }
+
+      /* ==========================================================================
+           EXHIBITIONS & CV SECTION (Accordion & Tabbed layout)
+           ========================================================================== */
+      .exhibitions-section {
+        background: var(--bg-subtle);
+      }
+
+      .cv-tab-nav {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .cv-tab-btn {
+        padding: 12px 28px;
+        font-family: var(--font-display);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: var(--bg-card);
+        border: 1px solid var(--border-medium);
+        border-radius: var(--radius-sm);
+        color: var(--ink-secondary);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .cv-tab-btn:hover,
+      .cv-tab-btn.active {
+        background: var(--river-teal);
+        color: #ffffff;
+        border-color: var(--river-teal);
+        box-shadow: 0 4px 16px rgba(30, 70, 74, 0.25);
+      }
+
+      .cv-tab-pane {
+        display: none;
+      }
+
+      .cv-tab-pane.active {
+        display: block;
+        animation: fadeIn 0.4s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .exhibition-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      .exhibit-item {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 24px 30px;
+        border: 1px solid var(--border-medium);
+        box-shadow: var(--shadow-sm);
+        display: grid;
+        grid-template-columns: 85px 1fr;
+        gap: 24px;
+        align-items: center;
+        transition: var(--transition-smooth);
+      }
+
+      .exhibit-item:hover {
+        transform: translateX(6px);
+        border-color: var(--border-gold);
+        box-shadow: var(--shadow-md);
+      }
+
+      @media (max-width: 576px) {
+        .exhibit-item {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          padding: 20px;
+        }
+      }
+
+      .exhibit-year-badge {
+        font-family: var(--font-mono);
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--terracotta);
+        background: var(--terracotta-soft);
+        padding: 8px 12px;
+        border-radius: var(--radius-sm);
+        text-align: center;
+        border: 1px solid rgba(200, 90, 50, 0.15);
+      }
+
+      .exhibit-details h4 {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--ink-primary);
+        margin-bottom: 6px;
+      }
+
+      .exhibit-venue {
+        font-size: 14px;
+        color: var(--ink-secondary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .exhibit-venue i {
+        color: var(--amber-ochre);
+        font-size: 12px;
+      }
+
+      .exhibit-country-tag {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        background: var(--river-wash);
+        color: var(--river-teal);
+        padding: 2px 8px;
+        border-radius: 3px;
+        margin-left: auto;
+      }
+
+      /* ==========================================================================
+           PRACTICE SUMMARY BANNER
+           ========================================================================== */
+      .practice-banner-section {
+        background: var(--river-dark);
+        color: #ffffff;
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .practice-banner-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 20% 50%,
+          rgba(200, 90, 50, 0.15) 0%,
+          transparent 60%
+        );
+      }
+
+      .practice-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 48px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      @media (max-width: 991px) {
+        .practice-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .practice-heading-box .practice-sub {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--amber-ochre);
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .practice-heading-box h2 {
+        color: #ffffff;
+        font-size: clamp(26px, 3.5vw, 38px);
+        line-height: 1.3;
+      }
+
+      .practice-text-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 36px;
+        border-radius: var(--radius-md);
+        backdrop-filter: blur(10px);
+      }
+
+      .practice-text-card p {
+        font-family: var(--font-serif);
+        font-size: 19px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+      }
+
+      .practice-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .practice-tag {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--amber-light);
+        padding: 4px 12px;
+        border-radius: 100px;
+      }
+
+      /* ==========================================================================
+           CONTACT & INQUIRIES SECTION
+           ========================================================================== */
+      .contact-section {
+        background-color: var(--bg-canvas);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 50px;
+      }
+
+      @media (max-width: 991px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .contact-info-panel {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 40px;
+        border: 1px solid var(--border-medium);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .contact-info-panel h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: var(--ink-primary);
+      }
+
+      .contact-info-panel p.contact-desc {
+        font-size: 15px;
+        color: var(--ink-secondary);
+        margin-bottom: 32px;
+      }
+
+      .direct-channels-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 36px;
+      }
+
+      .channel-card {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 18px 20px;
+        background: var(--bg-subtle);
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-light);
+        transition: var(--transition-smooth);
+      }
+
+      .channel-card:hover {
+        border-color: var(--terracotta);
+        background: #ffffff;
+        transform: translateX(4px);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .channel-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 8px;
+        background: var(--terracotta-soft);
+        color: var(--terracotta);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+
+      .channel-info label {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-muted);
+        margin-bottom: 2px;
+      }
+
+      .channel-info a,
+      .channel-info span {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--ink-primary);
+      }
+
+      .signature-box {
+        border-top: 1px solid var(--border-light);
+        padding-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .signature-box img {
+        max-height: 55px;
+        width: auto;
+        opacity: 0.85;
+      }
+
+      /* Contact Form */
+      .contact-form-panel {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 40px;
+        border: 1px solid var(--border-medium);
+        box-shadow: var(--shadow-md);
+      }
+
+      .form-group {
+        margin-bottom: 22px;
+      }
+
+      .form-label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink-primary);
+        margin-bottom: 8px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 13px 16px;
+        border: 1px solid var(--border-medium);
+        border-radius: var(--radius-sm);
+        background: var(--bg-canvas);
+        font-family: var(--font-sans);
+        font-size: 15px;
+        color: var(--ink-primary);
+        transition: var(--transition-smooth);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--terracotta);
+        background: #ffffff;
+        box-shadow: 0 0 0 4px var(--terracotta-soft);
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .form-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      @media (max-width: 576px) {
+        .form-grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .form-status-alert {
+        display: none;
+        padding: 14px 18px;
+        border-radius: var(--radius-sm);
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .form-status-alert.success {
+        display: block;
+        background: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #c8e6c9;
+      }
+
+      .form-status-alert.error {
+        display: block;
+        background: #fdeded;
+        color: #d32f2f;
+        border: 1px solid #ffcdd2;
+      }
+
+      /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+      .site-footer {
+        background: var(--river-dark);
+        color: #ffffff;
+        padding: 60px 0 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-top-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 48px;
+        margin-bottom: 50px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-top-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
+
+      .footer-brand h4 {
+        color: #ffffff;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
+
+      .footer-brand p {
+        font-family: var(--font-serif);
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+        font-style: italic;
+        max-width: 320px;
+      }
+
+      .footer-nav-title {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--amber-ochre);
+        margin-bottom: 18px;
+        font-weight: 600;
+      }
+
+      .footer-links-list li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links-list a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .footer-links-list a:hover {
+        color: var(--amber-ochre);
+        padding-left: 4px;
+      }
+
+      .footer-bottom-bar {
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      /* ==========================================================================
+           IMAGE LIGHTBOX MODAL
+           ========================================================================== */
+      .lightbox-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(11, 20, 27, 0.95);
+        backdrop-filter: blur(12px);
+        z-index: 2000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .lightbox-modal.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      .lightbox-container {
+        max-width: 1100px;
+        width: 100%;
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        position: relative;
+        max-height: 90vh;
+      }
+
+      @media (max-width: 850px) {
+        .lightbox-container {
+          grid-template-columns: 1fr;
+          max-height: 85vh;
+          overflow-y: auto;
+        }
+      }
+
+      .lightbox-image-box {
+        background: #151f28;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        position: relative;
+      }
+
+      .lightbox-image-box img {
+        max-height: 70vh;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 2px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .lightbox-details-box {
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: auto;
+        background: #ffffff;
+      }
+
+      .lightbox-close-btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(13, 22, 31, 0.08);
+        color: var(--ink-primary);
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+      }
+
+      .lightbox-close-btn:hover {
+        background: var(--terracotta);
+        color: #ffffff;
+      }
+
+      .lightbox-title {
+        font-size: 24px;
+        margin-bottom: 6px;
+        color: var(--ink-primary);
+      }
+
+      .lightbox-meta-tag {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--terracotta);
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .lightbox-specs-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        background: var(--bg-subtle);
+        padding: 16px;
+        border-radius: var(--radius-sm);
+        margin-bottom: 22px;
+      }
+
+      .lb-spec-item strong {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin-bottom: 2px;
+      }
+
+      .lb-spec-item span {
+        font-size: 13.5px;
+        color: var(--ink-primary);
+        font-weight: 600;
+      }
+
+      .lightbox-curatorial-desc {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--ink-secondary);
+        margin-bottom: 24px;
+      }
+
+      .lightbox-nav-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 18px;
+        border-top: 1px solid var(--border-light);
+      }
+
+      /* ==========================================================================
+           SCROLL TO TOP FLOATING BUTTON
+           ========================================================================== */
+      .back-to-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 46px;
+        height: 46px;
+        background: var(--terracotta);
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        box-shadow: 0 6px 20px var(--terracotta-glow);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-smooth);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        transform: translateY(-4px);
+        background: var(--terracotta-hover);
+      }
+
+      /* Reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ==========================================================================
+         NAVIGATION HEADER
+         ========================================================================== -->
+    <header class="header" id="navbar">
+      <div class="container nav-wrapper">
+        <a href="#home" class="brand-logo" aria-label="MD MAHAMUDUL HASAN">
+          <span class="brand-name">MD MAHAMUDUL HASAN</span>
+          <span class="brand-title">CONTEMPORARY VISUAL ARTIST</span>
+        </a>
+
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About &amp; Bio</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#gallery" class="nav-link">Selected Works</a></li>
+            <li><a href="#exhibitions" class="nav-link">Exhibitions</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-primary btn-sm btn-contact">
+            <i class="fa-regular fa-paper-plane"></i> Inquire
+          </a>
+          <button
+            class="nav-toggle-btn"
+            id="menuToggle"
+            aria-label="Open Navigation Menu"
+          >
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <div class="hero-badge-pill">
+              <span class="pulse-dot"></span>
+              <span>Doctoral Researcher &amp; Fine Arts Scholar</span>
+            </div>
+
+            <h1 class="hero-name">MD MAHAMUDUL HASAN</h1>
+            <p class="hero-tagline">
+              Watercolour · Acrylic · River Culture · Rural Life · Cultural
+              Memory
+            </p>
+
+            <div class="hero-quote-card">
+              <p>
+                “The river is not only a landscape; it is a living archive of
+                labour, movement, memory and belonging.”
+              </p>
+            </div>
+
+            <p class="hero-desc">
+              Exploring fluid washes, atmospheric light, and economical
+              brushwork to transform observed moments into poetic visual
+              narratives of Bangladesh's riverine heritage and working
+              communities.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#gallery" class="btn btn-primary">
+                <i class="fa-solid fa-palette"></i> Explore Artworks
+              </a>
+              <a href="#about" class="btn btn-outline">
+                <i class="fa-solid fa-user"></i> Artist Statement
+              </a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <div class="metric-num">PhD</div>
+                <div class="metric-lbl">Dhaka University Scholar</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-num">20+</div>
+                <div class="metric-lbl">Global Exhibitions</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-num">10+</div>
+                <div class="metric-lbl">Curated Masterworks</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-card reveal">
+            <div class="hero-image-frame">
+              <img
+                src="assets/mahamudul-portrait.jpg"
+                alt="MD MAHAMUDUL HASAN Portrait"
+                id="heroPortrait"
+              />
+            </div>
+            <div class="hero-floating-card">
+              <div class="floating-icon-box">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="floating-text">
+                <h4>Selected Portfolio 2025–2026</h4>
+                <p>Faculty of Fine Art, DU</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT & ARTIST STATEMENT SECTION
+         ========================================================================== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow"
+            ><i class="fa-solid fa-feather-pointed"></i> Profile &amp;
+            Philosophy</span
+          >
+          <h2 class="section-title">About the Artist</h2>
+          <p class="section-desc">
+            Transforming observed moments into enduring visual records of water
+            and labour
+          </p>
+          <div class="decorative-divider">
+            <span></span><i class="fa-solid fa-diamond"></i><span></span>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Sidebar Card -->
+          <aside class="profile-card reveal">
+            <div class="profile-avatar-box">
+              <img
+                src="assets/mahamudul-portrait.jpg"
+                alt="MD MAHAMUDUL HASAN"
+              />
+            </div>
+            <h3 class="profile-name">MD MAHAMUDUL HASAN</h3>
+            <p class="profile-subtitle">Contemporary Visual Artist</p>
+
+            <div class="profile-fact-list">
+              <div class="fact-row">
+                <div class="fact-icon"><i class="fa-solid fa-flag"></i></div>
+                <div class="fact-content">
+                  <strong>Nationality</strong>
+                  <span>Bangladeshi</span>
+                </div>
+              </div>
+              <div class="fact-row">
+                <div class="fact-icon">
+                  <i class="fa-solid fa-paintbrush"></i>
+                </div>
+                <div class="fact-content">
+                  <strong>Primary Media</strong>
+                  <span>Watercolour on paper; Acrylic on canvas</span>
+                </div>
+              </div>
+              <div class="fact-row">
+                <div class="fact-icon"><i class="fa-solid fa-compass"></i></div>
+                <div class="fact-content">
+                  <strong>Fields of Practice</strong>
+                  <span
+                    >Landscape, river culture, rural life, cultural memory</span
+                  >
+                </div>
+              </div>
+              <div class="fact-row">
+                <div class="fact-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="fact-content">
+                  <strong>Current Study</strong>
+                  <span>PhD in Fine Arts, University of Dhaka</span>
+                </div>
+              </div>
+              <div class="fact-row">
+                <div class="fact-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="fact-content">
+                  <strong>Based In</strong>
+                  <span>Dhaka, Bangladesh</span>
+                </div>
+              </div>
+              <div class="fact-row">
+                <div class="fact-icon">
+                  <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="fact-content">
+                  <strong>Portfolio Period</strong>
+                  <span>Selected Works 2025–2026 (Archive 2021+)</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Artist Statement & Bio -->
+          <article class="statement-content reveal">
+            <div class="statement-header-box">
+              <h3>Artist Statement</h3>
+              <p>Observation, Fluidity, and Emotional Atmosphere</p>
+            </div>
+
+            <div class="statement-body">
+              <p class="lead">
+                "My paintings grow from close observation of the landscapes and
+                everyday life of Bangladesh. Rivers, boats, villages, fields,
+                markets and ordinary travellers become visual records of a
+                culture continually shaped by water, labour and movement."
+              </p>
+
+              <p>
+                Watercolour is central to my practice because its transparency
+                and unpredictability mirror the changing atmosphere of the river
+                landscape. I allow washes to flow, merge and leave areas of open
+                paper, using light as an active element rather than merely an
+                effect. In acrylic works, I extend this interest through layered
+                surfaces, broader tonal fields and more sustained colour.
+              </p>
+
+              <div class="statement-highlight">
+                <h4>Subject &amp; Metaphor</h4>
+                <p>
+                  The river appears repeatedly as both subject and metaphor. It
+                  carries livelihoods, memory, migration and the continuity of
+                  community. By painting fishermen, ferry crossings, village
+                  architecture and agricultural life, I seek to honour people
+                  whose daily experiences are often overlooked while also
+                  recording landscapes that are changing rapidly.
+                </p>
+              </div>
+
+              <p>
+                My aim is not to reproduce a scene literally, but to preserve
+                its emotional atmosphere. I want the viewer to sense wind,
+                humidity, distance, silence and human presence. Through these
+                works, I hope to create a visual dialogue about cultural
+                heritage, ecological awareness and the dignity of ordinary life.
+              </p>
+
+              <p>
+                <strong>MD MAHAMUDUL HASAN</strong> is a Bangladeshi
+                contemporary visual artist and doctoral researcher at the
+                Faculty of Fine Art, University of Dhaka. His exhibition history
+                spans prestigious national and international presentations
+                across Bangladesh, Mexico, Nepal, Malaysia, Sri Lanka,
+                Indonesia, Greece, Thailand, Japan, and the United States.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCATION & ACADEMIC FORMATION
+         ========================================================================== -->
+    <section class="education-section section-padding" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow"
+            ><i class="fa-solid fa-graduation-cap"></i> Academic Formation</span
+          >
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-desc">
+            Academic excellence rooted in the prestigious Faculty of Fine Art,
+            University of Dhaka
+          </p>
+          <div class="decorative-divider">
+            <span></span><i class="fa-solid fa-diamond"></i><span></span>
+          </div>
+        </div>
+
+        <div class="edu-timeline-grid">
+          <!-- PhD -->
+          <div class="edu-card ongoing reveal">
+            <div>
+              <span class="edu-card-badge"
+                ><i class="fa-solid fa-spinner fa-spin"></i> Ongoing Doctoral
+                Research</span
+              >
+              <h3 class="edu-card-title">
+                Doctor of Philosophy (PhD) in Fine Arts
+              </h3>
+              <div class="edu-institution">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Faculty of Fine Art, University of Dhaka</span>
+              </div>
+              <p style="font-size: 14.5px; color: var(--ink-secondary)">
+                Advancing doctoral inquiry into visual culture, river
+                narratives, regional landscape practices, and the technical
+                dynamics of watercolour medium.
+              </p>
+            </div>
+            <div class="edu-footer-tag">
+              <i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh
+            </div>
+          </div>
+
+          <!-- MFA -->
+          <div class="edu-card reveal">
+            <div>
+              <span class="edu-card-badge">Post-Graduate Degree</span>
+              <h3 class="edu-card-title">Master of Fine Arts (MFA)</h3>
+              <div class="edu-institution">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Faculty of Fine Art, University of Dhaka</span>
+              </div>
+              <p style="font-size: 14.5px; color: var(--ink-secondary)">
+                Specialized master's studio practice concentrating on advanced
+                watercolour washes, tonal composition, acrylic experimentation,
+                and thematic figurative synthesis.
+              </p>
+            </div>
+            <div class="edu-footer-tag">
+              <i class="fa-solid fa-award"></i> University of Dhaka
+            </div>
+          </div>
+
+          <!-- BFA -->
+          <div class="edu-card reveal">
+            <div>
+              <span class="edu-card-badge">Undergraduate Degree</span>
+              <h3 class="edu-card-title">Bachelor of Fine Arts (BFA)</h3>
+              <div class="edu-institution">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Faculty of Fine Art, University of Dhaka</span>
+              </div>
+              <p style="font-size: 14.5px; color: var(--ink-secondary)">
+                Rigorous foundation in academic drawing, plein-air landscape
+                observation, historical perspective, brushwork economy, and
+                colour theory.
+              </p>
+            </div>
+            <div class="edu-footer-tag">
+              <i class="fa-solid fa-award"></i> University of Dhaka
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SELECTED WORKS / PORTFOLIO GALLERY
+         ========================================================================== -->
+    <section class="gallery-section section-padding" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow"
+            ><i class="fa-solid fa-images"></i> Curated Portfolio</span
+          >
+          <h2 class="section-title">Selected Works</h2>
+          <p class="section-desc">
+            2025–2026 Selected Collection with Archival Highlights
+          </p>
+          <div class="decorative-divider">
+            <span></span><i class="fa-solid fa-diamond"></i><span></span>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">
+            All Artworks (10)
+          </button>
+          <button class="filter-btn" data-filter="river">River Culture</button>
+          <button class="filter-btn" data-filter="rural">
+            Rural Life &amp; Architecture
+          </button>
+          <button class="filter-btn" data-filter="floral">
+            Floral Studies
+          </button>
+          <button class="filter-btn" data-filter="archive">
+            Archive &amp; Acrylics
+          </button>
+        </div>
+
+        <!-- Artworks Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Artwork 1: Riverside Story-3 -->
+          <div class="artwork-card reveal" data-category="river">
+            <div class="artwork-thumb-wrap" onclick="openLightbox(0)">
+              <img
+                src="assets/work-01-riverside-story-3.jpg"
+                alt="Riverside Story-3 by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2025</span>
+                  <span class="artwork-category-badge">River Culture</span>
+                </div>
+                <h3 class="artwork-title">Riverside Story-3</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-ruler-combined"></i> 15 × 22
+                    inches</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  A ferry crossing becomes a compact theatre of movement and
+                  community. The restrained horizon and soft reflections
+                  emphasize the river as a shared route of work, travel and
+                  exchange.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(0)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 2: Riverside Story-2 (2025) -->
+          <div class="artwork-card reveal" data-category="river rural">
+            <div class="artwork-thumb-wrap" onclick="openLightbox(1)">
+              <img
+                src="assets/work-02-riverside-story-2.jpg"
+                alt="Riverside Story-2 (2025) by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2025</span>
+                  <span class="artwork-category-badge">River &amp; Rural</span>
+                </div>
+                <h3 class="artwork-title">Riverside Story-2</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-ruler-combined"></i> 15 × 22
+                    inches</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  Figures, cattle and open fields are arranged through
+                  transparent washes and warm earth tones. Reflects the enduring
+                  relationship between rural labour, livestock and seasonal
+                  landscape.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(1)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 3: Bongoan Villa-1 -->
+          <div class="artwork-card reveal" data-category="rural">
+            <div class="artwork-thumb-wrap" onclick="openLightbox(2)">
+              <img
+                src="assets/work-03-bongoan-villa-1.jpg"
+                alt="Bongoan Villa-1 by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2026</span>
+                  <span class="artwork-category-badge">Architecture</span>
+                </div>
+                <h3 class="artwork-title">Bongoan Villa-1</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-ruler-combined"></i> 15 × 22
+                    inches</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  The weathered villa is rendered as a vessel of memory. Loose
+                  foliage, broken edges and open passages of paper evoke the
+                  quiet persistence of architecture within changing rural
+                  environments.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(2)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 4: Fishing Boat-2 -->
+          <div class="artwork-card reveal" data-category="river">
+            <div
+              class="artwork-thumb-wrap portrait-aspect"
+              onclick="openLightbox(3)"
+            >
+              <img
+                src="assets/work-04-fishing-boat-2.jpg"
+                alt="Fishing Boat-2 by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2025</span>
+                  <span class="artwork-category-badge">River Culture</span>
+                </div>
+                <h3 class="artwork-title">Fishing Boat-2</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-ruler-combined"></i> 15 × 22
+                    inches</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  Viewed frontally, the fishing boat emerges from a pale field
+                  of water and sky. Vertical orientation concentrates attention
+                  on distance, reflection, and fragile balance.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(3)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 5: Rural Journey -->
+          <div class="artwork-card reveal" data-category="rural">
+            <div
+              class="artwork-thumb-wrap portrait-aspect"
+              onclick="openLightbox(4)"
+            >
+              <img
+                src="assets/work-05-rural-journey.jpg"
+                alt="Rural Journey by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2026</span>
+                  <span class="artwork-category-badge">Rural Life</span>
+                </div>
+                <h3 class="artwork-title">Rural Journey</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-expand"></i> Studio Dimension</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  A procession of pedestrians, cyclists and motorbike moves
+                  along a narrow path between water stretches, suggesting
+                  migration, continuity and collective endurance.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(4)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 6: Floral Study-I -->
+          <div class="artwork-card reveal" data-category="floral">
+            <div
+              class="artwork-thumb-wrap portrait-aspect"
+              onclick="openLightbox(5)"
+            >
+              <img
+                src="assets/work-06-floral-study-1.jpg"
+                alt="Floral Study-I by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2025</span>
+                  <span class="artwork-category-badge">Floral Study</span>
+                </div>
+                <h3 class="artwork-title">Floral Study-I</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-expand"></i> Studio Dimension</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  A soft vertical arrangement in which pigment blooms and
+                  dissolves into open paper, emphasizing delicacy, atmosphere
+                  and the transient nature of flowers.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(5)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 7: Floral Study-II -->
+          <div class="artwork-card reveal" data-category="floral">
+            <div
+              class="artwork-thumb-wrap portrait-aspect"
+              onclick="openLightbox(6)"
+            >
+              <img
+                src="assets/work-07-floral-study-2.jpg"
+                alt="Floral Study-II by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2026</span>
+                  <span class="artwork-category-badge">Floral Study</span>
+                </div>
+                <h3 class="artwork-title">Floral Study-II</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-expand"></i> Studio Dimension</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  Denser colour and a stronger central rhythm give this bouquet
+                  a vivid, celebratory presence. Transparent reds, yellows and
+                  earth tones balance spontaneity with structural control.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(6)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 8: Riverside Story-2 (Archive 2024) -->
+          <div class="artwork-card reveal" data-category="archive river">
+            <div class="artwork-thumb-wrap" onclick="openLightbox(7)">
+              <img
+                src="assets/work-08-riverside-story-archive.jpg"
+                alt="Riverside Story-2 (Archive) by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2024</span>
+                  <span class="artwork-category-badge">Archive Collection</span>
+                </div>
+                <h3 class="artwork-title">Riverside Story-2 (Archive)</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-ruler-combined"></i> 15 × 22
+                    inches</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  An earlier foundational exploration of river bank commerce,
+                  wooden passenger boats, and soft moisture-laden Bangladeshi
+                  horizon lines.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(7)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 9: Landscape-2 (Acrylic) -->
+          <div class="artwork-card reveal" data-category="archive">
+            <div class="artwork-thumb-wrap" onclick="openLightbox(8)">
+              <img
+                src="assets/work-09-landscape-2.jpg"
+                alt="Landscape-2 Acrylic by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2021</span>
+                  <span class="artwork-category-badge">Acrylic on Canvas</span>
+                </div>
+                <h3 class="artwork-title">Landscape-2</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Acrylic on
+                    Canvas</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-ruler-combined"></i> 36 × 40
+                    inches</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  Layered surfaces, sustained tonal blues, and textured canvas
+                  exploring broader horizons and architectural riverbank
+                  silhouettes.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(8)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artwork 10: Fishing Boat-1 -->
+          <div class="artwork-card reveal" data-category="archive river">
+            <div class="artwork-thumb-wrap" onclick="openLightbox(9)">
+              <img
+                src="assets/work-10-fishing-boat-1.jpg"
+                alt="Fishing Boat-1 by MD MAHAMUDUL HASAN"
+                loading="lazy"
+              />
+              <div class="artwork-overlay">
+                <span class="overlay-view-btn"
+                  ><i class="fa-solid fa-magnifying-glass-plus"></i
+                ></span>
+              </div>
+            </div>
+            <div class="artwork-info">
+              <div>
+                <div class="artwork-header-meta">
+                  <span class="artwork-year">2021</span>
+                  <span class="artwork-category-badge">Archive Selection</span>
+                </div>
+                <h3 class="artwork-title">Fishing Boat-1</h3>
+                <div class="artwork-specs">
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-paintbrush"></i> Watercolour on
+                    Paper</span
+                  >
+                  <span class="spec-item"
+                    ><i class="fa-solid fa-ruler-combined"></i> 15 × 22
+                    inches</span
+                  >
+                </div>
+                <p class="artwork-note">
+                  Atmospheric river vessel with fishermen set against a warm
+                  dusk horizon, rendered through fluid washes and delicate
+                  pigment bleed.
+                </p>
+              </div>
+              <div class="artwork-action-row">
+                <button class="btn-inspect" onclick="openLightbox(9)">
+                  Inspect Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXHIBITIONS & CV SECTION
+         ========================================================================== -->
+    <section class="exhibitions-section section-padding" id="exhibitions">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow"
+            ><i class="fa-solid fa-landmark"></i> Exhibition History</span
+          >
+          <h2 class="section-title">Exhibitions &amp; Art Camps</h2>
+          <p class="section-desc">
+            Selected national and international presentations across 10+
+            countries
+          </p>
+          <div class="decorative-divider">
+            <span></span><i class="fa-solid fa-diamond"></i><span></span>
+          </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="cv-tab-nav reveal">
+          <button
+            class="cv-tab-btn active"
+            onclick="switchCvTab('international', this)"
+          >
+            <i class="fa-solid fa-globe"></i> International Exhibitions
+          </button>
+          <button class="cv-tab-btn" onclick="switchCvTab('national', this)">
+            <i class="fa-solid fa-map-pin"></i> National &amp; Group
+          </button>
+          <button class="cv-tab-btn" onclick="switchCvTab('workshops', this)">
+            <i class="fa-solid fa-campground"></i> Art Camps &amp; Workshops
+          </button>
+        </div>
+
+        <!-- Tab 1: International Exhibitions -->
+        <div class="cv-tab-pane active" id="tab-international">
+          <div class="exhibition-timeline">
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2026</div>
+              <div class="exhibit-details">
+                <h4>SINERGIA International Art Fair</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> CETYS University System
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Mexico</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2025</div>
+              <div class="exhibit-details">
+                <h4>Nepal Art Expo</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Nepal Art Council
+                  Gallery, Kathmandu
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Nepal</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2025</div>
+              <div class="exhibit-details">
+                <h4>
+                  Nepal International Art Exhibition - Dreamscape Nepal '25
+                </h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Zobra the Art Village
+                  &amp; Dot to Line, Kathmandu
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Nepal</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2025</div>
+              <div class="exhibit-details">
+                <h4>Nepal International Art Exhibition 2025</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Chandra Man Singh Maskey
+                  Gallery, Nepal Academy of Fine Arts, Kathmandu
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Nepal</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2025</div>
+              <div class="exhibit-details">
+                <h4>Malaysia International Art Exhibition - Pink Jambu 2.0</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> CMTHub Gallery, UiTM Shah
+                  Alam
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Malaysia</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2024</div>
+              <div class="exhibit-details">
+                <h4>2nd New York Art Fair</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Zervas Art; Club for
+                  UNESCO of Art in Achaia, New York
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> USA</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2023</div>
+              <div class="exhibit-details">
+                <h4>Three Painters of Bangladesh in Mexico</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Organized by the Embassy
+                  of Bangladesh
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Mexico</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2023</div>
+              <div class="exhibit-details">
+                <h4>Where the Mind Is Without Fear</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Positive Energy Art
+                  Foundation &amp; Faculty of Fine and Applied Arts,
+                  Bangkokthonburi University
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Thailand /
+                    India</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2023</div>
+              <div class="exhibit-details">
+                <h4>Silent Beauty of Bangladesh</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Gallery Sugino, Tokyo
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Japan</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2023</div>
+              <div class="exhibit-details">
+                <h4>29th Kiuko Be Hon Ten</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Sinkiuko Art Association,
+                  Tokyo
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Japan</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2023</div>
+              <div class="exhibit-details">
+                <h4>2nd New York Art Fair - Online Exhibition</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Zervas Art; Club for
+                  UNESCO of Art in Achaia, New York
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> USA</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2019</div>
+              <div class="exhibit-details">
+                <h4>4th International Action Art Fair Exhibition</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Chalkida, Evia
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Greece</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">2019</div>
+              <div class="exhibit-details">
+                <h4>Colours of Bangladesh and Greece</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Organized by the Embassy
+                  of Bangladesh, Athens
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-location-dot"></i> Greece</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item reveal">
+              <div class="exhibit-year-badge">Archive</div>
+              <div class="exhibit-details">
+                <h4>Additional International Projects &amp; Art Expos</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> iNVENTX (Multimedia Univ,
+                  Malaysia) · Colombo Art Expo (Sri Lanka) · Bali Art Expo
+                  (Indonesia) · Yogyakarta Art Expo (Indonesia)
+                  <span class="exhibit-country-tag"
+                    ><i class="fa-solid fa-earth-asia"></i> Asia</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: National & Group Exhibitions -->
+        <div class="cv-tab-pane" id="tab-national">
+          <div class="exhibition-timeline">
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2025</div>
+              <div class="exhibit-details">
+                <h4>Jibon Nodi - Group Art Exhibition</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> National Art Gallery-7,
+                  Bangladesh Shilpakala Academy (BSA &amp; Nongor), Dhaka
+                  <span class="exhibit-country-tag">Dhaka</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2024</div>
+              <div class="exhibit-details">
+                <h4>Shilpa Sandhan - Group Art Exhibition</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Zobra the Art Village
+                  &amp; Dot to Line, Dhaka
+                  <span class="exhibit-country-tag">Dhaka</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2023</div>
+              <div class="exhibit-details">
+                <h4>Winter Art Festival</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Zobra the Art Village
+                  &amp; Dot to Line, Cox's Bazar Cultural Centre
+                  <span class="exhibit-country-tag">Cox's Bazar</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2022</div>
+              <div class="exhibit-details">
+                <h4>Aid Flood Affected People</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Bangladesh Charushilpi
+                  Sangsad, Bangladesh Shilpakala Academy, Dhaka
+                  <span class="exhibit-country-tag">Dhaka</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2020</div>
+              <div class="exhibit-details">
+                <h4>Art Against Corona</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-building"></i> Bangladesh Shilpakala
+                  Academy, Dhaka
+                  <span class="exhibit-country-tag">Dhaka</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Workshops & Art Camps -->
+        <div class="cv-tab-pane" id="tab-workshops">
+          <div class="exhibition-timeline">
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2025</div>
+              <div class="exhibit-details">
+                <h4>Prokriteer Sannirdhe - Art Camp</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-tree"></i> Koitta, Manikganj, Bangladesh
+                  <span class="exhibit-country-tag">Manikganj</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2024</div>
+              <div class="exhibit-details">
+                <h4>Shilpa Shandhan - Art Camp</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-palette"></i> Zobra the Art Village
+                  &amp; Dot to Line, Hijol Tomal Resort, Gazipur
+                  <span class="exhibit-country-tag">Gazipur</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2024</div>
+              <div class="exhibit-details">
+                <h4>International Art Camp</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-globe"></i> Zervas Art; Club for UNESCO
+                  of Art in Achaia, New York
+                  <span class="exhibit-country-tag">USA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2024</div>
+              <div class="exhibit-details">
+                <h4>Chitra Pare Sultan - Art Camp</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-brush"></i> Ontre Bangla, Narail,
+                  Bangladesh
+                  <span class="exhibit-country-tag">Narail</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2023</div>
+              <div class="exhibit-details">
+                <h4>Winter Art Festival - Art Camp</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-water"></i> Zobra the Art Village &amp;
+                  Dot to Line, Cox's Bazar Cultural Centre
+                  <span class="exhibit-country-tag">Cox's Bazar</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2022</div>
+              <div class="exhibit-details">
+                <h4>Rang Tulite Muktijudha - Independence Day Art Camp</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-tv"></i> Channel i, Dhaka, Bangladesh
+                  <span class="exhibit-country-tag">Dhaka</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2022</div>
+              <div class="exhibit-details">
+                <h4>Joy Bangla Art Camp - Bangabandhu Uthsab</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-book"></i> Hasumonir Pathshala, Public
+                  Library, Dhaka
+                  <span class="exhibit-country-tag">Dhaka</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exhibit-item">
+              <div class="exhibit-year-badge">2020</div>
+              <div class="exhibit-details">
+                <h4>Art Against Corona</h4>
+                <div class="exhibit-venue">
+                  <i class="fa-solid fa-shield-heart"></i> Bangladesh Shilpakala
+                  Academy, Dhaka
+                  <span class="exhibit-country-tag">Dhaka</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRACTICE SUMMARY BANNER
+         ========================================================================== -->
+    <section class="practice-banner-section">
+      <div class="container">
+        <div class="practice-grid">
+          <div class="practice-heading-box reveal">
+            <span class="practice-sub">Artistic Inquiry</span>
+            <h2>Studio Observation &amp; Collaborative Art Camps</h2>
+          </div>
+
+          <div class="practice-text-card reveal">
+            <p>
+              "MD MAHAMUDUL HASAN practice combines studio-based observation
+              with direct engagement in collaborative art camps and
+              international exchange. These environments support his continuing
+              research into landscape, river-based communities, cultural memory
+              and the expressive possibilities of watercolour."
+            </p>
+            <div class="practice-tags">
+              <span class="practice-tag">#RiverCulture</span>
+              <span class="practice-tag">#WatercolourResearch</span>
+              <span class="practice-tag">#CulturalMemory</span>
+              <span class="practice-tag">#DhakaUniversity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & INQUIRIES SECTION
+         ========================================================================== -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow"
+            ><i class="fa-solid fa-envelope"></i> Get In Touch</span
+          >
+          <h2 class="section-title">Contact &amp; Studio Inquiries</h2>
+          <p class="section-desc">
+            For artwork acquisitions, exhibitions, curatorial projects, and
+            academic collaboration
+          </p>
+          <div class="decorative-divider">
+            <span></span><i class="fa-solid fa-diamond"></i><span></span>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Direct Channels -->
+          <div class="contact-info-panel reveal">
+            <h3>Direct Channels</h3>
+            <p class="contact-desc">
+              Reach out directly for collector inquiries, catalogue requests, or
+              exhibition invitations.
+            </p>
+
+            <div class="direct-channels-list">
+              <!-- Email -->
+              <div class="channel-card">
+                <div class="channel-icon">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="channel-info">
+                  <label>Official Email</label>
+                  <a href="mailto:mahamudul.ban@gmail.com"
+                    >mahamudul.ban@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="channel-card">
+                <div class="channel-icon">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="channel-info">
+                  <label>Phone &amp; WhatsApp</label>
+                  <a href="tel:+8801708377154">+880 1708-377154</a>
+                </div>
+              </div>
+
+              <!-- Studio Location -->
+              <div class="channel-card">
+                <div class="channel-icon">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <div class="channel-info">
+                  <label>Academic Studio</label>
+                  <span
+                    >Faculty of Fine Art, University of Dhaka, Bangladesh</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="signature-box">
+              <div>
+                <strong
+                  style="
+                    font-size: 13px;
+                    color: var(--ink-primary);
+                    display: block;
+                  "
+                  >MD MAHAMUDUL HASAN</strong
+                >
+                <span
+                  style="
+                    font-size: 11px;
+                    font-family: var(--font-mono);
+                    color: var(--ink-muted);
+                  "
+                  >Verified Portfolio 2026</span
+                >
+              </div>
+              <img src="assets/artist-signature.png" alt="Artist Signature" />
+            </div>
+          </div>
+
+          <!-- Interactive Inquiry Form -->
+          <div class="contact-form-panel reveal">
+            <form id="inquiryForm" onsubmit="handleFormSubmit(event)">
+              <div class="form-status-alert" id="formAlert">
+                <i class="fa-solid fa-circle-check"></i> Thank you! Your message
+                has been prepared. We will be in touch shortly.
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="senderName"
+                    >Your Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="senderName"
+                    name="senderName"
+                    class="form-control"
+                    placeholder="e.g. Eleanor Vance"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="senderEmail"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="senderEmail"
+                    name="senderEmail"
+                    class="form-control"
+                    placeholder="e.g. eleanor@gallery.org"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="senderPhone"
+                    >Phone / Mobile</label
+                  >
+                  <input
+                    type="tel"
+                    id="senderPhone"
+                    name="senderPhone"
+                    class="form-control"
+                    placeholder="e.g. +1 555-0199"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiryType"
+                    >Inquiry Purpose</label
+                  >
+                  <select
+                    id="inquiryType"
+                    name="inquiryType"
+                    class="form-control"
+                  >
+                    <option value="Acquisition">
+                      Artwork Acquisition / Purchase
+                    </option>
+                    <option value="Curatorial">
+                      Curatorial &amp; Exhibition Invitation
+                    </option>
+                    <option value="ArtCamp">
+                      Art Camp / Workshop Collaboration
+                    </option>
+                    <option value="Academic">
+                      Academic &amp; Research Inquiry
+                    </option>
+                    <option value="Other">General Question</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="messageContent"
+                  >Message / Details *</label
+                >
+                <textarea
+                  id="messageContent"
+                  name="messageContent"
+                  class="form-control"
+                  placeholder="Please provide details regarding the artwork of interest or project overview..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="submitBtn"
+                class="btn btn-primary"
+                style="width: 100%"
+              >
+                <i class="fa-solid fa-paper-plane"></i> Send Inquiries to Artist
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="footer-brand">
+            <h4>MD MAHAMUDUL HASAN</h4>
+            <p>
+              “The river is not only a landscape; it is a living archive of
+              labour, movement, memory and belonging.”
+            </p>
+          </div>
+
+          <div>
+            <h5 class="footer-nav-title">Quick Navigation</h5>
+            <ul class="footer-links-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">Artist Statement</a></li>
+              <li><a href="#education">Academic Formation</a></li>
+              <li><a href="#gallery">Selected Artworks</a></li>
+              <li><a href="#exhibitions">Exhibitions &amp; Camps</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="footer-nav-title">Direct Inquiries</h5>
+            <ul class="footer-links-list">
+              <li>
+                <a href="mailto:mahamudul.ban@gmail.com"
+                  ><i class="fa-solid fa-envelope"></i>
+                  mahamudul.ban@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+8801708377154"
+                  ><i class="fa-solid fa-phone"></i> +880 1708-377154</a
+                >
+              </li>
+              <li
+                style="
+                  color: rgba(255, 255, 255, 0.6);
+                  font-size: 13.5px;
+                  margin-top: 10px;
+                "
+              >
+                <i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>
+            © 2026 MD MAHAMUDUL HASAN. All Rights Reserved. Professional Artist
+            Portfolio.
+          </div>
+          <div>Faculty of Fine Art · University of Dhaka</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+         LIGHTBOX MODAL
+         ========================================================================== -->
+    <div
+      class="lightbox-modal"
+      id="lightboxModal"
+      onclick="closeLightboxOnBackdrop(event)"
+    >
+      <div class="lightbox-container" onclick="event.stopPropagation()">
+        <button
+          class="lightbox-close-btn"
+          onclick="closeLightbox()"
+          aria-label="Close Lightbox"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="lightbox-image-box">
+          <img id="lbImg" src="" alt="Artwork Preview" />
+        </div>
+
+        <div class="lightbox-details-box">
+          <div>
+            <span class="lightbox-meta-tag" id="lbCategory">River Culture</span>
+            <h3 class="lightbox-title" id="lbTitle">Riverside Story-3</h3>
+
+            <div class="lightbox-specs-grid">
+              <div class="lb-spec-item">
+                <strong>Year Created</strong>
+                <span id="lbYear">2025</span>
+              </div>
+              <div class="lb-spec-item">
+                <strong>Medium</strong>
+                <span id="lbMedium">Watercolour on Paper</span>
+              </div>
+              <div class="lb-spec-item">
+                <strong>Dimensions</strong>
+                <span id="lbDimensions">15 × 22 inches</span>
+              </div>
+              <div class="lb-spec-item">
+                <strong>Artist</strong>
+                <span>MD MAHAMUDUL HASAN</span>
+              </div>
+            </div>
+
+            <p class="lightbox-curatorial-desc" id="lbDesc">
+              A ferry crossing becomes a compact theatre of movement and
+              community. The restrained horizon and soft reflections emphasize
+              the river as a shared route of work, travel and exchange.
+            </p>
+          </div>
+
+          <div class="lightbox-nav-controls">
+            <button class="btn btn-outline btn-sm" onclick="prevLightbox()">
+              <i class="fa-solid fa-arrow-left"></i> Previous
+            </button>
+            <a
+              href="#contact"
+              class="btn btn-primary btn-sm"
+              onclick="closeLightbox()"
+            >
+              <i class="fa-regular fa-envelope"></i> Inquire Work
+            </a>
+            <button class="btn btn-outline btn-sm" onclick="nextLightbox()">
+              Next <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button
+      class="back-to-top"
+      id="backToTop"
+      onclick="scrollToTop()"
+      aria-label="Scroll back to top"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ==========================================================================
+         CLIENT JAVASCRIPT
+         ========================================================================== -->
+    <script>
+      // Data Registry for Artworks
+      const artworksData = [
+        {
+          title: "Riverside Story-3",
+          year: "2025",
+          medium: "Watercolour on Paper",
+          dimensions: "15 × 22 inches",
+          category: "River Culture",
+          image: "assets/work-01-riverside-story-3.jpg",
+          desc: "A ferry crossing becomes a compact theatre of movement and community. The restrained horizon and soft reflections emphasize the river as a shared route of work, travel and exchange.",
+        },
+        {
+          title: "Riverside Story-2",
+          year: "2025",
+          medium: "Watercolour on Paper",
+          dimensions: "15 × 22 inches",
+          category: "River & Rural",
+          image: "assets/work-02-riverside-story-2.jpg",
+          desc: "Figures, cattle and open fields are arranged through transparent washes and warm earth tones. The work reflects the enduring relationship between rural labour, livestock and the seasonal landscape.",
+        },
+        {
+          title: "Bongoan Villa-1",
+          year: "2026",
+          medium: "Watercolour on Paper",
+          dimensions: "15 × 22 inches",
+          category: "Architecture & Memory",
+          image: "assets/work-03-bongoan-villa-1.jpg",
+          desc: "The weathered villa is rendered as a vessel of memory. Loose foliage, broken edges and open passages of paper evoke the quiet persistence of architecture within a changing rural environment.",
+        },
+        {
+          title: "Fishing Boat-2",
+          year: "2025",
+          medium: "Watercolour on Paper",
+          dimensions: "15 × 22 inches",
+          category: "River Culture",
+          image: "assets/work-04-fishing-boat-2.jpg",
+          desc: "Viewed frontally, the fishing boat emerges from a pale field of water and sky. Its vertical orientation concentrates attention on distance, reflection and the fragile balance of a working vessel.",
+        },
+        {
+          title: "Rural Journey",
+          year: "2026",
+          medium: "Watercolour on Paper",
+          dimensions: "Studio Dimension",
+          category: "Rural Life",
+          image: "assets/work-05-rural-journey.jpg",
+          desc: "A procession of pedestrians, cyclists and a motorbike moves along a narrow raised path between stretches of water. The work records everyday mobility while also suggesting migration, continuity and collective endurance.",
+        },
+        {
+          title: "Floral Study-I",
+          year: "2025",
+          medium: "Watercolour on Paper",
+          dimensions: "Studio Dimension",
+          category: "Floral Study",
+          image: "assets/work-06-floral-study-1.jpg",
+          desc: "A soft vertical arrangement in which pigment blooms and dissolves into open paper, emphasizing delicacy, atmosphere and the transient nature of flowers.",
+        },
+        {
+          title: "Floral Study-II",
+          year: "2026",
+          medium: "Watercolour on Paper",
+          dimensions: "Studio Dimension",
+          category: "Floral Study",
+          image: "assets/work-07-floral-study-2.jpg",
+          desc: "Denser colour and a stronger central rhythm give this bouquet a vivid, celebratory presence. Transparent reds, yellows and earth tones balance spontaneity with structural control.",
+        },
+        {
+          title: "Riverside Story-2 (Archive 2024)",
+          year: "2024",
+          medium: "Watercolour on Paper",
+          dimensions: "15 × 22 inches",
+          category: "Archive Selection",
+          image: "assets/work-08-riverside-story-archive.jpg",
+          desc: "A foundational exploration of river bank commerce, wooden passenger boats, and soft moisture-laden Bangladeshi horizon lines.",
+        },
+        {
+          title: "Landscape-2",
+          year: "2021",
+          medium: "Acrylic on Canvas",
+          dimensions: "36 × 40 inches",
+          category: "Acrylic on Canvas",
+          image: "assets/work-09-landscape-2.jpg",
+          desc: "Layered surfaces, sustained tonal blues, and textured canvas exploring broader horizons and architectural riverbank silhouettes.",
+        },
+        {
+          title: "Fishing Boat-1",
+          year: "2021",
+          medium: "Watercolour on Paper",
+          dimensions: "15 × 22 inches",
+          category: "Archive Selection",
+          image: "assets/work-10-fishing-boat-1.jpg",
+          desc: "Atmospheric river vessel with fishermen set against a warm dusk horizon, rendered through fluid washes and delicate pigment bleed.",
+        },
+      ];
+
+      let currentLightboxIndex = 0;
+
+      // Sticky Header & Back to Top
+      const navbar = document.getElementById("navbar");
+      const backToTopBtn = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        const scrollPos = window.scrollY;
+        if (scrollPos > 60) {
+          navbar.classList.add("scrolled");
+          backToTopBtn.classList.add("visible");
+        } else {
+          navbar.classList.remove("scrolled");
+          backToTopBtn.classList.remove("visible");
+        }
+        highlightActiveNavLink();
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+        const icon = menuToggle.querySelector("i");
+        if (navMenu.classList.contains("open")) {
+          icon.classList.remove("fa-bars-staggered");
+          icon.classList.add("fa-xmark");
+        } else {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars-staggered");
+        }
+      });
+
+      // Close mobile menu on clicking any link
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("open");
+          const icon = menuToggle.querySelector("i");
+          if (icon) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars-staggered");
+          }
+        });
+      });
+
+      // Active Navigation Link Highlighting
+      const sections = document.querySelectorAll("section[id]");
+      function highlightActiveNavLink() {
+        const scrollY = window.pageYOffset;
+        sections.forEach((current) => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 120;
+          const sectionId = current.getAttribute("id");
+          const navLink = document.querySelector(
+            `.nav-link[href*="${sectionId}"]`,
+          );
+          if (navLink) {
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+              navLink.classList.add("active");
+            } else {
+              navLink.classList.remove("active");
+            }
+          }
+        });
+      }
+
+      // Scroll Reveal Animations
+      const revealElements = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      revealElements.forEach((el) => revealObserver.observe(el));
+
+      // Gallery Filter Buttons
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const artworkCards = document.querySelectorAll(".artwork-card");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filterValue = btn.getAttribute("data-filter");
+
+          artworkCards.forEach((card) => {
+            const cardCategories = card
+              .getAttribute("data-category")
+              .split(" ");
+            if (filterValue === "all" || cardCategories.includes(filterValue)) {
+              card.style.display = "flex";
+              card.style.opacity = "0";
+              setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+              }, 50);
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // CV Tabs Switcher
+      function switchCvTab(tabId, btnElement) {
+        document
+          .querySelectorAll(".cv-tab-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document
+          .querySelectorAll(".cv-tab-pane")
+          .forEach((pane) => pane.classList.remove("active"));
+
+        btnElement.classList.add("active");
+        const targetPane = document.getElementById(`tab-${tabId}`);
+        if (targetPane) {
+          targetPane.classList.add("active");
+        }
+      }
+
+      // Lightbox Modal Functions
+      const lightboxModal = document.getElementById("lightboxModal");
+      const lbImg = document.getElementById("lbImg");
+      const lbTitle = document.getElementById("lbTitle");
+      const lbCategory = document.getElementById("lbCategory");
+      const lbYear = document.getElementById("lbYear");
+      const lbMedium = document.getElementById("lbMedium");
+      const lbDimensions = document.getElementById("lbDimensions");
+      const lbDesc = document.getElementById("lbDesc");
+
+      function openLightbox(index) {
+        currentLightboxIndex = index;
+        updateLightboxContent();
+        lightboxModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightboxModal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function closeLightboxOnBackdrop(e) {
+        if (e.target === lightboxModal) {
+          closeLightbox();
+        }
+      }
+
+      function updateLightboxContent() {
+        const art = artworksData[currentLightboxIndex];
+        if (!art) return;
+        lbImg.src = art.image;
+        lbTitle.textContent = art.title;
+        lbCategory.textContent = art.category;
+        lbYear.textContent = art.year;
+        lbMedium.textContent = art.medium;
+        lbDimensions.textContent = art.dimensions;
+        lbDesc.textContent = art.desc;
+      }
+
+      function nextLightbox() {
+        currentLightboxIndex = (currentLightboxIndex + 1) % artworksData.length;
+        updateLightboxContent();
+      }
+
+      function prevLightbox() {
+        currentLightboxIndex =
+          (currentLightboxIndex - 1 + artworksData.length) %
+          artworksData.length;
+        updateLightboxContent();
+      }
+
+      // Keyboard navigation for Lightbox
+      document.addEventListener("keydown", (e) => {
+        if (!lightboxModal.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") nextLightbox();
+        if (e.key === "ArrowLeft") prevLightbox();
+      });
+
+      // Contact Form Handling (AJAX to contact.php with form reset on success)
+      async function handleFormSubmit(e) {
+        e.preventDefault();
+        const form = document.getElementById("inquiryForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const alertBox = document.getElementById("formAlert");
+        const originalBtnText = submitBtn.innerHTML;
+
+        // Collect Form Data
+        const formData = new FormData(form);
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+          '<i class="fa-solid fa-spinner fa-spin"></i> Sending Inquiry...';
+        alertBox.className = "form-status-alert";
+        alertBox.style.display = "none";
+
+        try {
+          const response = await fetch("contact.php", {
+            method: "POST",
+            body: formData,
+          });
+
+          const result = await response.json();
+
+          if (response.ok && result.status === "success") {
+            alertBox.className = "form-status-alert success";
+            alertBox.innerHTML =
+              '<i class="fa-solid fa-circle-check"></i> ' + result.message;
+            alertBox.style.display = "block";
+            alertBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+            // Erase / Reset all form inputs on success
+            form.reset();
+          } else {
+            throw new Error(result.message || "An unexpected error occurred.");
+          }
+        } catch (error) {
+          alertBox.className = "form-status-alert error";
+          alertBox.innerHTML =
+            '<i class="fa-solid fa-triangle-exclamation"></i> ' +
+            (error.message ||
+              "Failed to send message. Please try again or email directly.");
+          alertBox.style.display = "block";
+          alertBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      }
+    </script>
+  </body>
+</html>

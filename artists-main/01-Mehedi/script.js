@@ -85,7 +85,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Interactive Lightbox Modal
+    // 3.1 Memories Section Filter Logic
+    const memoryFilterBtns = document.querySelectorAll('.memory-filter-btn');
+    const memoryCards = document.querySelectorAll('.memory-card');
+
+    memoryFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            memoryFilterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            memoryCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+
+    // 4. Interactive Lightbox Modal (Supports both Artwork Gallery & Memories)
     const lightboxModal = document.getElementById('lightbox-modal');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
@@ -97,21 +126,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxPrev = document.getElementById('lightbox-prev');
     const lightboxNext = document.getElementById('lightbox-next');
 
+    let currentMode = 'gallery'; // 'gallery' | 'memory'
     let currentItemIndex = 0;
-    const visibleCards = () => Array.from(document.querySelectorAll('.gallery-card')).filter(card => card.style.display !== 'none');
 
-    function openLightbox(cardIndex) {
-        const cards = visibleCards();
+    const visibleGalleryCards = () => Array.from(document.querySelectorAll('.gallery-card')).filter(card => card.style.display !== 'none');
+    const visibleMemoryCards = () => Array.from(document.querySelectorAll('.memory-card')).filter(card => card.style.display !== 'none');
+
+    function openLightbox(mode, cardIndex) {
+        currentMode = mode;
+        const cards = mode === 'memory' ? visibleMemoryCards() : visibleGalleryCards();
         if (cardIndex < 0 || cardIndex >= cards.length) return;
 
         currentItemIndex = cardIndex;
         const targetCard = cards[cardIndex];
 
         const img = targetCard.querySelector('img');
-        const title = targetCard.querySelector('.work-title')?.textContent || '';
-        const year = targetCard.querySelector('.work-year')?.textContent || '';
-        const medium = targetCard.querySelector('.work-medium')?.textContent || '';
-        const desc = targetCard.querySelector('.work-desc')?.textContent || '';
+        
+        let title = '';
+        let year = '';
+        let medium = '';
+        let desc = '';
+
+        if (mode === 'memory') {
+            title = targetCard.querySelector('.memory-title')?.textContent || '';
+            const yr = targetCard.querySelector('.memory-year')?.textContent || '';
+            const tag = targetCard.querySelector('.memory-pill-tag')?.textContent || '';
+            year = tag ? `${yr} · ${tag.trim()}` : yr;
+            medium = targetCard.querySelector('.memory-subtitle')?.textContent || '';
+            desc = targetCard.querySelector('.memory-desc')?.textContent || '';
+        } else {
+            title = targetCard.querySelector('.work-title')?.textContent || '';
+            year = targetCard.querySelector('.work-year')?.textContent || '';
+            medium = targetCard.querySelector('.work-medium')?.textContent || '';
+            desc = targetCard.querySelector('.work-desc')?.textContent || '';
+        }
 
         lightboxImg.src = img.src;
         lightboxImg.alt = title;
@@ -131,37 +179,65 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
+    // Attach Gallery Card events
     galleryCards.forEach((card) => {
         const zoomBtn = card.querySelector('.zoom-btn');
         const imgWrapper = card.querySelector('.card-image-wrapper');
 
         const triggerOpen = (e) => {
             e.stopPropagation();
-            const cards = visibleCards();
+            const cards = visibleGalleryCards();
             const idx = cards.indexOf(card);
-            openLightbox(idx >= 0 ? idx : 0);
+            openLightbox('gallery', idx >= 0 ? idx : 0);
         };
 
         if (zoomBtn) zoomBtn.addEventListener('click', triggerOpen);
         if (imgWrapper) imgWrapper.addEventListener('click', triggerOpen);
     });
 
+    // Attach Memory Card events
+    memoryCards.forEach((card) => {
+        const zoomBtn = card.querySelector('.memory-zoom-btn');
+        const imgWrapper = card.querySelector('.memory-image-wrapper');
+
+        const triggerOpen = (e) => {
+            e.stopPropagation();
+            const cards = visibleMemoryCards();
+            const idx = cards.indexOf(card);
+            openLightbox('memory', idx >= 0 ? idx : 0);
+        };
+
+        if (zoomBtn) zoomBtn.addEventListener('click', triggerOpen);
+        if (imgWrapper) imgWrapper.addEventListener('click', triggerOpen);
+        card.addEventListener('click', triggerOpen);
+    });
+
+    // Spotlight trigger button
+    const spotlightTrigger = document.getElementById('spotlight-zoom-trigger');
+    if (spotlightTrigger) {
+        spotlightTrigger.addEventListener('click', () => {
+            openLightbox('memory', 0);
+        });
+    }
+
     if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
     if (lightboxOverlay) lightboxOverlay.addEventListener('click', closeLightbox);
 
     if (lightboxPrev) {
         lightboxPrev.addEventListener('click', () => {
-            const cards = visibleCards();
+            const cards = currentMode === 'memory' ? visibleMemoryCards() : visibleGalleryCards();
+            if (cards.length === 0) return;
             currentItemIndex = (currentItemIndex - 1 + cards.length) % cards.length;
-            openLightbox(currentItemIndex);
+            openLightbox(currentMode, currentItemIndex);
         });
     }
 
     if (lightboxNext) {
         lightboxNext.addEventListener('click', () => {
-            const cards = visibleCards();
+            const cards = currentMode === 'memory' ? visibleMemoryCards() : visibleGalleryCards();
+            if (cards.length === 0) return;
             currentItemIndex = (currentItemIndex + 1) % cards.length;
-            openLightbox(currentItemIndex);
+            openLightbox(currentMode, currentItemIndex);
         });
     }
 

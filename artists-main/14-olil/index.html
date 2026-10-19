@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Olil Miah — Contemporary Visual Artist</title>
+<meta name="description" content="Md Olil Miah is a Bangladeshi contemporary visual artist, painter, photographer, and art organizer exploring human psychology, memory, social gaze, and ecology.">
+<link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Crect width='160' height='120' fill='%23111822'/%3E%3Cpath d='M12,60 C40,20 120,20 148,60 C120,100 40,100 12,60 Z' fill='none' stroke='%23F1F5F9' stroke-width='6'/%3E%3Ccircle cx='80' cy='60' r='20' fill='%23BD7038'/%3E%3Ccircle cx='80' cy='60' r='9' fill='%23111822'/%3E%3C/svg%3E\">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  /* ============ TOKENS (Masculine Editorial: Obsidian, Steel Slate, Burnished Cognac) ============ */
+  :root{
+    --ink:        #0E141B;
+    --ink-soft:   #3E4A56;
+    --mist-900:   #090E13;
+    --mist-800:   #111822;
+    --mist-700:   #1A2433;
+    --mist-line:  rgba(230,236,244,0.12);
+    --paper:      #E6EBF0;
+    --paper-deep: #D7DEE6;
+    --paper-line: rgba(14,20,27,0.12);
+    --gold:       #BD7038;
+    --gold-soft:  #DCA365;
+    --rust:       #963824;
+    --cream:      #F1F5F9;
+
+    --display: 'Fraunces', serif;
+    --body:    'Work Sans', sans-serif;
+    --mono:    'IBM Plex Mono', monospace;
+
+    --maxw: 1240px;
+    --pad: clamp(24px, 5vw, 72px);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  h1,h2,h3,h4,p{ margin:0; }
+  section{ position:relative; }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:26px; height:1px;
+    background:var(--gold);
+    display:inline-block;
+  }
+
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad); }
+
+  /* subtle grain texture */
+  .grain{
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events:none;
+    mix-blend-mode:overlay;
+    opacity:0.6;
+  }
+
+  /* reveal-on-scroll */
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in-view{ opacity:1; transform:none; }
+  .reveal-stagger > *{ transition-delay:calc(var(--i,0) * 90ms); }
+
+  /* ============ NAV ============ */
+  header.site-nav{
+    position:fixed; top:0; left:0; right:0; z-index:250;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px var(--pad);
+    transition:background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+  }
+  header.site-nav.solid{
+    background:rgba(11,16,22,0.88);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    padding:14px var(--pad);
+    box-shadow:0 8px 24px rgba(0,0,0,0.18);
+  }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand svg{ width:32px; height:auto; flex-shrink:0; }
+  .brand-name{
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:500;
+    font-size:19px;
+    color:var(--cream);
+    letter-spacing:0.01em;
+  }
+  nav.links{ display:flex; align-items:center; gap:36px; }
+  nav.links a{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--cream);
+    opacity:0.72;
+    position:relative;
+    padding-bottom:4px;
+    transition:opacity 0.25s ease;
+  }
+  nav.links a::after{
+    content:""; position:absolute; left:0; right:100%; bottom:0; height:1px;
+    background:var(--gold-soft); transition:right 0.3s ease;
+  }
+  nav.links a:hover, nav.links a.active{ opacity:1; }
+  nav.links a:hover::after, nav.links a.active::after{ right:0; }
+
+  .menu-btn{
+    display:none; width:30px; height:22px; position:relative; cursor:pointer;
+    background:none; border:none; padding:0; z-index:200;
+  }
+  .menu-btn span{
+    position:absolute; left:0; right:0; height:2px; background:var(--cream);
+    transition:transform 0.3s ease, opacity 0.3s ease;
+  }
+  .menu-btn span:nth-child(1){ top:0; }
+  .menu-btn span:nth-child(2){ top:10px; }
+  .menu-btn span:nth-child(3){ top:20px; }
+  .menu-btn.open span:nth-child(1){ transform:translateY(10px) rotate(45deg); }
+  .menu-btn.open span:nth-child(2){ opacity:0; }
+  .menu-btn.open span:nth-child(3){ transform:translateY(-10px) rotate(-45deg); }
+
+  @media (max-width:760px){
+    nav.links{ display:none; }
+    .menu-btn{ display:block; }
+    .brand-name{ font-size:17px; }
+    .brand svg{ width:28px; }
+  }
+
+  .mobile-panel{
+    position:fixed; inset:0; background:var(--mist-900); z-index:150;
+    display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;
+    padding:88px var(--pad) 36px;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    transform:translateY(-100%); transition:transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .mobile-panel.open{ transform:translateY(0); }
+  .mobile-nav-links{
+    display:flex; flex-direction:column; align-items:flex-start;
+    gap:18px; width:100%;
+  }
+  .mobile-nav-links a{
+    font-family:var(--display); font-style:italic; font-size:clamp(28px, 6.5vw, 36px); color:var(--paper);
+    transition:color 0.25s ease, transform 0.25s ease;
+  }
+  .mobile-nav-links a:hover{ color:var(--gold-soft); transform:translateX(6px); }
+  .mobile-panel-meta{
+    margin-top:auto; padding-top:28px; border-top:1px solid var(--mist-line); width:100%;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .mobile-panel-meta .m-loc{ font-family:var(--mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-soft); }
+  .mobile-panel-meta a{ font-family:var(--mono); font-size:12.5px; color:rgba(230,236,244,0.65); letter-spacing:0.02em; }
+  .mobile-panel-meta a:hover{ color:var(--gold-soft); }
+
+  @media (max-width:680px){
+    .statement{ padding:80px 0 60px; }
+    .works{ padding:80px 0 70px; }
+    .about{ padding:80px 0; }
+    .exhibitions{ padding:80px 0 60px; }
+    .contact{ padding:80px 0 0; }
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    min-height:100svh;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    position:relative;
+    background:var(--mist-900);
+    overflow:hidden;
+  }
+  .hero-img{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:50% 35%;
+    filter:saturate(0.92) brightness(0.68);
+    transform:scale(1.05);
+  }
+  .hero-scrim{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(9,14,19,0.62) 0%, rgba(9,14,19,0.22) 30%, rgba(9,14,19,0.48) 62%, rgba(9,14,19,0.96) 100%),
+      linear-gradient(90deg, rgba(9,14,19,0.7) 0%, rgba(9,14,19,0.18) 55%);
+  }
+  .mist-blob{
+    position:absolute; border-radius:50%;
+    filter:blur(60px); mix-blend-mode:screen; opacity:0.32; pointer-events:none;
+  }
+  .mist-blob.a{ width:520px; height:520px; background:#3B526B; top:-120px; left:-100px; animation:driftA 46s ease-in-out infinite; }
+  .mist-blob.b{ width:420px; height:420px; background:#7B4C28; bottom:-140px; right:-60px; animation:driftB 55s ease-in-out infinite; }
+  @keyframes driftA{ 0%,100%{ transform:translate(0,0); } 50%{ transform:translate(60px,40px); } }
+  @keyframes driftB{ 0%,100%{ transform:translate(0,0); } 50%{ transform:translate(-50px,-30px); } }
+
+  .hero-content{ position:relative; z-index:2; padding:0 var(--pad) 96px; }
+  .hero-eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold-soft); margin-bottom:22px; display:flex; align-items:center; gap:12px;
+  }
+  .hero-eyebrow::before{ content:""; width:34px; height:1px; background:var(--gold-soft); }
+  h1.hero-title{
+    font-family:var(--display);
+    font-weight:480;
+    color:var(--cream);
+    font-size:clamp(50px, 9vw, 120px);
+    line-height:0.96;
+    letter-spacing:-0.01em;
+    max-width:14ch;
+  }
+  .hero-sub{
+    margin-top:26px;
+    max-width:48ch;
+    font-size:clamp(16px, 2vw, 19px);
+    color:rgba(241,245,249,0.85);
+    font-weight:300;
+  }
+  .hero-actions{ display:flex; gap:18px; margin-top:44px; flex-wrap:wrap; }
+  .btn{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+    padding:15px 26px; border-radius:2px; display:inline-flex; align-items:center; gap:10px;
+    transition:transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor:pointer; border:1px solid transparent;
+  }
+  .btn-solid{ background:var(--cream); color:var(--mist-900); }
+  .btn-solid:hover{ transform:translateY(-2px); background:var(--gold-soft); }
+  .btn-outline{ border-color:rgba(241,245,249,0.4); color:var(--cream); }
+  .btn-outline:hover{ transform:translateY(-2px); border-color:var(--cream); }
+
+  .hero-tag{
+    position:absolute; right:var(--pad); bottom:34px; z-index:2;
+    text-align:right; font-family:var(--mono); font-size:11.5px; color:rgba(241,245,249,0.65);
+    letter-spacing:0.03em; max-width:240px; line-height:1.5;
+  }
+  .hero-tag b{ color:rgba(241,245,249,0.92); font-weight:500; display:block; margin-bottom:2px; }
+
+  .scroll-cue{
+    position:absolute; left:var(--pad); bottom:34px; z-index:2;
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:rgba(241,245,249,0.6);
+  }
+  .scroll-cue .line{ width:1px; height:34px; background:rgba(241,245,249,0.4); position:relative; overflow:hidden; }
+  .scroll-cue .line::after{
+    content:""; position:absolute; top:-100%; left:0; width:100%; height:100%; background:var(--gold-soft);
+    animation:scrollline 2.2s ease-in-out infinite;
+  }
+  @keyframes scrollline{ 0%{ top:-100%; } 60%{ top:100%; } 100%{ top:100%; } }
+
+  @media (max-width: 720px){
+    .hero-tag{ display:none; }
+  }
+
+  /* ============ STATEMENT ============ */
+  .statement{
+    background:var(--paper);
+    padding:130px 0 100px;
+  }
+  .statement-inner{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:48px;
+    align-items:flex-start;
+  }
+  .statement svg.mark{ width:54px; height:auto; margin-top:10px; }
+  blockquote{
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(23px, 3.2vw, 38px);
+    line-height:1.38;
+    color:var(--ink);
+    max-width:22ch;
+  }
+  .statement-foot{
+    margin-top:34px;
+    display:flex; gap:40px; flex-wrap:wrap;
+    align-items:flex-start;
+  }
+  .statement-foot p{
+    font-size:15.5px; color:var(--ink-soft); max-width:46ch; font-weight:300;
+  }
+  .statement-foot cite{
+    font-family:var(--mono); font-style:normal; font-size:12px; letter-spacing:0.06em;
+    color:var(--ink); white-space:nowrap; padding-top:4px;
+  }
+
+  @media (max-width:680px){
+    .statement-inner{ grid-template-columns:1fr; }
+    .statement svg.mark{ display:none; }
+  }
+
+  /* ============ SPEC STRIP ============ */
+  .spec-strip{
+    background:var(--paper-deep);
+    border-top:1px solid var(--paper-line);
+    border-bottom:1px solid var(--paper-line);
+  }
+  .spec-grid{
+    display:grid; grid-template-columns:repeat(4,1fr);
+  }
+  .spec-item{
+    padding:34px var(--pad);
+    border-left:1px solid var(--paper-line);
+  }
+  .spec-item:first-child{ border-left:none; padding-left:var(--pad); }
+  .spec-label{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:10px;
+  }
+  .spec-value{ font-family:var(--display); font-size:18px; font-weight:500; line-height:1.35; }
+
+  @media (max-width:900px){
+    .spec-grid{ grid-template-columns:repeat(2,1fr); }
+    .spec-item{ border-left:none; border-top:1px solid var(--paper-line); }
+    .spec-item:nth-child(odd){ border-right:1px solid var(--paper-line); }
+    .spec-item:nth-child(1), .spec-item:nth-child(2){ border-top:none; }
+  }
+  @media (max-width:540px){
+    .spec-grid{ grid-template-columns:1fr; }
+    .spec-item, .spec-item:nth-child(odd){ border-right:none; padding-left:var(--pad); }
+    .spec-item:nth-child(1){ border-top:none; }
+    .spec-item:nth-child(n+2){ border-top:1px solid var(--paper-line); }
+  }
+
+  /* ============ WORKS ============ */
+  .works{
+    background:var(--mist-800);
+    padding:120px 0 110px;
+    position:relative;
+    overflow:hidden;
+  }
+  .works-head{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
+    margin-bottom:64px; flex-wrap:wrap;
+  }
+  .works-head h2{
+    font-family:var(--display); font-weight:480; font-style:italic;
+    color:var(--cream); font-size:clamp(32px,4.4vw,52px); margin-top:18px; max-width:14ch;
+  }
+  .works-head p{
+    max-width:38ch; color:rgba(230,236,244,0.66); font-size:15px; font-weight:300; padding-bottom:6px;
+  }
+
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:var(--mist-line);
+  }
+  .g-item{
+    position:relative; overflow:hidden; background:var(--mist-900);
+    cursor:pointer;
+    aspect-ratio:4/5;
+  }
+  .g-item img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform 0.7s cubic-bezier(.2,.7,.2,1), filter 0.5s ease;
+    filter:saturate(0.96);
+  }
+  .g-item:hover img{ transform:scale(1.06); }
+  .g-num{
+    position:absolute; top:18px; left:18px;
+    font-family:var(--mono); font-size:11px; color:rgba(230,236,244,0.7);
+    letter-spacing:0.08em;
+  }
+  .g-caption{
+    position:absolute; left:0; right:0; bottom:0; padding:22px;
+    background:linear-gradient(180deg, transparent, rgba(9,14,19,0.94) 78%);
+    transform:translateY(14px); opacity:0; transition:transform 0.4s ease, opacity 0.4s ease;
+  }
+  .g-item:hover .g-caption{ transform:translateY(0); opacity:1; }
+  .g-title{ font-family:var(--display); font-style:italic; color:var(--cream); font-size:19px; }
+  .g-meta{ font-family:var(--mono); font-size:11px; color:rgba(230,236,244,0.66); margin-top:6px; letter-spacing:0.02em; }
+  .g-expand{
+    position:absolute; top:16px; right:16px; width:30px; height:30px; border-radius:50%;
+    border:1px solid rgba(230,236,244,0.4); display:flex; align-items:center; justify-content:center;
+    opacity:0; transition:opacity 0.3s ease; color:var(--cream);
+  }
+  .g-item:hover .g-expand{ opacity:1; }
+
+  @media (max-width:860px){ .gallery{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .gallery{ grid-template-columns:1fr; } .g-item{ aspect-ratio:5/4; } }
+
+  /* ============ ABOUT ============ */
+  .about{
+    background:var(--paper);
+    padding:130px 0;
+  }
+  .about-grid{
+    display:grid; grid-template-columns:0.85fr 1.15fr; gap:80px; align-items:start;
+  }
+  .about-photo{ position:sticky; top:110px; }
+  .about-photo .frame{
+    position:relative; border:1px solid var(--paper-line); padding:14px; background:var(--cream);
+  }
+  .about-photo img{ width:100%; object-fit:cover; aspect-ratio:3/4; filter:grayscale(0.12) contrast(1.03); }
+  .about-photo figcaption{
+    font-family:var(--mono); font-size:11px; color:var(--ink-soft); margin-top:14px; letter-spacing:0.04em;
+  }
+  .about-text h2{
+    font-family:var(--display); font-style:italic; font-weight:480; font-size:clamp(30px,3.6vw,44px);
+    margin-bottom:26px;
+  }
+  .about-text p{ color:var(--ink-soft); font-size:16px; font-weight:300; max-width:60ch; }
+  .about-text p + p{ margin-top:18px; }
+
+  /* Areas of Practice Tag Pills */
+  .practice-pills{
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:28px; margin-bottom:44px;
+  }
+  .practice-pill{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.04em;
+    padding:6px 14px; border-radius:20px;
+    background:rgba(14,20,27,0.06); color:var(--ink);
+    border:1px solid var(--paper-line);
+  }
+
+  /* Affiliations & Roles */
+  .affiliations{
+    display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:40px;
+  }
+  .aff-card{
+    border:1px solid var(--paper-line); padding:24px; background:rgba(255,255,255,0.4);
+    border-radius:2px;
+  }
+  .aff-title{ font-family:var(--display); font-weight:500; font-size:17px; margin-bottom:8px; }
+  .aff-desc{ font-size:13.5px; color:var(--ink-soft); font-weight:300; line-height:1.55; }
+
+  /* Awards strip */
+  .awards-list{ margin-top:40px; border-top:1px solid var(--paper-line); }
+  .award-row{
+    display:grid; grid-template-columns:80px 1fr; gap:16px; align-items:baseline;
+    padding:16px 0; border-bottom:1px solid var(--paper-line);
+  }
+  .award-year{ font-family:var(--mono); font-size:12px; color:var(--rust); font-weight:500; }
+  .award-name{ font-size:14.5px; font-weight:500; }
+  .award-org{ font-size:13px; color:var(--ink-soft); margin-top:3px; font-weight:300; }
+
+  @media (max-width:860px){
+    .about-grid{ grid-template-columns:1fr; gap:48px; }
+    .about-photo{ position:static; max-width:320px; }
+    .affiliations{ grid-template-columns:1fr; }
+  }
+
+  /* ============ EXHIBITIONS ============ */
+  .exhibitions{
+    background:var(--mist-800); color:var(--cream);
+    padding:130px 0 90px;
+  }
+  .ex-head{ margin-bottom:70px; }
+  .ex-head h2{
+    font-family:var(--display); font-style:italic; font-weight:480; color:var(--cream);
+    font-size:clamp(32px,4.4vw,52px); margin-top:18px; max-width:16ch;
+  }
+  .timeline{ border-top:1px solid var(--mist-line); }
+  .tl-year-group{ display:grid; grid-template-columns:140px 1fr; border-bottom:1px solid var(--mist-line); }
+  .tl-year{
+    font-family:var(--display); font-style:italic; font-size:40px; color:var(--gold-soft);
+    padding:30px 0; position:sticky; top:100px; align-self:start;
+  }
+  .tl-entries{ padding:30px 0; }
+  .tl-entry{ padding:14px 0; }
+  .tl-entry + .tl-entry{ border-top:1px dashed var(--mist-line); }
+  .tl-title{ font-size:16.5px; font-weight:500; color:var(--cream); }
+  .tl-badge{
+    display:inline-block; font-family:var(--mono); font-size:10px; letter-spacing:0.06em;
+    text-transform:uppercase; padding:2px 8px; border-radius:12px; margin-left:8px;
+    vertical-align:middle;
+  }
+  .tl-badge.intl{ background:rgba(189,112,56,0.18); color:var(--gold-soft); border:1px solid rgba(189,112,56,0.38); }
+  .tl-badge.natl{ background:rgba(230,236,244,0.1); color:rgba(230,236,244,0.85); }
+  .tl-venue{ font-family:var(--mono); font-size:12.5px; color:rgba(230,236,244,0.58); margin-top:6px; line-height:1.6; }
+
+  @media (max-width:640px){
+    .tl-year-group{ grid-template-columns:1fr; }
+    .tl-year{ position:static; padding-bottom:6px; }
+  }
+
+  /* Camps and Residencies Grid */
+  .camps{
+    margin-top:20px; padding-top:60px; border-top:1px solid var(--mist-line);
+  }
+  .camps-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:30px; flex-wrap:wrap; }
+  .camps-head h3{ font-family:var(--display); font-style:italic; font-size:24px; color:var(--cream); }
+  .camps-head span{ font-family:var(--mono); font-size:11.5px; color:rgba(230,236,244,0.5); }
+  .camp-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--mist-line); }
+  .camp-card{ background:var(--mist-800); padding:26px; }
+  .camp-year{ font-family:var(--mono); color:var(--gold-soft); font-size:12px; letter-spacing:0.06em; }
+  .camp-name{ font-family:var(--display); font-size:17px; margin-top:10px; color:var(--cream); }
+  .camp-loc{ font-size:13px; color:rgba(230,236,244,0.56); margin-top:8px; font-weight:300; }
+  @media (max-width:760px){ .camp-grid{ grid-template-columns:1fr; } }
+
+  /* ============ CONTACT / FOOTER ============ */
+  .contact{
+    background:var(--paper); padding:120px 0 0;
+  }
+  .contact-inner{ text-align:center; max-width:720px; margin:0 auto; }
+  .contact h2{
+    font-family:var(--display); font-style:italic; font-weight:480; font-size:clamp(32px,5vw,58px);
+    margin-top:22px;
+  }
+  .contact p{ color:var(--ink-soft); font-size:16px; font-weight:300; }
+  .contact-links{ margin-top:40px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .contact-links a{
+    font-family:var(--mono); font-size:13px; letter-spacing:0.04em;
+    padding:16px 26px; border:1px solid var(--paper-line); border-radius:2px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  }
+  .contact-links a:hover{ transform:translateY(-2px); }
+  .contact-links a.primary{ background:var(--ink); color:var(--cream); border-color:var(--ink); }
+  .contact-links a.primary:hover{ background:var(--rust); border-color:var(--rust); }
+  .contact-links a:not(.primary):hover{ border-color:var(--ink); }
+
+  footer{
+    margin-top:100px; background:var(--mist-900); color:rgba(230,236,244,0.5);
+    padding:36px var(--pad); display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:14px;
+  }
+  footer .fmark{ display:flex; align-items:center; gap:12px; }
+  footer .fmark svg{ width:24px; height:auto; opacity:0.85; }
+  footer p{ font-family:var(--mono); font-size:11.5px; letter-spacing:0.02em; }
+
+  /* Lightbox */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(7,10,14,0.96); z-index:300;
+    display:flex; align-items:center; justify-content:center; padding:40px;
+    opacity:0; pointer-events:none; transition:opacity 0.35s ease;
+  }
+  .lightbox.open{ opacity:1; pointer-events:auto; }
+  .lightbox img{ max-width:min(90vw, 980px); max-height:76vh; object-fit:contain; box-shadow:0 30px 80px rgba(0,0,0,0.6); }
+  .lightbox-cap{ text-align:center; margin-top:20px; color:var(--cream); }
+  .lightbox-cap .t{ font-family:var(--display); font-style:italic; font-size:22px; }
+  .lightbox-cap .m{ font-family:var(--mono); font-size:12px; color:rgba(230,236,244,0.6); margin-top:8px; }
+  .lb-close, .lb-prev, .lb-next{
+    position:absolute; background:none; border:1px solid rgba(230,236,244,0.3); color:var(--cream);
+    cursor:pointer; display:flex; align-items:center; justify-content:center; border-radius:50%;
+    transition:border-color 0.25s ease, background 0.25s ease;
+  }
+  .lb-close{ top:28px; right:28px; width:44px; height:44px; font-size:18px; }
+  .lb-prev{ left:20px; top:50%; transform:translateY(-50%); width:48px; height:48px; font-size:24px; }
+  .lb-next{ right:20px; top:50%; transform:translateY(-50%); width:48px; height:48px; font-size:24px; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover{ border-color:var(--cream); background:rgba(230,236,244,0.08); }
+  @media (max-width:640px){
+    .lb-prev{ left:8px; width:38px; height:38px; }
+    .lb-next{ right:8px; width:38px; height:38px; }
+    .lb-close{ top:14px; right:14px; width:38px; height:38px; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="siteNav">
+  <a href="#top" class="brand">
+    <svg class="mark" width="30" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M12,60 C40,20 120,20 148,60 C120,100 40,100 12,60 Z" fill="none" stroke="#F1F5F9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="80" cy="60" r="22" fill="#F1F5F9"/>
+  <circle cx="80" cy="60" r="10" fill="#111822"/>
+  <circle cx="86" cy="54" r="4" fill="#F1F5F9"/>
+</svg>
+    <span class="brand-name">Md Olil Miah</span>
+  </a>
+  <nav class="links">
+    <a href="#works">Work</a>
+    <a href="#about">About</a>
+    <a href="#exhibitions">Exhibitions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-nav-links">
+    <a href="#works">Work</a>
+    <a href="#about">About</a>
+    <a href="#exhibitions">Exhibitions</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="mobile-panel-meta">
+    <div class="m-loc">Shariatpur &amp; Dhaka, Bangladesh</div>
+    <a href="mailto:olilsordar11086@gmail.com">olilsordar11086@gmail.com</a>
+    <a href="tel:+8801937371271">+880 1937 371271</a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <img class="hero-img" src="artworks/01_beyond_the_doorway.jpg" alt="Beyond the Doorway — Watercolour painting by Md Olil Miah">
+  <div class="hero-scrim"></div>
+  <div class="mist-blob a"></div>
+  <div class="mist-blob b"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Visual Artist &nbsp;·&nbsp; Shariatpur &amp; Dhaka, Bangladesh</div>
+    <h1 class="hero-title">Md Olil<br>Miah</h1>
+    <p class="hero-sub">Contemporary painting, watercolour, and mixed media exploring human psychology, social observation, the gaze, and the living memory of Bangladesh.</p>
+    <div class="hero-actions">
+      <a href="#works" class="btn btn-solid">View the Work</a>
+      <a href="#statement" class="btn btn-outline">Read the Statement</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="line"></span> Scroll</div>
+  <div class="hero-tag"><b>Beyond the Doorway</b>Watercolour on paper — Md Olil Miah</div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement reveal" id="statement">
+  <div class="wrap statement-inner">
+    <svg class="mark" width="58" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M12,60 C40,20 120,20 148,60 C120,100 40,100 12,60 Z" fill="none" stroke="#131F1B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="80" cy="60" r="22" fill="#131F1B"/>
+  <circle cx="80" cy="60" r="10" fill="#EAEDE2"/>
+  <circle cx="86" cy="54" r="4" fill="#B4903D"/>
+  <path d="M20,105 C60,100 100,110 140,102" fill="none" stroke="#B4903D" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
+    <div>
+      <blockquote>"My art develops from observation — of people, relationships, society, nature, memory and the emotional circumstances that shape everyday life."</blockquote>
+      <div class="statement-foot">
+        <p>I am interested in the distance between what we experience internally and what society allows us to express publicly. The eye is one of the most important recurring symbols in my work — representing seeing and being seen, awareness, judgment, memory and the silent presence of society. Ultimately, I consider painting a space where reality, memory, emotion, imagination and observation can coexist.</p>
+        <cite>— Artist Statement</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEC STRIP ============ -->
+<section class="spec-strip reveal">
+  <div class="wrap" style="padding-left:0; padding-right:0;">
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="spec-label">Nationality &amp; Base</div>
+        <div class="spec-value">Bangladeshi · Shariatpur &amp; Dhaka</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Primary Media</div>
+        <div class="spec-value">Watercolour on paper, acrylic, mixed media, photography</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Key Themes</div>
+        <div class="spec-value">The gaze, human psychology, women &amp; society, memory</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Affiliations</div>
+        <div class="spec-value">UJAN Art Space · Shariatpur Photography Club</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKS ============ -->
+<section class="works" id="works">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div class="works-head reveal">
+      <div>
+        <div class="eyebrow">Selected Artworks</div>
+        <h2>Atmospheres &amp;<br>Urban Memory</h2>
+      </div>
+      <p>A curated selection of watercolour paintings exploring architectural heritage, streetscapes, threshold spaces, and riverine life in Bangladesh — click any piece to inspect.</p>
+    </div>
+
+    <div class="gallery reveal" id="gallery">
+      <div class="g-item" data-index="0">
+        <span class="g-num">01</span>
+        <img src="artworks/01_beyond_the_doorway.jpg" alt="Beyond the Doorway" loading="lazy">
+        <div class="g-caption">
+          <div class="g-title">Beyond the Doorway</div>
+          <div class="g-meta">Watercolour on paper</div>
+        </div>
+        <div class="g-expand" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="g-item" data-index="1">
+        <span class="g-num">02</span>
+        <img src="artworks/02_heritage_street.jpg" alt="Heritage Street" loading="lazy">
+        <div class="g-caption">
+          <div class="g-title">Heritage Street</div>
+          <div class="g-meta">Watercolour on paper · 38.1 × 55.9 cm</div>
+        </div>
+        <div class="g-expand" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="g-item" data-index="2">
+        <span class="g-num">03</span>
+        <img src="artworks/03_life_in_the_old_city.jpeg" alt="Life in the Old City" loading="lazy">
+        <div class="g-caption">
+          <div class="g-title">Life in the Old City</div>
+          <div class="g-meta">Watercolour on paper</div>
+        </div>
+        <div class="g-expand" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="g-item" data-index="3">
+        <span class="g-num">04</span>
+        <img src="artworks/04_rhythm_of_the_streets.jpeg" alt="Rhythm of the Streets" loading="lazy">
+        <div class="g-caption">
+          <div class="g-title">Rhythm of the Streets</div>
+          <div class="g-meta">Watercolour on paper · 38.1 × 55.9 cm</div>
+        </div>
+        <div class="g-expand" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="g-item" data-index="4">
+        <span class="g-num">05</span>
+        <img src="artworks/05_rickshaw_in_the_old_lane.jpeg" alt="Rickshaw in the Old Lane" loading="lazy">
+        <div class="g-caption">
+          <div class="g-title">Rickshaw in the Old Lane</div>
+          <div class="g-meta">Watercolour on paper</div>
+        </div>
+        <div class="g-expand" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="g-item" data-index="5">
+        <span class="g-num">06</span>
+        <img src="artworks/06_boats_at_the_riverbank.jpeg" alt="Boats at the Riverbank" loading="lazy">
+        <div class="g-caption">
+          <div class="g-title">Boats at the Riverbank</div>
+          <div class="g-meta">Watercolour on paper</div>
+        </div>
+        <div class="g-expand" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="frame">
+        <img src="profile.jpg" alt="Portrait of Md Olil Miah">
+      </div>
+      <figcaption>Md Olil Miah — Visual Artist, Photographer &amp; Art Organizer</figcaption>
+    </div>
+
+    <div class="about-text reveal">
+      <div class="eyebrow">About the Artist</div>
+      <h2>Investigating the space between internal experience and social presence</h2>
+      
+      <p>Md Olil Miah is a Bangladeshi contemporary visual artist whose practice spans painting, mixed media, photography, drawing, printmaking, community art, and experimental visual expression. His work is driven by an ongoing inquiry into human psychology, social dynamics, women's lived experiences, memory, and the emotional realities of contemporary life.</p>
+      
+      <p>A defining signature in his visual language is the motif of the eye — recurring, enlarged, or fragmented — functioning as a powerful metaphor for consciousness, vulnerability, social scrutiny, and quiet contemplation. Across paper, canvas, and photographic prints, Olil constructs evocative spaces where personal history and collective reality converge.</p>
+
+      <div class="practice-pills">
+        <span class="practice-pill">Women, Identity &amp; Society</span>
+        <span class="practice-pill">The Gaze &amp; Observation</span>
+        <span class="practice-pill">Memory &amp; Autobiography</span>
+        <span class="practice-pill">Nature &amp; Ecology</span>
+        <span class="practice-pill">Abstraction &amp; Gesture</span>
+        <span class="practice-pill">Community Art</span>
+      </div>
+
+      <div class="affiliations">
+        <div class="aff-card">
+          <div class="aff-title">UJAN Art Space</div>
+          <div class="aff-desc">Shariatpur, Bangladesh — An independent creative platform fostering artistic dialogue, community engagement, workshops, and grassroots cultural development.</div>
+        </div>
+        <div class="aff-card">
+          <div class="aff-title">Shariatpur Photography Club</div>
+          <div class="aff-desc">Bangladesh — Dedicated platform supporting documentary photography, visual archival work, technical training, and creative exchange.</div>
+        </div>
+      </div>
+
+      <div class="awards-list">
+        <div class="award-row">
+          <div class="award-year">2019</div>
+          <div>
+            <div class="award-name">Honorable Award</div>
+            <div class="award-org">Dhaka Art College · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+        <div class="award-row">
+          <div class="award-year">2018</div>
+          <div>
+            <div class="award-name">Shorong Award — Best Photography</div>
+            <div class="award-org">Shorong Art Group · Bangladesh</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXHIBITIONS ============ -->
+<section class="exhibitions" id="exhibitions">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div class="ex-head reveal">
+      <div class="eyebrow" style="color:var(--gold-soft);">Selected Exhibitions</div>
+      <h2>Exhibited across South,<br>Southeast &amp; East Asia</h2>
+    </div>
+
+    <div class="timeline reveal">
+
+      <!-- 2025 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2025</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">Pink Jambu 2.0 — Malaysia International Art Exhibition <span class="tl-badge intl">International</span></div>
+            <div class="tl-venue">Kuala Lumpur / Shah Alam, Malaysia</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">Nepal Art Expo 2025 <span class="tl-badge intl">International</span></div>
+            <div class="tl-venue">Kathmandu, Nepal</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">Memories 71 — Group Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Gallery Hamiduzzaman · Dhaka, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">4th International Khulna Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Bangladesh Shilpakala Academy · Khulna, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">6th National Sculpture Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">National Art Gallery, Bangladesh Shilpakala Academy · Dhaka, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">Chattagram Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Chattogram, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">Third Eye — Group Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Drik Gallery · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2024</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">Japan International Art Expo <span class="tl-badge intl">International</span></div>
+            <div class="tl-venue">Tokyo Metropolitan Art Museum · Tokyo, Japan</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">Colombo Art Expo <span class="tl-badge intl">International</span></div>
+            <div class="tl-venue">J.D.A. Perera Gallery · Colombo, Sri Lanka</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2023</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">Bali Art Expo <span class="tl-badge intl">International</span></div>
+            <div class="tl-venue">Sika Art Gallery · Bali, Indonesia</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">25th National Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">National Art Gallery, Bangladesh Shilpakala Academy · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2022</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">19th Asian Art Biennale Bangladesh <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Bangladesh Shilpakala Academy · Ministry of Cultural Affairs, Dhaka</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2021</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">Stay Art Home — International Showcase <span class="tl-badge intl">International</span></div>
+            <div class="tl-venue">Kapalloerk Art Space · Malaysia</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">24th National Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Bangladesh Shilpakala Academy · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2020</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">22nd Young Artists' Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Bangladesh Shilpakala Academy · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2019 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2019</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">Dhaka Art Week — Group Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Shorong Art Group &amp; Art Hawk · Dhaka, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">Olil Memorial Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Bangladesh Shilpakala Academy · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2018 & 2017 -->
+      <div class="tl-year-group">
+        <div class="tl-year">2018–17</div>
+        <div class="tl-entries">
+          <div class="tl-entry">
+            <div class="tl-title">Nepal Art Fair <span class="tl-badge intl">International</span></div>
+            <div class="tl-venue">Kathmandu, Nepal</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">21st Young Artists' Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Bangladesh Shilpakala Academy · Dhaka, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">S.M. Sultan Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Narail / Dhaka, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">Beauty in Wreckage — Group Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Dhaka, Bangladesh</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-title">9th Kahal Art Exhibition <span class="tl-badge natl">National</span></div>
+            <div class="tl-venue">Bangladesh Shilpakala Academy · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Art Camps & Residencies -->
+    <div class="camps reveal">
+      <div class="camps-head">
+        <h3>Art Camps &amp; Residencies</h3>
+        <span>Selected national and international creative camps</span>
+      </div>
+      <div class="camp-grid">
+        <div class="camp-card">
+          <div class="camp-year">2025</div>
+          <div class="camp-name">Metal Carving International Art Camp</div>
+          <div class="camp-loc">Kathmandu, Nepal</div>
+        </div>
+        <div class="camp-card">
+          <div class="camp-year">2025</div>
+          <div class="camp-name">Sthan Kal Patro Art Camp</div>
+          <div class="camp-loc">Bogura Zila Shilpakala Academy, Bangladesh</div>
+        </div>
+        <div class="camp-card">
+          <div class="camp-year">2024</div>
+          <div class="camp-name">Ceramic Sculpture International Camp</div>
+          <div class="camp-loc">J.D.A. Perera Gallery, Colombo, Sri Lanka</div>
+        </div>
+        <div class="camp-card">
+          <div class="camp-year">2024</div>
+          <div class="camp-name">Gozni Art Camp</div>
+          <div class="camp-loc">Sherpur Zila Shilpakala Academy, Bangladesh</div>
+        </div>
+        <div class="camp-card">
+          <div class="camp-year">2023</div>
+          <div class="camp-name">Bhola Art Camp: Water &amp; Life</div>
+          <div class="camp-loc">Community Ecology Project, Bhola, Bangladesh</div>
+        </div>
+        <div class="camp-card">
+          <div class="camp-year">2023</div>
+          <div class="camp-name">Pabna &amp; Shahid Buddhijibi Art Camps</div>
+          <div class="camp-loc">UJAN Art Space &amp; Shilpakala Academy, Bangladesh</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-inner reveal">
+    <div class="eyebrow" style="justify-content:center;">Get in Touch</div>
+    <h2>Let's discuss a commission,<br>exhibition, or project</h2>
+    <p>For inquiries regarding original paintings, acquisitions, exhibitions, curatorial collaborations, or creative workshops — connect directly via email or phone.</p>
+    
+    <div class="contact-links">
+      <a href="mailto:olilsordar11086@gmail.com" class="primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        olilsordar11086@gmail.com
+      </a>
+      <a href="tel:+8801937371271">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        +880 1937 371271
+      </a>
+      <a href="./06_Md_Olil_Miah_Artist_CV.pdf" download="Md_Olil_Miah_Artist_CV.pdf">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Download CV (PDF)
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="#top" class="fmark">
+      <svg class="mark" width="24" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M12,60 C40,20 120,20 148,60 C120,100 40,100 12,60 Z" fill="none" stroke="#F1F5F9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="80" cy="60" r="22" fill="#F1F5F9"/>
+  <circle cx="80" cy="60" r="10" fill="#090E13"/>
+  <circle cx="86" cy="54" r="4" fill="#F1F5F9"/>
+</svg>
+      <p>Md Olil Miah — Visual Artist</p>
+    </a>
+    <p>All artworks shown remain the property of the artist.</p>
+  </footer>
+</section>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+  <div>
+    <img id="lbImg" src="" alt="">
+    <div class="lightbox-cap">
+      <div class="t" id="lbTitle"></div>
+      <div class="m" id="lbMeta"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+
+  /* ---- nav solid on scroll ---- */
+  var nav = document.getElementById('siteNav');
+  function onScroll(){
+    if(window.scrollY > window.innerHeight * 0.7){ nav.classList.add('solid'); }
+    else{ nav.classList.remove('solid'); }
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---- mobile menu ---- */
+  var menuBtn = document.getElementById('menuBtn');
+  var panel = document.getElementById('mobilePanel');
+  menuBtn.addEventListener('click', function(){
+    menuBtn.classList.toggle('open');
+    panel.classList.toggle('open');
+  });
+  panel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menuBtn.classList.remove('open'); panel.classList.remove('open'); });
+  });
+
+  /* ---- active nav link on scroll ---- */
+  var sections = ['works','about','exhibitions','contact'].map(function(id){ return document.getElementById(id); });
+  var navLinks = document.querySelectorAll('nav.links a');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var id = entry.target.id;
+        navLinks.forEach(function(l){
+          l.classList.toggle('active', l.getAttribute('href') === '#'+id);
+        });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ if(s) io.observe(s); });
+
+  /* ---- reveal on scroll ---- */
+  var reveals = document.querySelectorAll('.reveal');
+  var ro = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('in-view'); ro.unobserve(entry.target); }
+    });
+  }, {threshold:0.12});
+  reveals.forEach(function(el){ ro.observe(el); });
+
+  /* ---- lightbox data & events ---- */
+  var works = [
+    {
+      title: "Beyond the Doorway",
+      meta: "Watercolour on paper",
+      src: "artworks/01_beyond_the_doorway.jpg"
+    },
+    {
+      title: "Heritage Street",
+      meta: "Watercolour on paper · 38.1 × 55.9 cm",
+      src: "artworks/02_heritage_street.jpg"
+    },
+    {
+      title: "Life in the Old City",
+      meta: "Watercolour on paper",
+      src: "artworks/03_life_in_the_old_city.jpeg"
+    },
+    {
+      title: "Rhythm of the Streets",
+      meta: "Watercolour on paper · 38.1 × 55.9 cm",
+      src: "artworks/04_rhythm_of_the_streets.jpeg"
+    },
+    {
+      title: "Rickshaw in the Old Lane",
+      meta: "Watercolour on paper",
+      src: "artworks/05_rickshaw_in_the_old_lane.jpeg"
+    },
+    {
+      title: "Boats at the Riverbank",
+      meta: "Watercolour on paper",
+      src: "artworks/06_boats_at_the_riverbank.jpeg"
+    },
+  ];
+
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbTitle = document.getElementById('lbTitle');
+  var lbMeta = document.getElementById('lbMeta');
+  var current = 0;
+
+  function openLB(i){
+    current = i;
+    render();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLB(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function render(){
+    var w = works[current];
+    lbImg.src = w.src;
+    lbImg.alt = w.title;
+    lbTitle.textContent = w.title;
+    lbMeta.textContent = w.meta;
+  }
+  function next(){ current = (current+1) % works.length; render(); }
+  function prev(){ current = (current-1+works.length) % works.length; render(); }
+
+  document.querySelectorAll('.g-item').forEach(function(item){
+    item.addEventListener('click', function(){ openLB(parseInt(item.getAttribute('data-index'),10)); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLB);
+  document.getElementById('lbNext').addEventListener('click', next);
+  document.getElementById('lbPrev').addEventListener('click', prev);
+  lb.addEventListener('click', function(e){ if(e.target === lb){ closeLB(); } });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLB();
+    if(e.key === 'ArrowRight') next();
+    if(e.key === 'ArrowLeft') prev();
+  });
+
+})();
+</script>
+
+</body>
+</html>

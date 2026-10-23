@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sohel Rana — Visual Artist | Ramna, Dhaka</title>
+<meta name="description" content="Sohel Rana is a contemporary Bangladeshi visual artist working from his studio in Ramna, Dhaka, specializing in expressive watercolour and ink exploring quiet, inward moments of domestic life.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* Palette: Nocturne & Vermilion (Dusk, Ink, Diya Glow & Warm Parchment) */
+    --night: #0E1219;
+    --night-2: #151B26;
+    --night-card: #1D2534;
+    --vermilion: #C84630;
+    --vermilion-glow: #E0533C;
+    --amber: #DE9B3E;
+    --amber-soft: #F0B35C;
+    --emerald-deep: #254B44;
+    --parchment: #F6EFE9;
+    --parchment-2: #ECE1D6;
+    --card-white: #FFFFFF;
+    --ink: #171A21;
+    --ink-soft: #3E4652;
+    --ink-muted: #6B7584;
+    --line: rgba(23, 26, 33, 0.12);
+    --line-subtle: rgba(23, 26, 33, 0.06);
+    --line-dark: rgba(246, 239, 233, 0.14);
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+
+    --maxw: 1180px;
+    --nav-h: 74px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  ::selection { background: var(--vermilion); color: #FFF; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--vermilion);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Eyebrows */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 16px;
+    font-weight: 500;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 20px;
+    height: 1.5px;
+    background: var(--vermilion);
+    display: inline-block;
+  }
+  .eyebrow.light {
+    color: var(--amber-soft);
+  }
+  .eyebrow.light::before {
+    background: var(--amber-soft);
+  }
+
+  /* Section Spacing & Titles */
+  section {
+    padding: 100px 0;
+    position: relative;
+  }
+  .section-head {
+    max-width: 720px;
+    margin-bottom: 50px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(34px, 4.4vw, 52px);
+    margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  /* Decorative Line Divider */
+  .ornament-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 16px 32px;
+  }
+  .ornament-line {
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .ornament-glyph {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--vermilion);
+    letter-spacing: 0.25em;
+  }
+
+  /* ================= NAVBAR ================= */
+  .site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(246, 239, 233, 0);
+    transition: background .35s ease, box-shadow .35s ease, padding .35s ease;
+    backdrop-filter: blur(0px);
+  }
+  .site-nav.scrolled {
+    background: rgba(246, 239, 233, 0.95);
+    box-shadow: 0 4px 24px rgba(14, 18, 25, 0.06), 0 1px 0 var(--line);
+    padding: 14px 36px;
+    backdrop-filter: blur(12px);
+  }
+  .site-nav .brand {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color .35s ease;
+  }
+  .site-nav .brand::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--vermilion);
+    box-shadow: 0 0 8px var(--vermilion);
+    display: inline-block;
+  }
+  .site-nav.scrolled .brand {
+    color: var(--ink);
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.88);
+    position: relative;
+    padding: 4px 0;
+    transition: color .25s ease;
+    font-weight: 500;
+  }
+  .nav-links a:hover {
+    color: var(--amber-soft);
+  }
+  .site-nav.scrolled .nav-links a {
+    color: var(--ink-soft);
+  }
+  .site-nav.scrolled .nav-links a:hover {
+    color: var(--vermilion);
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 100%; bottom: -1px;
+    height: 2px;
+    background: var(--amber-soft);
+    transition: right .25s ease;
+  }
+  .site-nav.scrolled .nav-links a::after {
+    background: var(--vermilion);
+  }
+  .nav-links a:hover::after { right: 0; }
+
+  /* Mobile menu button & drawer */
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: #FFFFFF;
+    transition: color .3s ease;
+  }
+  .site-nav.scrolled .nav-toggle {
+    color: var(--ink);
+  }
+  .nav-toggle svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 56px; left: 0; right: 0;
+    background: rgba(246, 239, 233, 0.98);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    padding: 24px 30px;
+    z-index: 99;
+    box-shadow: 0 16px 36px rgba(14, 18, 25, 0.14);
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: var(--mono);
+    font-size: 13.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--ink);
+    display: block;
+    padding: 6px 0;
+  }
+  .mobile-menu a:hover {
+    color: var(--vermilion);
+  }
+
+  /* ================= HERO ================= */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--night);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0.62;
+    filter: contrast(1.08) brightness(0.85);
+    transform: scale(1.02);
+    transition: transform 9s ease-out;
+  }
+  .hero:hover .hero-bg {
+    transform: scale(1.05);
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14,18,25,0.2) 0%, rgba(14,18,25,0.65) 55%, rgba(14,18,25,0.96) 100%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 36px 72px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    color: #FFFFFF;
+  }
+  .hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(222, 155, 62, 0.14);
+    border: 1px solid rgba(222, 155, 62, 0.35);
+    border-radius: 999px;
+    padding: 5px 15px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber-soft);
+    margin-bottom: 22px;
+  }
+  .hero-status .glow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber-soft);
+    box-shadow: 0 0 8px var(--amber-soft);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(52px, 9.5vw, 120px);
+    line-height: 0.92;
+    margin: 0 0 24px;
+    letter-spacing: -0.015em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--amber-soft);
+    font-weight: 400;
+  }
+  .hero-sub {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: clamp(16px, 2vw, 20px);
+    max-width: 640px;
+    line-height: 1.6;
+    color: rgba(246, 239, 233, 0.9);
+    margin: 0;
+  }
+  .hero-meta {
+    margin-top: 36px;
+    display: flex;
+    gap: 20px 28px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(246, 239, 233, 0.75);
+  }
+  .hero-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-meta span::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--vermilion);
+  }
+  .scroll-cue {
+    position: absolute;
+    right: 36px;
+    bottom: 34px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(246, 239, 233, 0.6);
+    writing-mode: vertical-rl;
+  }
+  .scroll-cue .line {
+    width: 1px;
+    height: 44px;
+    background: rgba(246, 239, 233, 0.4);
+    animation: cue 2.4s ease-in-out infinite;
+  }
+  @keyframes cue { 0%,100%{opacity:.25} 50%{opacity:1} }
+
+  /* ================= PROFILE ================= */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 56px;
+    align-items: start;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 860px) {
+    .profile-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .portrait-card {
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(14, 18, 25, 0.06);
+  }
+  .portrait-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform .4s ease;
+  }
+  .portrait-card:hover .portrait-img {
+    transform: scale(1.02);
+  }
+  .portrait-caption {
+    padding: 16px 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--card-white);
+  }
+  .portrait-caption strong {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .portrait-caption span {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    font-weight: 500;
+  }
+
+  .profile-body .lede {
+    font-family: var(--serif);
+    font-size: clamp(23px, 2.6vw, 32px);
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0 0 24px;
+  }
+  .profile-body .lede .drop {
+    font-size: 1.4em;
+    color: var(--vermilion);
+    font-style: italic;
+    margin-right: 2px;
+  }
+  .profile-bio p {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    font-weight: 300;
+  }
+
+  /* Fact Sheet */
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-top: 44px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(14, 18, 25, 0.03);
+  }
+  .facts-grid .fact-cell {
+    padding: 24px 22px;
+    border-right: 1px solid var(--line);
+  }
+  .facts-grid .fact-cell:last-child { border-right: none; }
+  .fact-cell .flabel {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .fact-cell .fval {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+
+  /* ================= STATEMENT (DARK NOCTURNE) ================= */
+  .statement-section {
+    background: var(--night);
+    color: #FFFFFF;
+    padding: 104px 0;
+  }
+  .statement-section h2 { color: #FFFFFF; }
+  .statement-quote-box {
+    background: var(--night-2);
+    border: 1px solid var(--line-dark);
+    border-left: 4px solid var(--vermilion);
+    border-radius: 0 8px 8px 0;
+    padding: 36px 40px;
+    margin-bottom: 52px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+  .statement-quote-box blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(21px, 2.5vw, 29px);
+    line-height: 1.48;
+    color: #FFFFFF;
+    font-style: italic;
+  }
+  .statement-quote-box blockquote em {
+    color: var(--amber-soft);
+    font-style: normal;
+  }
+
+  /* 4 Pillars */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 900px) {
+    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+  }
+  .pillar-card {
+    background: var(--night-2);
+    border: 1px solid var(--line-dark);
+    border-radius: 6px;
+    padding: 22px 20px;
+    transition: transform .25s ease, border-color .25s ease;
+  }
+  .pillar-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--amber);
+  }
+  .pillar-card .pnum {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--amber-soft);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .pillar-card h4 {
+    margin: 0 0 8px;
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .pillar-card p {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: rgba(246, 239, 233, 0.7);
+  }
+
+  /* ================= SELECTED WORKS ================= */
+  .works-section {
+    background: var(--parchment);
+    padding: 104px 0;
+  }
+  .works-section .section-note {
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 600px;
+    margin-top: 14px;
+    font-weight: 300;
+  }
+
+  /* Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+  }
+  @media (max-width: 960px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 620px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+  }
+  .work-card {
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(14, 18, 25, 0.04);
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  }
+  .work-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--vermilion);
+    box-shadow: 0 16px 36px rgba(200, 70, 48, 0.12);
+  }
+  .work-thumb-wrap {
+    aspect-ratio: 4/4.5;
+    overflow: hidden;
+    background: var(--night-2);
+    position: relative;
+  }
+  .work-thumb-wrap.portrait-tall {
+    aspect-ratio: 4/5.5;
+  }
+  .work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform .5s cubic-bezier(.2,.7,.2,1);
+  }
+  .work-card:hover img {
+    transform: scale(1.035);
+  }
+  .work-card-info {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--card-white);
+  }
+  .work-card-info .top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .work-card-info .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--vermilion);
+    font-weight: 600;
+  }
+  .work-card-info .year {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+  .work-card-info h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .work-card-info .spec {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ================= CURRICULUM VITAE ================= */
+  .cv-section {
+    background: var(--parchment-2);
+    padding: 100px 0;
+  }
+  .cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 36px;
+  }
+  @media (max-width: 880px) {
+    .cv-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .cv-col-head {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--vermilion);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .cv-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .cv-row:last-child { border-bottom: none; }
+  .cv-row .year {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--vermilion);
+    font-weight: 600;
+  }
+  .cv-row .title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+  .cv-row .venue {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .country-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    color: var(--ink-soft);
+    margin-left: 6px;
+    font-weight: 500;
+  }
+
+  /* Academic / Studio highlight card */
+  .formation-card {
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 30px;
+    margin-top: 36px;
+    box-shadow: 0 4px 18px rgba(14, 18, 25, 0.03);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 768px) {
+    .formation-card { grid-template-columns: 1fr; }
+  }
+  .formation-cell h4 {
+    margin: 0 0 6px;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .formation-cell p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ================= FOOTER / CONTACT ================= */
+  footer {
+    background: var(--night);
+    color: #FFFFFF;
+    padding: 96px 0 40px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--line-dark);
+  }
+  @media (max-width: 820px) {
+    .footer-top { grid-template-columns: 1fr; gap: 40px; }
+  }
+  footer h2 {
+    color: #FFFFFF;
+    margin-bottom: 18px;
+  }
+  .footer-lede {
+    font-size: 16.5px;
+    color: rgba(246, 239, 233, 0.8);
+    max-width: 480px;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+  .contact-tile {
+    background: var(--night-2);
+    border: 1px solid var(--line-dark);
+    border-radius: 8px;
+    padding: 32px 30px;
+  }
+  .contact-tile .clabel {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber-soft);
+    margin: 0 0 6px;
+    font-weight: 500;
+  }
+  .contact-tile a.cval {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    transition: color .25s ease;
+  }
+  .contact-tile a.cval:hover {
+    color: var(--amber-soft);
+  }
+  .cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: var(--vermilion);
+    padding: 13px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background .25s ease, transform .2s ease;
+  }
+  .cv-download-btn:hover {
+    background: var(--vermilion-glow);
+    transform: translateY(-1px);
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 32px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    color: rgba(246, 239, 233, 0.5);
+    text-transform: uppercase;
+  }
+
+  /* ================= LIGHTBOX MODAL ================= */
+  .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(14, 18, 25, 0.96);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+  }
+  .lightbox-modal.active { display: flex; }
+  .lightbox-content {
+    position: relative;
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox-content img {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+    border: 1px solid rgba(246, 239, 233, 0.16);
+    border-radius: 4px;
+  }
+  .lightbox-meta {
+    margin-top: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: -44px; right: 0;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    padding: 6px;
+    text-transform: uppercase;
+  }
+  .lightbox-close:hover { color: var(--amber-soft); }
+
+  /* ================= REVEAL ON SCROLL ================= */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .scroll-cue .line { animation: none; }
+  }
+
+  /* Responsive refinements */
+  @media (max-width: 960px) {
+    .facts-grid { grid-template-columns: repeat(2, 1fr); }
+    .facts-grid .fact-cell:nth-child(2) { border-right: none; }
+    .facts-grid .fact-cell:nth-child(1), .facts-grid .fact-cell:nth-child(2) { border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 520px) {
+    .facts-grid { grid-template-columns: 1fr; }
+    .facts-grid .fact-cell { border-right: none; border-bottom: 1px solid var(--line); }
+    .facts-grid .fact-cell:last-child { border-bottom: none; }
+  }
+  @media (max-width: 768px) {
+    .wrap { padding: 0 20px; }
+    .hero-inner { padding: 0 20px 48px; }
+    .site-nav { padding: 16px 20px; }
+    .site-nav.scrolled { padding: 12px 20px; }
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    section { padding: 68px 0; }
+    .scroll-cue { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="site-nav" id="siteNav">
+  <a href="#" class="brand">Sohel Rana</a>
+  <ul class="nav-links">
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#statement">Statement</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#cv">Exhibitions</a></li>
+    <li><a href="#camps">Camps</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  </button>
+</nav>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#statement">Statement</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#cv">Exhibitions</a></li>
+    <li><a href="#camps">Camps</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <img class="hero-bg" src="artworks/The Evening Lamp.png" alt="The Evening Lamp by Sohel Rana">
+  <div class="hero-inner">
+    <div class="hero-status">
+      <span class="glow-dot"></span>
+      Visual Artist · Ramna, Dhaka · 2026 Portfolio
+    </div>
+    <h1>Sohel <em>Rana</em></h1>
+    <p class="hero-sub">Exploring quiet, inward moments, dusk lamps, and the poetic geometry of domestic life through fluid ink and watercolour washes.</p>
+    <div class="hero-meta">
+      <span>Studio in Ramna, Dhaka</span>
+      <span>Watercolour &amp; Ink on Paper</span>
+      <span>Exhibitions in Bangladesh, Malaysia &amp; Nepal</span>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- ============ PROFILE ============ -->
+<section id="profile">
+  <div class="wrap">
+    <div class="eyebrow reveal">Artist Profile</div>
+
+    <div class="profile-grid">
+      <!-- Portrait Card -->
+      <div class="portrait-card reveal">
+        <img class="portrait-img" src="profile.png" alt="Sohel Rana — Portrait">
+        <div class="portrait-caption">
+          <strong>Sohel Rana</strong>
+          <span>Visual Artist · Painter</span>
+        </div>
+      </div>
+
+      <!-- Bio Column -->
+      <div class="profile-body reveal">
+        <p class="lede">
+          <span class="drop">S</span>ohel Rana is a Bangladeshi visual artist working from his studio in Ramna, Dhaka, whose practice focuses on expressive watercolour painting and the intimate poetry of everyday life.
+        </p>
+
+        <div class="profile-bio">
+          <p>
+            He has participated in prominent group exhibitions and art camps across Bangladesh and internationally, including exhibitions in Malaysia and Nepal. Working with delicate pigment washes and expressive calligraphic ink lines, his work concentrates on the quiet interior worlds of women, the domestic atmosphere of dusk, and the emotive resonance of memory.
+          </p>
+          <p>
+            His paintings capture moments suspended between labour and rest, contemplation and observation: a solitary figure lighting a diya, a glance away from the world, or a contemplative pause enveloped in warm vermilion and deep shadow.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Facts Grid -->
+    <div class="facts-grid reveal">
+      <div class="fact-cell">
+        <div class="flabel">Nationality</div>
+        <div class="fval">Bangladeshi</div>
+      </div>
+      <div class="fact-cell">
+        <div class="flabel">Studio Location</div>
+        <div class="fval">Ramna, Dhaka, Bangladesh</div>
+      </div>
+      <div class="fact-cell">
+        <div class="flabel">Primary Media</div>
+        <div class="fval">Watercolour &amp; Ink on Paper</div>
+      </div>
+      <div class="fact-cell">
+        <div class="flabel">Key Focus</div>
+        <div class="fval">Expressive Portraiture &amp; Mood</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Minimal Ornament Divider -->
+<div class="ornament-divider">
+  <div class="ornament-line"></div>
+  <div class="ornament-glyph">◈ ARTIST STATEMENT ◈</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- ============ STATEMENT (DARK NOCTURNE) ============ -->
+<section id="statement" class="statement-section">
+  <div class="wrap">
+    <div class="eyebrow light reveal">Philosophy &amp; Vision</div>
+    <h2 class="reveal">Inward Moments, Light &amp; Shadow</h2>
+
+    <div class="statement-quote-box reveal">
+      <blockquote>
+        “My paintings explore quiet, inward moments in the lives of women: <em>a lamp lit at dusk</em>, a contemplative pause, or a glance away from the world. Working with expressive ink lines and fluid, transparent watercolour washes, I allow colour to bloom, bleed and settle on the paper. Through <em>warm vermilion, indigo, green and deep shadow</em>, I seek an atmosphere of memory, emotion and the poetry of domestic life.”
+      </blockquote>
+    </div>
+
+    <!-- 4 Creative Pillars -->
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <span class="pnum">01 // SOLITUDE</span>
+        <h4>Inward Contemplation</h4>
+        <p>Quiet glances, silent afternoons, and psychological spaces untouched by external distraction.</p>
+      </div>
+
+      <div class="pillar-card reveal">
+        <span class="pnum">02 // ILLUMINATION</span>
+        <h4>The Evening Lamp</h4>
+        <p>The warm luminescence of the diya against the darkening evening interior and quiet ritual.</p>
+      </div>
+
+      <div class="pillar-card reveal">
+        <span class="pnum">03 // MATERIALITY</span>
+        <h4>Fluid Bleeds &amp; Washes</h4>
+        <p>Letting pigments bloom and settle naturally on paper, balancing delicate line and saturated tone.</p>
+      </div>
+
+      <div class="pillar-card reveal">
+        <span class="pnum">04 // SYMBOLISM</span>
+        <h4>Bindu &amp; Sindoor</h4>
+        <p>Cultural motifs, lotus petals, and red pigments representing heritage, identity, and inner consciousness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELECTED WORKS ============ -->
+<section id="works" class="works-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Selected Works · 2026</div>
+      <h2 class="reveal">Watercolour &amp; Ink Portfolio</h2>
+      <p class="section-note reveal">
+        A curated suite of original watercolour paintings exploring intimate portraiture, dusk illumination, and atmospheric colour.
+      </p>
+    </div>
+
+    <!-- Gallery Grid of 6 Artworks -->
+    <div class="gallery-grid">
+      <!-- 01 The Evening Lamp -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/The Evening Lamp.png', 'The Evening Lamp', '2026 · Watercolour on Paper · 56 × 38 cm')">
+        <div class="work-thumb-wrap portrait-tall">
+          <img src="artworks/The Evening Lamp.png" alt="The Evening Lamp by Sohel Rana">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">01 // FEATURED</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>The Evening Lamp</h3>
+          <div class="spec">Watercolour on Paper · 56 × 38 cm</div>
+        </div>
+      </div>
+
+      <!-- 02 Silent Afternoon -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Silent Afternoon.png', 'Silent Afternoon', '2026 · Watercolour on Paper · 38 × 56 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Silent Afternoon.png" alt="Silent Afternoon by Sohel Rana">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">02 // PAINTING</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Silent Afternoon</h3>
+          <div class="spec">Watercolour on Paper · 38 × 56 cm</div>
+        </div>
+      </div>
+
+      <!-- 03 Lotus Reverie -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Lotus Reverie.png', 'Lotus Reverie', '2026 · Watercolour on Paper · 38 × 28 cm')">
+        <div class="work-thumb-wrap portrait-tall">
+          <img src="artworks/Lotus Reverie.png" alt="Lotus Reverie by Sohel Rana">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">03 // PAINTING</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Lotus Reverie</h3>
+          <div class="spec">Watercolour on Paper · 38 × 28 cm</div>
+        </div>
+      </div>
+
+      <!-- 04 Bindu -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Bindu.png', 'Bindu', '2026 · Watercolour on Paper · 36 × 36 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Bindu.png" alt="Bindu by Sohel Rana">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">04 // PAINTING</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Bindu</h3>
+          <div class="spec">Watercolour on Paper · 36 × 36 cm</div>
+        </div>
+      </div>
+
+      <!-- 05 Twilight Veil -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Twilight Veil.png', 'Twilight Veil', '2026 · Watercolour on Paper · 36 × 36 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Twilight Veil.png" alt="Twilight Veil by Sohel Rana">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">05 // PAINTING</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Twilight Veil</h3>
+          <div class="spec">Watercolour on Paper · 36 × 36 cm</div>
+        </div>
+      </div>
+
+      <!-- 06 Sindoor -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Sindoor.png', 'Sindoor', '2026 · Watercolour on Paper · 36 × 36 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Sindoor.png" alt="Sindoor by Sohel Rana">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">06 // PAINTING</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Sindoor</h3>
+          <div class="spec">Watercolour on Paper · 36 × 36 cm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Minimal Ornament Divider -->
+<div class="ornament-divider">
+  <div class="ornament-line"></div>
+  <div class="ornament-glyph">◈ EXHIBITION HISTORY ◈</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- ============ EXHIBITIONS & CV ============ -->
+<section id="cv" class="cv-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Curriculum Vitae</div>
+      <h2 class="reveal">Exhibitions &amp; Residencies</h2>
+    </div>
+
+    <div class="cv-grid">
+      <!-- International -->
+      <div class="reveal">
+        <div class="cv-col-head">International Exhibitions</div>
+        <div class="cv-row">
+          <div class="year">2025</div>
+          <div>
+            <div class="title">Pink Jambu 2.0 — Malaysia International Art Exhibition <span class="country-tag">Malaysia</span></div>
+            <div class="venue">CMTHub Gallery, UiTM Shah Alam · Malaysia</div>
+          </div>
+        </div>
+        <div class="cv-row">
+          <div class="year">2025</div>
+          <div>
+            <div class="title">Dreamscape Nepal '25 — Nepal International Art Exhibition <span class="country-tag">Nepal</span></div>
+            <div class="venue">Zobra the Art Village &amp; Dot to Line · Kathmandu, Nepal</div>
+          </div>
+        </div>
+        <div class="cv-row">
+          <div class="year">2025</div>
+          <div>
+            <div class="title">Nepal International Art Exhibition 2025 <span class="country-tag">Nepal</span></div>
+            <div class="venue">Chandra Man Singh Maskey Gallery, Nepal Academy of Fine Arts · Kathmandu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- National & Group -->
+      <div class="reveal">
+        <div class="cv-col-head">National &amp; Group Exhibitions</div>
+        <div class="cv-row">
+          <div class="year">2024</div>
+          <div>
+            <div class="title">Shilpa Sandhan — Group Exhibition</div>
+            <div class="venue">Organised by Zobra the Art Village &amp; Dot to Line · Dhaka, Bangladesh</div>
+          </div>
+        </div>
+        <div class="cv-row">
+          <div class="year">2023</div>
+          <div>
+            <div class="title">Winter Art Festival</div>
+            <div class="venue">Cox's Bazar Cultural Centre · Cox's Bazar, Bangladesh</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKSHOPS & CAMPS ============ -->
+<section id="camps">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Professional Engagement</div>
+      <h2 class="reveal">Workshops &amp; Art Camps</h2>
+    </div>
+
+    <div class="formation-card reveal">
+      <div class="formation-cell">
+        <h4>Prokriteer Sannirdhe Art Camp</h4>
+        <p><strong>2025</strong> · Koitta, Manikganj, Bangladesh — Nature-immersion art camp exploring rural landscape and plein-air painting.</p>
+      </div>
+
+      <div class="formation-cell">
+        <h4>Shilpa Shandhan Art Camp</h4>
+        <p><strong>2024</strong> · Hijol Tomal Resort, Gazipur, Bangladesh — Contemporary collaborative workshop on watercolor and expression.</p>
+      </div>
+
+      <div class="formation-cell">
+        <h4>Chitra Pare Sultan Art Camp</h4>
+        <p><strong>2024</strong> · Ontre Bangla, Narail, Bangladesh — Tributes to S. M. Sultan and creative residency in Narail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <h2>Connect with the Studio.</h2>
+        <p class="footer-lede">
+          Open to gallery representation, group and solo exhibitions, curatorial projects, commissions, and international art camp invitations.
+        </p>
+      </div>
+
+      <div class="contact-tile">
+        <div class="clabel">Direct Mobile / WhatsApp</div>
+        <a class="cval" href="tel:01926762739">01926762739</a>
+
+        <div class="clabel">Email Inquiries</div>
+        <a class="cval" href="mailto:info@sohelart.org">info@sohelart.org</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© Sohel Rana</span>
+      <span>Visual Artist · Ramna, Dhaka, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox Modal Container -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightboxDirect()">✕ Close</button>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-meta" id="lightboxMeta"></div>
+  </div>
+</div>
+
+<script>
+  // Sticky nav background on scroll
+  var nav = document.getElementById('siteNav');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
+  }, {passive:true});
+
+  // Mobile menu toggle
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(navToggle && mobileMenu){
+    navToggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      mobileMenu.classList.toggle('open');
+    });
+    // Close mobile menu on clicking any link
+    var mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(function(link){
+      link.addEventListener('click', function(){
+        mobileMenu.classList.remove('open');
+      });
+    });
+    // Close on outside click
+    document.addEventListener('click', function(e){
+      if(!mobileMenu.contains(e.target) && !navToggle.contains(e.target)){
+        mobileMenu.classList.remove('open');
+      }
+    });
+  }
+
+  // Scroll reveal
+  if('IntersectionObserver' in window){
+    var els = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:"0px 0px -40px 0px"});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  // Lightbox functions
+  var modal = document.getElementById('lightboxModal');
+  var modalImg = document.getElementById('lightboxImg');
+  var modalMeta = document.getElementById('lightboxMeta');
+
+  function openLightbox(src, title, details){
+    if(!modal || !modalImg || !modalMeta) return;
+    modalImg.src = src;
+    modalImg.alt = title;
+    modalMeta.innerHTML = '<strong>' + title + '</strong> — ' + details;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e){
+    if(e.target === modal){
+      closeLightboxDirect();
+    }
+  }
+
+  function closeLightboxDirect(){
+    if(!modal) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      closeLightboxDirect();
+      if(mobileMenu) mobileMenu.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>

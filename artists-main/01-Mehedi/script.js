@@ -4,9 +4,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Mobile Navigation Toggle
+    // 1. Mobile Navigation Toggle & Dropdowns
     const navToggleBtn = document.getElementById('nav-toggle-btn');
     const navLinks = document.getElementById('nav-links');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
     
     if (navToggleBtn && navLinks) {
         navToggleBtn.addEventListener('click', () => {
@@ -18,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu on link click
-        navLinks.querySelectorAll('a').forEach(link => {
+        // Close menu on link click (direct links)
+        navLinks.querySelectorAll('a:not(.dropdown-item)').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                document.querySelectorAll('.nav-item-dropdown').forEach(d => d.classList.remove('open'));
                 const icon = navToggleBtn.querySelector('i');
                 if (icon) {
                     icon.classList.add('fa-bars');
@@ -31,9 +34,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Dropdown toggle click logic (works for touch/mobile and keyboard)
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = toggle.closest('.nav-item-dropdown');
+            const isOpen = parent.classList.contains('open');
+            
+            // Close all other dropdowns
+            document.querySelectorAll('.nav-item-dropdown').forEach(d => {
+                if (d !== parent) {
+                    d.classList.remove('open');
+                    d.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            parent.classList.toggle('open', !isOpen);
+            toggle.setAttribute('aria-expanded', !isOpen);
+        });
+    });
+
+    // Close dropdown on dropdown item click
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.nav-item-dropdown').forEach(d => {
+                d.classList.remove('open');
+                d.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+            });
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = navToggleBtn?.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                }
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-item-dropdown')) {
+            document.querySelectorAll('.nav-item-dropdown').forEach(d => {
+                d.classList.remove('open');
+                d.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
+
     // 2. Active Section Highlighting on Scroll
     const sections = document.querySelectorAll('section[id]');
-    const navItems = document.querySelectorAll('.nav-link');
+    const allNavAnchors = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
 
     function highlightNavOnScroll() {
         const scrollY = window.scrollY;
@@ -44,10 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionId = current.getAttribute('id');
 
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${sectionId}`) {
+                // Clear active states
+                allNavAnchors.forEach(item => item.classList.remove('active'));
+                document.querySelectorAll('.dropdown-toggle').forEach(btn => btn.classList.remove('active'));
+
+                // Find matching anchor
+                allNavAnchors.forEach(item => {
+                    const href = item.getAttribute('href') || '';
+                    if (href === `#${sectionId}` || href.endsWith(`#${sectionId}`)) {
                         item.classList.add('active');
+                        // If item is inside a dropdown, highlight parent toggle too
+                        const parentDropdown = item.closest('.nav-item-dropdown');
+                        if (parentDropdown) {
+                            parentDropdown.querySelector('.dropdown-toggle')?.classList.add('active');
+                        }
                     }
                 });
             }
@@ -114,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Interactive Lightbox Modal (Supports both Artwork Gallery & Memories)
+    // 4. Interactive Lightbox Modal (Supports Artwork Gallery, Memories & Certificates)
     const lightboxModal = document.getElementById('lightbox-modal');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
@@ -126,15 +188,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxPrev = document.getElementById('lightbox-prev');
     const lightboxNext = document.getElementById('lightbox-next');
 
-    let currentMode = 'gallery'; // 'gallery' | 'memory'
+    let currentMode = 'gallery'; // 'gallery' | 'memory' | 'certificate'
     let currentItemIndex = 0;
 
     const visibleGalleryCards = () => Array.from(document.querySelectorAll('.gallery-card')).filter(card => card.style.display !== 'none');
     const visibleMemoryCards = () => Array.from(document.querySelectorAll('.memory-card')).filter(card => card.style.display !== 'none');
+    const visibleCertCards = () => Array.from(document.querySelectorAll('.cert-card')).filter(card => card.style.display !== 'none');
+
+    const getActiveCards = () => {
+        if (currentMode === 'memory') return visibleMemoryCards();
+        if (currentMode === 'certificate') return visibleCertCards();
+        return visibleGalleryCards();
+    };
 
     function openLightbox(mode, cardIndex) {
         currentMode = mode;
-        const cards = mode === 'memory' ? visibleMemoryCards() : visibleGalleryCards();
+        const cards = getActiveCards();
         if (cardIndex < 0 || cardIndex >= cards.length) return;
 
         currentItemIndex = cardIndex;
@@ -154,6 +223,13 @@ document.addEventListener('DOMContentLoaded', () => {
             year = tag ? `${yr} · ${tag.trim()}` : yr;
             medium = targetCard.querySelector('.memory-subtitle')?.textContent || '';
             desc = targetCard.querySelector('.memory-desc')?.textContent || '';
+        } else if (mode === 'certificate') {
+            title = targetCard.querySelector('.cert-title')?.textContent || '';
+            const yr = targetCard.querySelector('.cert-year')?.textContent || '';
+            const tag = targetCard.querySelector('.cert-tag')?.textContent || '';
+            year = tag ? `${yr} · ${tag.trim()}` : yr;
+            medium = targetCard.querySelector('.cert-issuer')?.textContent?.trim() || '';
+            desc = targetCard.querySelector('.cert-desc')?.textContent || '';
         } else {
             title = targetCard.querySelector('.work-title')?.textContent || '';
             year = targetCard.querySelector('.work-year')?.textContent || '';
@@ -212,6 +288,24 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', triggerOpen);
     });
 
+    // Attach Certificate Card events
+    const certCards = document.querySelectorAll('.cert-card');
+    certCards.forEach((card) => {
+        const zoomBtn = card.querySelector('.cert-zoom-btn');
+        const imgWrapper = card.querySelector('.cert-image-wrapper');
+
+        const triggerOpen = (e) => {
+            e.stopPropagation();
+            const cards = visibleCertCards();
+            const idx = cards.indexOf(card);
+            openLightbox('certificate', idx >= 0 ? idx : 0);
+        };
+
+        if (zoomBtn) zoomBtn.addEventListener('click', triggerOpen);
+        if (imgWrapper) imgWrapper.addEventListener('click', triggerOpen);
+        card.addEventListener('click', triggerOpen);
+    });
+
     // Spotlight trigger button
     const spotlightTrigger = document.getElementById('spotlight-zoom-trigger');
     if (spotlightTrigger) {
@@ -225,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (lightboxPrev) {
         lightboxPrev.addEventListener('click', () => {
-            const cards = currentMode === 'memory' ? visibleMemoryCards() : visibleGalleryCards();
+            const cards = getActiveCards();
             if (cards.length === 0) return;
             currentItemIndex = (currentItemIndex - 1 + cards.length) % cards.length;
             openLightbox(currentMode, currentItemIndex);
@@ -234,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (lightboxNext) {
         lightboxNext.addEventListener('click', () => {
-            const cards = currentMode === 'memory' ? visibleMemoryCards() : visibleGalleryCards();
+            const cards = getActiveCards();
             if (cards.length === 0) return;
             currentItemIndex = (currentItemIndex + 1) % cards.length;
             openLightbox(currentMode, currentItemIndex);

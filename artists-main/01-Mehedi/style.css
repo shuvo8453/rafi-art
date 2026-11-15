@@ -1108,6 +1108,11 @@ ul {
 /* ==========================================
    MEMORIES & GLOBAL ENGAGEMENTS SECTION
    ========================================== */
+/* Hide the archive and its entry points without reserving layout space. */
+.memories-hidden {
+    display: none !important;
+}
+
 .memories-section {
     position: relative;
     background-color: var(--clr-bg-alt);
@@ -2136,7 +2141,7 @@ ul {
 /* Career Highlights Strip */
 .career-strip-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
 }

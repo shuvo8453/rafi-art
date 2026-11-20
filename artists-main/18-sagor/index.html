@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saiful Islam Sagor — Visual Artist &amp; Curator | Dhaka, Bangladesh</title>
+<meta name="description" content="Saiful Islam Sagor is a Bangladeshi visual artist and curator at the National Sculpture Gallery, working across fine art, sculpture, and material-based studio practice.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* Palette: Nocturne, Terracotta & Warm Parchment */
+    --night: #0E1219;
+    --night-2: #151B26;
+    --night-card: #1D2534;
+    --vermilion: #C84630;
+    --vermilion-glow: #E0533C;
+    --amber: #DE9B3E;
+    --amber-soft: #F0B35C;
+    --emerald-deep: #254B44;
+    --parchment: #F6EFE9;
+    --parchment-2: #ECE1D6;
+    --card-white: #FFFFFF;
+    --ink: #171A21;
+    --ink-soft: #3E4652;
+    --ink-muted: #6B7584;
+    --line: rgba(23, 26, 33, 0.12);
+    --line-subtle: rgba(23, 26, 33, 0.06);
+    --line-dark: rgba(246, 239, 233, 0.14);
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+
+    --maxw: 1180px;
+    --nav-h: 74px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  ::selection { background: var(--vermilion); color: #FFF; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--vermilion);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Eyebrows */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 16px;
+    font-weight: 500;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 20px;
+    height: 1.5px;
+    background: var(--vermilion);
+    display: inline-block;
+  }
+  .eyebrow.light {
+    color: var(--amber-soft);
+  }
+  .eyebrow.light::before {
+    background: var(--amber-soft);
+  }
+
+  /* Section Spacing & Titles */
+  section {
+    padding: 100px 0;
+    position: relative;
+  }
+  .section-head {
+    max-width: 760px;
+    margin-bottom: 50px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(34px, 4.4vw, 52px);
+    margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  /* Decorative Line Divider */
+  .ornament-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 16px 32px;
+  }
+  .ornament-line {
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .ornament-glyph {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--vermilion);
+    letter-spacing: 0.25em;
+  }
+
+  /* ================= NAVBAR ================= */
+  .site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(246, 239, 233, 0);
+    transition: background .35s ease, box-shadow .35s ease, padding .35s ease;
+    backdrop-filter: blur(0px);
+  }
+  .site-nav.scrolled {
+    background: rgba(246, 239, 233, 0.95);
+    box-shadow: 0 4px 24px rgba(14, 18, 25, 0.06), 0 1px 0 var(--line);
+    padding: 14px 36px;
+    backdrop-filter: blur(12px);
+  }
+  .site-nav .brand {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color .35s ease;
+  }
+  .site-nav .brand::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--vermilion);
+    box-shadow: 0 0 8px var(--vermilion);
+    display: inline-block;
+  }
+  .site-nav.scrolled .brand {
+    color: var(--ink);
+  }
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.88);
+    position: relative;
+    padding: 4px 0;
+    transition: color .25s ease;
+    font-weight: 500;
+  }
+  .nav-links a:hover {
+    color: var(--amber-soft);
+  }
+  .site-nav.scrolled .nav-links a {
+    color: var(--ink-soft);
+  }
+  .site-nav.scrolled .nav-links a:hover {
+    color: var(--vermilion);
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 100%; bottom: -1px;
+    height: 2px;
+    background: var(--amber-soft);
+    transition: right .25s ease;
+  }
+  .site-nav.scrolled .nav-links a::after {
+    background: var(--vermilion);
+  }
+  .nav-links a:hover::after { right: 0; }
+
+  /* Mobile menu button & drawer */
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: #FFFFFF;
+    transition: color .3s ease;
+  }
+  .site-nav.scrolled .nav-toggle {
+    color: var(--ink);
+  }
+  .nav-toggle svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 56px; left: 0; right: 0;
+    background: rgba(246, 239, 233, 0.98);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    padding: 24px 30px;
+    z-index: 99;
+    box-shadow: 0 16px 36px rgba(14, 18, 25, 0.14);
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: var(--mono);
+    font-size: 13.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--ink);
+    display: block;
+    padding: 6px 0;
+  }
+  .mobile-menu a:hover {
+    color: var(--vermilion);
+  }
+
+  /* ================= HERO ================= */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--night);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0.58;
+    filter: contrast(1.08) brightness(0.85);
+    transform: scale(1.02);
+    transition: transform 9s ease-out;
+  }
+  .hero:hover .hero-bg {
+    transform: scale(1.05);
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14,18,25,0.25) 0%, rgba(14,18,25,0.7) 55%, rgba(14,18,25,0.97) 100%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 36px 72px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    color: #FFFFFF;
+  }
+  .hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(222, 155, 62, 0.14);
+    border: 1px solid rgba(222, 155, 62, 0.35);
+    border-radius: 999px;
+    padding: 5px 15px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber-soft);
+    margin-bottom: 22px;
+  }
+  .hero-status .glow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber-soft);
+    box-shadow: 0 0 8px var(--amber-soft);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(48px, 8.5vw, 110px);
+    line-height: 0.94;
+    margin: 0 0 24px;
+    letter-spacing: -0.015em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--amber-soft);
+    font-weight: 400;
+  }
+  .hero-sub {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: clamp(16px, 2vw, 20px);
+    max-width: 680px;
+    line-height: 1.6;
+    color: rgba(246, 239, 233, 0.9);
+    margin: 0;
+  }
+  .hero-meta {
+    margin-top: 36px;
+    display: flex;
+    gap: 20px 28px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(246, 239, 233, 0.75);
+  }
+  .hero-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-meta span::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--vermilion);
+  }
+  .scroll-cue {
+    position: absolute;
+    right: 36px;
+    bottom: 34px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(246, 239, 233, 0.6);
+    writing-mode: vertical-rl;
+  }
+  .scroll-cue .line {
+    width: 1px;
+    height: 44px;
+    background: rgba(246, 239, 233, 0.4);
+    animation: cue 2.4s ease-in-out infinite;
+  }
+  @keyframes cue { 0%,100%{opacity:.25} 50%{opacity:1} }
+
+  /* ================= PROFILE ================= */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 56px;
+    align-items: start;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 860px) {
+    .profile-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .portrait-card {
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(14, 18, 25, 0.06);
+  }
+  .portrait-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform .4s ease;
+  }
+  .portrait-card:hover .portrait-img {
+    transform: scale(1.02);
+  }
+  .portrait-caption {
+    padding: 16px 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--card-white);
+  }
+  .portrait-caption strong {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .portrait-caption span {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    font-weight: 500;
+  }
+
+  .profile-body .lede {
+    font-family: var(--serif);
+    font-size: clamp(23px, 2.6vw, 32px);
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0 0 24px;
+  }
+  .profile-body .lede .drop {
+    font-size: 1.4em;
+    color: var(--vermilion);
+    font-style: italic;
+    margin-right: 2px;
+  }
+  .profile-bio p {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    font-weight: 300;
+  }
+
+  /* Fact Sheet */
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-top: 44px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(14, 18, 25, 0.03);
+  }
+  .facts-grid .fact-cell {
+    padding: 24px 22px;
+    border-right: 1px solid var(--line);
+  }
+  .facts-grid .fact-cell:last-child { border-right: none; }
+  .fact-cell .flabel {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .fact-cell .fval {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+
+  /* ================= EXPERIENCE / CURATORIAL ================= */
+  .experience-section {
+    background: var(--parchment-2);
+    padding: 100px 0;
+  }
+  .exp-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .exp-item {
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--vermilion);
+    border-radius: 6px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(14, 18, 25, 0.03);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .exp-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(14, 18, 25, 0.06);
+  }
+  .exp-item.current {
+    border-left-color: var(--amber);
+    background: #FCFAF7;
+  }
+  .exp-role-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .exp-badge {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    font-weight: 600;
+  }
+  .exp-item.current .exp-badge {
+    color: var(--amber);
+  }
+  .exp-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .exp-inst {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  .exp-desc {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .exp-item {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 20px 22px;
+    }
+  }
+
+  /* ================= STATEMENT (DARK NOCTURNE) ================= */
+  .statement-section {
+    background: var(--night);
+    color: #FFFFFF;
+    padding: 104px 0;
+  }
+  .statement-section h2 { color: #FFFFFF; }
+  .statement-quote-box {
+    background: var(--night-2);
+    border: 1px solid var(--line-dark);
+    border-left: 4px solid var(--vermilion);
+    border-radius: 0 8px 8px 0;
+    padding: 36px 40px;
+    margin-bottom: 52px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+  .statement-quote-box blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(21px, 2.5vw, 29px);
+    line-height: 1.48;
+    color: #FFFFFF;
+    font-style: italic;
+  }
+  .statement-quote-box blockquote em {
+    color: var(--amber-soft);
+    font-style: normal;
+  }
+
+  /* 4 Pillars */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 900px) {
+    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+  }
+  .pillar-card {
+    background: var(--night-2);
+    border: 1px solid var(--line-dark);
+    border-radius: 6px;
+    padding: 22px 20px;
+    transition: transform .25s ease, border-color .25s ease;
+  }
+  .pillar-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--amber);
+  }
+  .pillar-card .pnum {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--amber-soft);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .pillar-card h4 {
+    margin: 0 0 8px;
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .pillar-card p {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: rgba(246, 239, 233, 0.7);
+  }
+
+  /* ================= SELECTED WORKS ================= */
+  .works-section {
+    background: var(--parchment);
+    padding: 104px 0;
+  }
+  .works-section .section-note {
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 600px;
+    margin-top: 14px;
+    font-weight: 300;
+  }
+
+  /* Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+  }
+  @media (max-width: 960px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 620px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+  }
+  .work-card {
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(14, 18, 25, 0.04);
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  }
+  .work-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--vermilion);
+    box-shadow: 0 16px 36px rgba(200, 70, 48, 0.12);
+  }
+  .work-thumb-wrap {
+    aspect-ratio: 4/4.5;
+    overflow: hidden;
+    background: var(--night-2);
+    position: relative;
+  }
+  .work-thumb-wrap.portrait-tall {
+    aspect-ratio: 4/5.5;
+  }
+  .work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform .5s cubic-bezier(.2,.7,.2,1);
+  }
+  .work-card:hover img {
+    transform: scale(1.035);
+  }
+  .work-card-info {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--card-white);
+  }
+  .work-card-info .top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .work-card-info .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--vermilion);
+    font-weight: 600;
+  }
+  .work-card-info .year {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+  .work-card-info h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .work-card-info .spec {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ================= CURRICULUM VITAE ================= */
+  .cv-section {
+    background: var(--parchment-2);
+    padding: 100px 0;
+  }
+  .cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 36px;
+  }
+  @media (max-width: 880px) {
+    .cv-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .cv-col-head {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--vermilion);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .cv-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .cv-row:last-child { border-bottom: none; }
+  .cv-row .year {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--vermilion);
+    font-weight: 600;
+  }
+  .cv-row .title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+  .cv-row .venue {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .cv-row .venue-text {
+    font-size: 15.5px;
+    color: var(--ink);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .cv-sub-header {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: -4px 0 20px;
+    line-height: 1.4;
+  }
+  .cv-row .venues-list {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .country-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    color: var(--ink-soft);
+    margin-left: 6px;
+    font-weight: 500;
+  }
+
+  /* Academic / Studio highlight card */
+  .formation-card {
+    background: var(--card-white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 30px;
+    margin-top: 36px;
+    box-shadow: 0 4px 18px rgba(14, 18, 25, 0.03);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 768px) {
+    .formation-card { grid-template-columns: 1fr; }
+  }
+  .formation-cell h4 {
+    margin: 0 0 6px;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .formation-cell p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ================= FOOTER / CONTACT ================= */
+  footer {
+    background: var(--night);
+    color: #FFFFFF;
+    padding: 96px 0 40px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--line-dark);
+  }
+  @media (max-width: 820px) {
+    .footer-top { grid-template-columns: 1fr; gap: 40px; }
+  }
+  footer h2 {
+    color: #FFFFFF;
+    margin-bottom: 18px;
+  }
+  .footer-lede {
+    font-size: 16.5px;
+    color: rgba(246, 239, 233, 0.8);
+    max-width: 480px;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+  .contact-tile {
+    background: var(--night-2);
+    border: 1px solid var(--line-dark);
+    border-radius: 8px;
+    padding: 32px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact-tile .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .contact-tile .clabel {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber-soft);
+    font-weight: 500;
+  }
+  .contact-tile a.cval {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    transition: color .25s ease;
+  }
+  .contact-tile a.cval:hover {
+    color: var(--amber-soft);
+  }
+  .cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: var(--vermilion);
+    padding: 13px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    width: fit-content;
+    transition: background .25s ease, transform .2s ease;
+  }
+  .cv-download-btn:hover {
+    background: var(--vermilion-glow);
+    transform: translateY(-1px);
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 32px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    color: rgba(246, 239, 233, 0.5);
+    text-transform: uppercase;
+  }
+
+  /* ================= LIGHTBOX MODAL ================= */
+  .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(14, 18, 25, 0.96);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+  }
+  .lightbox-modal.active { display: flex; }
+  .lightbox-content {
+    position: relative;
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox-content img {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+    border: 1px solid rgba(246, 239, 233, 0.16);
+    border-radius: 4px;
+  }
+  .lightbox-meta {
+    margin-top: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: -44px; right: 0;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    padding: 6px;
+    text-transform: uppercase;
+  }
+  .lightbox-close:hover { color: var(--amber-soft); }
+
+  /* ================= REVEAL ON SCROLL ================= */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .scroll-cue .line { animation: none; }
+  }
+
+  /* Responsive refinements */
+  @media (max-width: 960px) {
+    .facts-grid { grid-template-columns: repeat(2, 1fr); }
+    .facts-grid .fact-cell:nth-child(2) { border-right: none; }
+    .facts-grid .fact-cell:nth-child(1), .facts-grid .fact-cell:nth-child(2) { border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 520px) {
+    .facts-grid { grid-template-columns: 1fr; }
+    .facts-grid .fact-cell { border-right: none; border-bottom: 1px solid var(--line); }
+    .facts-grid .fact-cell:last-child { border-bottom: none; }
+  }
+  @media (max-width: 768px) {
+    .wrap { padding: 0 20px; }
+    .hero-inner { padding: 0 20px 48px; }
+    .site-nav { padding: 16px 20px; }
+    .site-nav.scrolled { padding: 12px 20px; }
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    section { padding: 68px 0; }
+    .scroll-cue { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="site-nav" id="siteNav">
+  <a href="#" class="brand">Saiful Islam Sagor</a>
+  <ul class="nav-links">
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#statement">Statement</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#cv">Exhibitions</a></li>
+    <li><a href="#engagement">Engagement</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  </button>
+</nav>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#statement">Statement</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#cv">Exhibitions</a></li>
+    <li><a href="#engagement">Engagement</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <img class="hero-bg" src="artworks/The Evening Lamp.png" alt="Curated Artwork by Saiful Islam Sagor">
+  <div class="hero-inner">
+    <div class="hero-status">
+      <span class="glow-dot"></span>
+      Visual Artist &amp; Curator · National Sculpture Gallery · 2026 Portfolio
+    </div>
+    <h1>Saiful Islam <em>Sagor</em></h1>
+    <p class="hero-sub">Bangladeshi visual artist and curator working across fine art, sculpture, and material-based studio practice — bridging tactile studio experimentation with curatorial engagement.</p>
+    <div class="hero-meta">
+      <span>National Sculpture Gallery, Bangladesh</span>
+      <span>Fine Art &amp; Material Practice</span>
+      <span>Nepal · Sri Lanka · Indonesia · Bangladesh</span>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- ============ PROFILE ============ -->
+<section id="profile">
+  <div class="wrap">
+    <div class="eyebrow reveal">Artist Profile</div>
+
+    <div class="profile-grid">
+      <!-- Portrait Card -->
+      <div class="portrait-card reveal">
+        <img class="portrait-img" src="profile.jpeg" alt="Saiful Islam Sagor — Portrait">
+        <div class="portrait-caption">
+          <strong>Saiful Islam Sagor</strong>
+          <span>Visual Artist &amp; Curator</span>
+        </div>
+      </div>
+
+      <!-- Bio Column -->
+      <div class="profile-body reveal">
+        <p class="lede">
+          <span class="drop">S</span>aiful Islam Sagor is a Bangladeshi visual artist and curator working across fine art, sculpture, and material-based studio practice, currently serving at the National Sculpture Gallery, Bangladesh.
+        </p>
+
+        <div class="profile-bio">
+          <p>
+            His artistic activity encompasses solo and group exhibitions, selected international art expositions, artist workshops, and community-based engagements. Having participated in major platforms across Nepal, Sri Lanka, Indonesia, and Bangladesh, his studio practice is driven by deep tactile sensitivity and continuous experimentation with raw materials.
+          </p>
+          <p>
+            Alongside his personal creative oeuvre, his curatorial leadership spans key institutions including the National Sculpture Gallery, Samdani Art Foundation, Bengal Foundation, Gallery Cosmos, and Drik — fostering cross-cultural artistic exchange, exhibition production, and public dialogue in contemporary visual art.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Facts Grid -->
+    <div class="facts-grid reveal">
+      <div class="fact-cell">
+        <div class="flabel">Designation</div>
+        <div class="fval">Visual Artist &amp; Curator</div>
+      </div>
+      <div class="fact-cell">
+        <div class="flabel">Institution</div>
+        <div class="fval">National Sculpture Gallery, Bangladesh</div>
+      </div>
+      <div class="fact-cell">
+        <div class="flabel">Primary Media</div>
+        <div class="fval">Fine Art, Sculpture &amp; Material Exploration</div>
+      </div>
+      <div class="fact-cell">
+        <div class="flabel">International Presence</div>
+        <div class="fval">Nepal · Sri Lanka · Indonesia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Minimal Ornament Divider -->
+<div class="ornament-divider">
+  <div class="ornament-line"></div>
+  <div class="ornament-glyph">◈ PROFESSIONAL EXPERIENCE ◈</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- ============ PROFESSIONAL EXPERIENCE ============ -->
+<section id="experience" class="experience-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Curatorial &amp; Institutional Record</div>
+      <h2 class="reveal">Professional Experience</h2>
+      <p style="font-size: 16px; color: var(--ink-soft); margin-top: 14px; font-weight: 300;">
+        A distinguished career in gallery management, exhibition coordination, and contemporary arts programming across premier institutions in Bangladesh.
+      </p>
+    </div>
+
+    <div class="exp-timeline">
+      <!-- 01 National Sculpture Gallery -->
+      <div class="exp-item current reveal">
+        <div class="exp-role-col">
+          <span class="exp-badge">Current Position</span>
+          <div class="exp-title">Visual Artist &amp; Curator</div>
+          <div class="exp-inst">National Sculpture Gallery, Bangladesh</div>
+        </div>
+        <p class="exp-desc">
+          Directs curatorial strategies, leads sculpture exhibitions, oversees permanent collections, and conducts educational programs bridging three-dimensional contemporary practice with the public.
+        </p>
+      </div>
+
+      <!-- 02 Samdani Art Foundation -->
+      <div class="exp-item reveal">
+        <div class="exp-role-col">
+          <span class="exp-badge">Curatorial Leadership</span>
+          <div class="exp-title">Curatorial Coordinator</div>
+          <div class="exp-inst">Samdani Art Foundation</div>
+        </div>
+        <p class="exp-desc">
+          Supported contemporary art programmes, assisted visiting international curators, and coordinated large-scale logistical operations for major contemporary exhibitions and summits.
+        </p>
+      </div>
+
+      <!-- 03 Bengal Foundation -->
+      <div class="exp-item reveal">
+        <div class="exp-role-col">
+          <span class="exp-badge">Coordination</span>
+          <div class="exp-title">Exhibition Coordinator</div>
+          <div class="exp-inst">Bengal Foundation</div>
+        </div>
+        <p class="exp-desc">
+          Liaised with participating visual artists, coordinated exhibition installations, prepared analytical exhibition literature, and facilitated public engagement sessions.
+        </p>
+      </div>
+
+      <!-- 04 Gallery Cosmos -->
+      <div class="exp-item reveal">
+        <div class="exp-role-col">
+          <span class="exp-badge">Curatorial Practice</span>
+          <div class="exp-title">Curatorial Assistant</div>
+          <div class="exp-inst">Gallery Cosmos</div>
+        </div>
+        <p class="exp-desc">
+          Assisted with seasonal exhibition scheduling, artwork archiving, cataloguing, and comprehensive documentation of permanent and visiting collections.
+        </p>
+      </div>
+
+      <!-- 05 Drik -->
+      <div class="exp-item reveal">
+        <div class="exp-role-col">
+          <span class="exp-badge">Institutional Foundation</span>
+          <div class="exp-title">Gallery Assistant</div>
+          <div class="exp-inst">Drik</div>
+        </div>
+        <p class="exp-desc">
+          Supported high-profile documentary and visual art exhibitions, gaining foundational expertise in gallery operations, spatial lighting, and responsive public presentation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Minimal Ornament Divider -->
+<div class="ornament-divider">
+  <div class="ornament-line"></div>
+  <div class="ornament-glyph">◈ ARTIST STATEMENT ◈</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- ============ STATEMENT (DARK NOCTURNE) ============ -->
+<section id="statement" class="statement-section">
+  <div class="wrap">
+    <div class="eyebrow light reveal">Philosophy &amp; Vision</div>
+    <h2 class="reveal">Materiality, Form &amp; Curatorial Dialogue</h2>
+
+    <div class="statement-quote-box reveal">
+      <blockquote>
+        “My practice explores the tension between <em>material substance, three-dimensional presence, and shared human encounter</em>. Through sculpture, fine art, and tactile experimentation, I interrogate how raw materials hold cultural memory, and how <em>curatorial frameworks activate dialogue</em> between the creative object, architectural space, and the wider community.”
+      </blockquote>
+    </div>
+
+    <!-- 4 Creative Pillars -->
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <span class="pnum">01 // TACTILITY</span>
+        <h4>Material Exploration</h4>
+        <p>Investigating the physical texture, density, and expressive possibilities of organic and raw studio media.</p>
+      </div>
+
+      <div class="pillar-card reveal">
+        <span class="pnum">02 // SPATIALITY</span>
+        <h4>Sculpture &amp; Form</h4>
+        <p>Shaping three-dimensional relationships between sculpted volumes, surrounding light, and the observer's gaze.</p>
+      </div>
+
+      <div class="pillar-card reveal">
+        <span class="pnum">03 // CURATION</span>
+        <h4>Curatorial Engagement</h4>
+        <p>Structuring exhibition narratives that link artist studios, institutional galleries, and diverse public audiences.</p>
+      </div>
+
+      <div class="pillar-card reveal">
+        <span class="pnum">04 // EXCHANGE</span>
+        <h4>Cross-Cultural Exchange</h4>
+        <p>Fostering South Asian and international dialogue through art expos across Nepal, Sri Lanka, and Indonesia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELECTED WORKS ============ -->
+<section id="works" class="works-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Selected Works · 2026</div>
+      <h2 class="reveal">Featured Artworks &amp; Studies</h2>
+      <p class="section-note reveal">
+        A curated suite of works examining contemplative atmosphere, tonal saturation, delicate brushwork, and material resonance.
+      </p>
+    </div>
+
+    <!-- Gallery Grid of 6 Artworks -->
+    <div class="gallery-grid">
+      <!-- 01 The Evening Lamp -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/The Evening Lamp.png', 'The Evening Lamp', '2026 · Watercolour &amp; Mixed Media · 56 × 38 cm')">
+        <div class="work-thumb-wrap portrait-tall">
+          <img src="artworks/The Evening Lamp.png" alt="The Evening Lamp by Saiful Islam Sagor">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">01 // FEATURED</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>The Evening Lamp</h3>
+          <div class="spec">Watercolour &amp; Mixed Media · 56 × 38 cm</div>
+        </div>
+      </div>
+
+      <!-- 02 Silent Afternoon -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Silent Afternoon.png', 'Silent Afternoon', '2026 · Composition on Paper · 38 × 56 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Silent Afternoon.png" alt="Silent Afternoon by Saiful Islam Sagor">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">02 // STUDY</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Silent Afternoon</h3>
+          <div class="spec">Composition on Paper · 38 × 56 cm</div>
+        </div>
+      </div>
+
+      <!-- 03 Lotus Reverie -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Lotus Reverie.png', 'Lotus Reverie', '2026 · Material Study · 38 × 28 cm')">
+        <div class="work-thumb-wrap portrait-tall">
+          <img src="artworks/Lotus Reverie.png" alt="Lotus Reverie by Saiful Islam Sagor">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">03 // EXPLORATION</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Lotus Reverie</h3>
+          <div class="spec">Material Study · 38 × 28 cm</div>
+        </div>
+      </div>
+
+      <!-- 04 Bindu -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Bindu.png', 'Bindu', '2026 · Form &amp; Pigment · 36 × 36 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Bindu.png" alt="Bindu by Saiful Islam Sagor">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">04 // COMPOSITION</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Bindu</h3>
+          <div class="spec">Form &amp; Pigment · 36 × 36 cm</div>
+        </div>
+      </div>
+
+      <!-- 05 Twilight Veil -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Twilight Veil.png', 'Twilight Veil', '2026 · Mixed Media · 36 × 36 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Twilight Veil.png" alt="Twilight Veil by Saiful Islam Sagor">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">05 // STUDY</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Twilight Veil</h3>
+          <div class="spec">Mixed Media · 36 × 36 cm</div>
+        </div>
+      </div>
+
+      <!-- 06 Sindoor -->
+      <div class="work-card reveal" onclick="openLightbox('artworks/Sindoor.png', 'Sindoor', '2026 · Pigment on Paper · 36 × 36 cm')">
+        <div class="work-thumb-wrap">
+          <img src="artworks/Sindoor.png" alt="Sindoor by Saiful Islam Sagor">
+        </div>
+        <div class="work-card-info">
+          <div class="top-meta">
+            <span class="idx">06 // PIGMENT</span>
+            <span class="year">2026</span>
+          </div>
+          <h3>Sindoor</h3>
+          <div class="spec">Pigment on Paper · 36 × 36 cm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Minimal Ornament Divider -->
+<div class="ornament-divider">
+  <div class="ornament-line"></div>
+  <div class="ornament-glyph">◈ EXHIBITION HISTORY ◈</div>
+  <div class="ornament-line"></div>
+</div>
+
+<!-- ============ EXHIBITIONS & CV ============ -->
+<section id="cv" class="cv-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Curriculum Vitae</div>
+      <h2 class="reveal">Exhibitions &amp; International Expos</h2>
+    </div>
+
+        <div class="cv-grid">
+      <!-- Left Column: International & National Selected Exhibitions -->
+      <div class="reveal">
+        <div class="cv-col-head">Selected International Exhibitions</div>
+        
+        <div class="cv-row">
+          <div class="year">2025</div>
+          <div>
+            <div class="title">NEPAL ART EXPO <span class="country-tag">Nepal</span></div>
+            <div class="venue">Nepal Art Council Gallery, Kathmandu, Nepal | Participating artist</div>
+          </div>
+        </div>
+
+        <div class="cv-row">
+          <div class="year">2024</div>
+          <div>
+            <div class="title">COLOMBO ART EXPO <span class="country-tag">Sri Lanka</span></div>
+            <div class="venue">JDA Perera Gallery, Colombo, Sri Lanka | Participating artist</div>
+          </div>
+        </div>
+
+        <div class="cv-row">
+          <div class="year">2019</div>
+          <div>
+            <div class="title">YOGYAKARTA ART EXPO <span class="country-tag">Indonesia</span></div>
+            <div class="venue">Sangkasa Gallery / Kersan Art Foundation, Indonesia | Participating artist</div>
+          </div>
+        </div>
+
+        <!-- Selected Exhibition in Bangladesh -->
+        <div class="cv-col-head" style="margin-top: 42px;">Selected Exhibition in Bangladesh</div>
+
+        <div class="cv-row">
+          <div class="year">2023</div>
+          <div>
+            <div class="title">KAZI ANOWAR HOSSAIN INTERNATIONAL ART EXHIBITION <span class="country-tag">Bangladesh</span></div>
+            <div class="venue">Lake View Gallery, Madaripur, Bangladesh | Participating artist</div>
+          </div>
+        </div>
+
+        <!-- Record Summary from CV -->
+        <div style="margin-top: 36px; padding: 20px 24px; background: var(--card-white); border: 1px solid var(--line); border-radius: 6px;">
+          <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vermilion); font-weight: 600; margin-bottom: 6px;">
+            Exhibition &amp; Workshop Record
+          </div>
+          <p style="margin: 0; font-size: 13.5px; color: var(--ink-soft); line-height: 1.55;">
+            Selected exhibition and artistic programme participation includes activities in Nepal, Sri Lanka, Indonesia, and Bangladesh.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column: Exhibition History (Selected gallery and institutional venues in Bangladesh | 2015–2026) -->
+      <div class="reveal">
+        <div class="cv-col-head">EXHIBITION HISTORY</div>
+        <div class="cv-sub-header">Selected gallery and institutional venues in Bangladesh | 2015–2026</div>
+
+        <div class="cv-history-table">
+          <div class="cv-row">
+            <div class="year">2026</div>
+            <div class="venue-text">Shilpangan Gallery · Dwip Gallery</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2025</div>
+            <div class="venue-text">Bengal Gallery of Fine Arts · Gallery Chitrak · Gallery Jolrong, Uttara · Athena Gallery of Fine Arts · Zainul Gallery, University of Dhaka</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2024</div>
+            <div class="venue-text">Bengal Shilpalay · Bengal Art Lounge · Galleri Kaya · Gallery Cosmos</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2023</div>
+            <div class="venue-text">Edge Gallery · La Galerie, Alliance Française de Dhaka</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2022</div>
+            <div class="venue-text">Kalakendra</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2020</div>
+            <div class="venue-text">Drik Gallery</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2019</div>
+            <div class="venue-text">Safiuddin Shilpalay</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2018</div>
+            <div class="venue-text">Artist Rashid Choudhury Art Gallery</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2016</div>
+            <div class="venue-text">Dhaka Art Center</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="year">2015</div>
+            <div class="venue-text">National Art Gallery, Bangladesh Shilpakala Academy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKSHOPS & CAMPS ============ -->
+<section id="engagement">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Art Camps &amp; Practice Areas</div>
+      <h2 class="reveal">Artistic Activity &amp; Engagement</h2>
+      <p style="font-size: 16px; color: var(--ink-soft); margin-top: 14px; font-weight: 300;">
+        Continuous creative immersion through plein-air camps, studio practice, community engagements, and curatorial research.
+      </p>
+    </div>
+
+    <div class="formation-card reveal">
+      <div class="formation-cell">
+        <h4>Gajni Art Camp, Bangladesh</h4>
+        <p>Participating artist in an intensive outdoor art camp and community exhibition, engaging with landscape, regional materials, and collaborative exchange.</p>
+      </div>
+
+      <div class="formation-cell">
+        <h4>Artistic Practice &amp; Material Exploration</h4>
+        <p>Focused on fine art, sculpture, tactile exploration, studio experiments, solo and group exhibitions, artist workshops, and cross-cultural exchanges.</p>
+      </div>
+
+      <div class="formation-cell">
+        <h4>Curatorial Engagement &amp; Dialogue</h4>
+        <p>Curatorial practice at the National Sculpture Gallery and previous foundations, curating public dialogues, art workshops, and cross-border initiatives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <h2>Connect with Saiful Islam Sagor</h2>
+        <p class="footer-lede">
+          Available for exhibition participation, curatorial projects, institutional collaborations, commissions, and international art expos.
+        </p>
+        <a class="cv-download-btn" href="Saiful_Islam_Sagor_Artist_Curator_CV.pdf" download="Saiful_Islam_Sagor_Artist_Curator_CV.pdf">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download Artist &amp; Curator CV (PDF)
+        </a>
+      </div>
+
+      <div class="contact-tile">
+        <div class="contact-item">
+          <div class="clabel">Direct Mobile / WhatsApp</div>
+          <a class="cval" href="tel:+8801996606507">+8801996606507</a>
+        </div>
+
+        <div class="contact-item">
+          <div class="clabel">Email Inquiries</div>
+          <a class="cval" href="mailto:info@sagorart.org">info@sagorart.org</a>
+        </div>
+
+        <div class="contact-item">
+          <div class="clabel">Current Institutional Affiliation</div>
+          <div style="font-family: var(--serif); font-size: 20px; color: #FFFFFF; font-weight: 500;">
+            National Sculpture Gallery, Bangladesh
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© Saiful Islam Sagor · All Rights Reserved</span>
+      <span>Visual Artist &amp; Curator · National Sculpture Gallery, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox Modal Container -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightboxDirect()">✕ Close</button>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-meta" id="lightboxMeta"></div>
+  </div>
+</div>
+
+<script>
+  // Sticky nav background on scroll
+  var nav = document.getElementById('siteNav');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
+  }, {passive:true});
+
+  // Mobile menu toggle
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(navToggle && mobileMenu){
+    navToggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      mobileMenu.classList.toggle('open');
+    });
+    // Close mobile menu on clicking any link
+    var mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(function(link){
+      link.addEventListener('click', function(){
+        mobileMenu.classList.remove('open');
+      });
+    });
+    // Close on outside click
+    document.addEventListener('click', function(e){
+      if(!mobileMenu.contains(e.target) && !navToggle.contains(e.target)){
+        mobileMenu.classList.remove('open');
+      }
+    });
+  }
+
+  // Scroll reveal
+  if('IntersectionObserver' in window){
+    var els = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:"0px 0px -40px 0px"});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  // Lightbox functions
+  var modal = document.getElementById('lightboxModal');
+  var modalImg = document.getElementById('lightboxImg');
+  var modalMeta = document.getElementById('lightboxMeta');
+
+  function openLightbox(src, title, details){
+    if(!modal || !modalImg || !modalMeta) return;
+    modalImg.src = src;
+    modalImg.alt = title;
+    modalMeta.innerHTML = '<strong>' + title + '</strong> — ' + details;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e){
+    if(e.target === modal){
+      closeLightboxDirect();
+    }
+  }
+
+  function closeLightboxDirect(){
+    if(!modal) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      closeLightboxDirect();
+      if(mobileMenu) mobileMenu.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>

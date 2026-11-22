@@ -1,0 +1,345 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Nur Hossain</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hind+Siliguri:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: a material index. Raw-concrete ground, jute-gold and river-blue accents; works catalogued by their own numbers and sorted by material (thread, earth, bamboo, water); CV set as a project register with real dimensions. */
+:root{
+  --ground:#ecebe6; --ground-2:#e0ded6; --ink:#1e1d1a; --ink-soft:#5d5a52;
+  --jute:#a87b2c; --river:#2c4a5e; --rule:#cbc8bd; --deep:#1c2a33; --on-deep:#eeeae0;
+  --display:"Young Serif", "Georgia", serif;
+  --body:"Hind Siliguri", "Segoe UI", system-ui, sans-serif;
+  --mono:"Space Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#151513; --ground-2:#1d1d1a; --ink:#ebe8df; --ink-soft:#a7a397;
+  --jute:#d4a24e; --river:#7fb0cc; --rule:#33322d; --deep:#0f171c; --on-deep:#eeeae0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ground:#151513; --ground-2:#1d1d1a; --ink:#ebe8df; --ink-soft:#a7a397;
+  --jute:#d4a24e; --river:#7fb0cc; --rule:#33322d; --deep:#0f171c; --on-deep:#eeeae0; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--jute);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+.label{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ground)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--ground);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+nav .mark{font-family:var(--display);font-size:20px;text-decoration:none;white-space:nowrap}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft)}
+nav ul a:hover{color:var(--jute)}
+@media (max-width:640px){nav .mark{display:none} nav .wrap{justify-content:center} nav ul{gap:16px}}
+
+/* hero */
+.hero .top{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;padding-block:56px 32px}
+.hero .bn{font-size:21px;color:var(--jute);margin:0 0 8px}
+.hero h1{font-size:clamp(60px,11vw,152px);line-height:.88;letter-spacing:-.02em}
+.hero .role{max-width:34ch;font-size:18px;font-weight:300;color:var(--ink-soft);margin:0;text-align:right}
+.hero .role b{color:var(--ink);font-weight:500}
+.hero-img{position:relative;margin:0}
+.hero-img img{display:block;width:100%;height:clamp(320px,52vw,640px);object-fit:cover;object-position:center 40%}
+.hero-img figcaption{position:absolute;left:max(20px, env(safe-area-inset-left,0px));bottom:18px;background:var(--ground);color:var(--ink);padding:8px 14px;font-size:14px;display:flex;gap:12px;align-items:baseline;max-width:calc(100% - 40px)}
+.hero-img figcaption b{font-family:var(--display);font-weight:400;font-size:17px}
+.hero-img figcaption span{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+@media (max-width:760px){.hero .top{grid-template-columns:1fr;padding-block:40px 28px}.hero .role{text-align:left}}
+
+/* materials strip */
+.materials{background:var(--deep);color:var(--on-deep)}
+.materials ul{list-style:none;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding-block:0}
+.materials li{padding:22px 18px;border-left:1px solid rgba(238,234,224,.14);display:flex;flex-direction:column;gap:4px}
+.materials li:first-child{border-left:0;padding-left:0}
+.materials b{font-family:var(--display);font-weight:400;font-size:22px}
+.materials span{font-size:14px;opacity:.72;line-height:1.45}
+@media (max-width:820px){.materials ul{grid-template-columns:repeat(2,1fr)}.materials li:nth-child(odd){border-left:0;padding-left:0}.materials li:nth-child(n+3){border-top:1px solid rgba(238,234,224,.14)}}
+@media (max-width:440px){.materials ul{grid-template-columns:1fr}.materials li{border-left:0!important;padding-left:0!important}.materials li+li{border-top:1px solid rgba(238,234,224,.14)}}
+
+section{padding-block:88px}
+.sec-head{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:44px;align-items:baseline}
+.sec-head h2{font-size:clamp(34px,5vw,56px);line-height:1.06}
+@media (max-width:720px){.sec-head{grid-template-columns:1fr;gap:8px}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:220px 1fr 260px;gap:40px;align-items:start}
+.about-meta{display:flex;flex-direction:column;gap:18px;font-size:15px}
+.about-meta div{display:flex;flex-direction:column}
+.about-text{max-width:62ch;min-width:0}
+.about-text p{margin:0 0 1.1em}
+.about-text .lede{font-family:var(--display);font-size:clamp(22px,2.5vw,28px);line-height:1.38}
+.portrait{margin:0}
+.portrait img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:center 15%}
+.portrait figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding-top:10px}
+@media (max-width:980px){.about-grid{grid-template-columns:220px 1fr}.portrait{grid-column:1;grid-row:1;max-width:220px}.about-meta{grid-column:1}.about-text{grid-column:2;grid-row:1 / span 2}}
+@media (max-width:640px){.about-grid{grid-template-columns:1fr;gap:28px}.about-text{grid-column:1;grid-row:auto}.about-meta{flex-direction:row;flex-wrap:wrap;gap:16px 32px}}
+
+/* works */
+#works{background:var(--ground-2);border-top:1px solid var(--rule)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:-16px 0 16px}
+.filters button{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;background:none;border:1px solid var(--rule);color:var(--ink-soft);padding:8px 14px;cursor:pointer}
+.filters button:hover{color:var(--ink);border-color:var(--ink-soft)}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}
+.note{max-width:66ch;margin:0 0 40px;color:var(--ink-soft);font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px 26px}
+.work{margin:0;display:flex;flex-direction:column;gap:12px}
+.work button{all:unset;cursor:zoom-in;display:block;overflow:hidden;aspect-ratio:16/10;background:var(--rule);max-width:100%}
+.work button:focus-visible{outline:2px solid var(--jute);outline-offset:3px}
+.work img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.work button:hover img{transform:scale(1.035)}
+.work figcaption{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:baseline}
+.work .no{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--jute);grid-row:span 3}
+.work em{font-style:normal;font-family:var(--display);font-size:20px;line-height:1.25}
+.work small{font-size:14px;color:var(--ink-soft);line-height:1.45}
+.work .dim{font-family:var(--mono);font-size:11.5px;color:var(--ink)}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.gallery{grid-template-columns:1fr}}
+
+/* CV */
+.cv-block{display:grid;grid-template-columns:220px 1fr;gap:32px;padding-block:36px;border-top:1px solid var(--rule)}
+.cv-block:first-of-type{border-top:2px solid var(--ink)}
+.cv-block h3{font-size:25px;line-height:1.2}
+.cv-block h3 small{display:block;margin-top:8px}
+.facts-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px 32px;margin:0}
+.facts-list div{display:flex;flex-direction:column}
+.facts-list dd{margin:0;font-size:17px}
+.table-wrap{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;text-align:left;padding:0 12px 10px 0;border-bottom:1px solid var(--ink)}
+td{padding:10px 12px 10px 0;border-bottom:1px dotted var(--rule);vertical-align:top}
+td:first-child{font-family:var(--mono);font-weight:700;color:var(--jute);width:44px}
+td.t{font-family:var(--display);font-size:17px}
+td.d{font-family:var(--mono);font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.m{color:var(--ink-soft)}
+.cols{columns:2 260px;column-gap:40px;list-style:none;margin:0;padding:0}
+.cols li{break-inside:avoid;padding:8px 0 8px 20px;position:relative;border-bottom:1px dotted var(--rule);font-size:16px;line-height:1.4}
+.cols li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:3px;background:var(--river)}
+.cols li span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-soft);margin-top:2px}
+@media (max-width:720px){.cv-block{grid-template-columns:1fr;gap:16px}}
+
+/* contact */
+#contact{background:var(--deep);color:var(--on-deep)}
+#contact .label{color:var(--on-deep);opacity:.6}
+.contact-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+#contact h2{font-size:clamp(40px,6vw,74px);line-height:1.02}
+#contact p{max-width:48ch;opacity:.85;font-weight:300}
+.contact-card{border-top:2px solid var(--jute);padding-top:22px;display:flex;flex-direction:column;gap:16px}
+.contact-card div{display:flex;flex-direction:column}
+.contact-card b{font-weight:500;font-size:18px}
+@media (max-width:720px){.contact-grid{grid-template-columns:1fr}}
+footer{background:var(--deep);color:var(--on-deep);border-top:1px solid rgba(238,234,224,.12)}
+footer .wrap{padding-block:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;opacity:.65}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(12,12,10,.95);display:flex;align-items:center;justify-content:center;padding:max(20px, env(safe-area-inset-top,0px)) max(20px, env(safe-area-inset-right,0px)) max(20px, env(safe-area-inset-bottom,0px)) max(20px, env(safe-area-inset-left,0px))}
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:100%}
+.lb img{max-width:min(1300px,100%);max-height:76vh;width:auto;height:auto;display:block}
+.lb figcaption{color:#eeeae0;text-align:center;font-size:14px}
+.lb figcaption em{font-style:normal;font-family:var(--display);font-size:25px;display:block}
+.lb figcaption small{font-family:var(--mono);font-size:11.5px;opacity:.7}
+.lb button{position:absolute;background:none;border:1px solid rgba(238,234,224,.35);color:#eeeae0;width:46px;height:46px;font-size:22px;cursor:pointer;font-family:var(--mono)}
+.lb button:hover{border-color:#d4a24e;color:#d4a24e}
+.lb .x{top:max(16px, env(safe-area-inset-top,0px));right:max(16px, env(safe-area-inset-right,0px))}
+.lb .p{left:max(16px, env(safe-area-inset-left,0px));top:50%;transform:translateY(-50%)}
+.lb .n{right:max(16px, env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%)}
+@media (max-width:640px){.lb .p,.lb .n{top:auto;bottom:max(16px, env(safe-area-inset-bottom,0px));transform:none}}
+</style>
+
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#top">Nur Hossain</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap top">
+    <div>
+      <p class="bn" lang="bn">নূর হোসেন</p>
+      <h1>Nur<br>Hossain</h1>
+    </div>
+    <p class="role">Installation artist working with <b>jute, bamboo, clay, muslin, salt and water</b>, the everyday materials of the Bengal delta.</p>
+  </div>
+  <figure class="hero-img">
+    <img src="img/river_of_memory.jpg" alt="River of Memory: broken wooden boats, jute rope and brass vessels suspended in a wave across a gallery">
+    <figcaption><b>01. River of Memory</b><span>600 × 350 × 300 cm</span></figcaption>
+  </figure>
+</header>
+
+<div class="materials">
+  <ul class="wrap" aria-label="Materials">
+    <li><b>Thread &amp; cloth</b><span>Muslin, handwoven cotton, reclaimed saris, red thread</span></li>
+    <li><b>Earth &amp; clay</b><span>Terracotta, earthenware, brick, red earth, salt</span></li>
+    <li><b>Bamboo &amp; jute</b><span>Bamboo, jute rope, rice straw, woven reed, handmade paper</span></li>
+    <li><b>Water &amp; metal</b><span>Brass vessels, recycled glass, steel, river sand, light</span></li>
+  </ul>
+</div>
+
+<main>
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="label">About the artist</span><h2>The delta's own materials, built into rooms</h2></div>
+    <div class="about-grid">
+      <aside class="about-meta">
+        <div><span class="label">Born</span>1981, Shariatpur</div>
+        <div><span class="label">Nationality</span>Bangladeshi</div>
+        <div><span class="label">Practice</span>Installation and sculpture</div>
+        <div><span class="label">Scale</span>Room-sized works, up to 6 m</div>
+      </aside>
+      <div class="about-text">
+        <p class="lede">Nur Hossain plans large installations from the materials of rural Bangladesh: jute rope, split bamboo, river sand, fired clay and muslin.</p>
+        <p>He was born in 1981 in Shariatpur, in the char lands of the Padma, where villages are rebuilt each time the river takes the bank. That cycle of loss and rebuilding drives the work. Broken boats hang in a wave of jute rope in <em>River of Memory</em>. Bamboo stilt houses float above a mirrored floor in <em>Floating Homeland</em>, and a row of reclaimed doors stands in river sand in <em>Tidal Threshold</em>.</p>
+        <p>A second thread runs through Bengal's crafts and the hands behind them. Hundreds of earthenware bowls form a curving wall in <em>Clay Remembers</em>. An old loom spills red and white yarn across a gallery in <em>Silent Loom</em>, and reclaimed saris are stitched into maps in <em>Stitched Geography</em>. Light passes through rings of muslin, the fabric Dhaka was once famous for, in <em>Light Through Muslin</em>.</p>
+        <p>The works are made to be walked through rather than looked at from a distance. Most are planned at room scale, between four and six metres across.</p>
+      </div>
+      <figure class="portrait"><img src="img/portrait.jpg" alt="Portrait of the artist Nur Hossain"><figcaption>Nur Hossain</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head"><span class="label">Selected works</span><h2>Installation concepts, 01–20</h2></div>
+    <div class="filters" role="group" aria-label="Filter by material">
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">All · 19</button>
+      <button type="button" id="f-thread" data-f="thread" aria-pressed="false">Thread &amp; cloth</button>
+      <button type="button" id="f-earth" data-f="earth" aria-pressed="false">Earth &amp; clay</button>
+      <button type="button" id="f-bamboo" data-f="bamboo" aria-pressed="false">Bamboo &amp; jute</button>
+      <button type="button" id="f-water" data-f="water" aria-pressed="false">Water &amp; metal</button>
+    </div>
+    <p class="note">Each work is shown as an AI-generated installation concept, with its planned materials and proposed size (width × depth × height). Numbers follow the artist's own catalogue.</p>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="wrap">
+    <div class="sec-head"><span class="label">Curriculum vitae</span><h2>Artist profile &amp; project register</h2></div>
+
+    <div class="cv-block">
+      <h3>Personal details</h3>
+      <dl class="facts-list">
+        <div><dt class="label">Name</dt><dd>Nur Hossain</dd></div>
+        <div><dt class="label">Born</dt><dd>1981, Shariatpur, Bangladesh</dd></div>
+        <div><dt class="label">Nationality</dt><dd>Bangladeshi</dd></div>
+        <div><dt class="label">Discipline</dt><dd>Installation, sculpture, site-specific work</dd></div>
+        <div><dt class="label">Languages</dt><dd>Bangla, English</dd></div>
+      </dl>
+    </div>
+
+    <div class="cv-block">
+      <h3>Installation projects<small class="label">19 concepts</small></h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>No.</th><th>Title</th><th>Materials</th><th>Proposed size (cm)</th></tr></thead>
+          <tbody id="register"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <h3>Materials &amp; techniques</h3>
+      <ul class="cols">
+        <li>Jute rope binding and suspension<span>River of Memory, Breathing Bamboo, Songs Beneath the Soil</span></li>
+        <li>Bamboo frame construction<span>Floating Homeland, Breathing Bamboo, Letters to the Delta</span></li>
+        <li>Terracotta and earthenware<span>Clay Remembers, Seeds of Tomorrow, The Unfinished Courtyard</span></li>
+        <li>Textile, weaving and natural dye<span>Threads of Belonging, Silent Loom, Stitched Geography</span></li>
+        <li>Thread drawing in space<span>Red Thread, Many Voices, Silent Loom</span></li>
+        <li>Reclaimed and salvaged materials<span>Urban Sediment, Tidal Threshold, Salt Lines</span></li>
+        <li>Water, glass and suspended vessels<span>The Weight of Water, Monsoon Archive</span></li>
+        <li>Programmable LED and architectural light<span>Light Through Muslin, Breathing Bamboo</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="label">Contact</span>
+      <h2>Commissions, exhibitions and site-specific projects</h2>
+      <p>For installation commissions, exhibition invitations, residencies or collaborations, please contact the artist.</p>
+    </div>
+    <div class="contact-card">
+      <div><span class="label">Artist</span><b>Nur Hossain</b></div>
+      <div><span class="label">Based in</span><b>Bangladesh</b></div>
+      <div><span class="label">Practice</span><b>Installation &amp; sculpture in natural materials</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Nur Hossain. All works © the artist.</span><span lang="bn">নূর হোসেন</span></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Work viewer">
+  <button class="x" id="lbX" aria-label="Close">×</button>
+  <button class="p" id="lbP" aria-label="Previous work">←</button>
+  <figure><img id="lbImg" alt=""><figcaption><em id="lbT"></em><small id="lbM"></small></figcaption></figure>
+  <button class="n" id="lbN" aria-label="Next work">→</button>
+</div>
+
+<script>
+// [no, file, title, materials, size, group]
+const works=[
+ ["01","river_of_memory","River of Memory","Jute rope, reclaimed wood and suspended brass vessels","600 × 350 × 300","bamboo"],
+ ["02","threads_of_belonging","Threads of Belonging","Handwoven cotton, bamboo and natural dyes","450 × 450 × 320","thread"],
+ ["03","the_unfinished_courtyard","The Unfinished Courtyard","Terracotta, earth and brick","500 × 500 × 180","earth"],
+ ["04","monsoon_archive","Monsoon Archive","Recycled glass, water, steel and light","400 × 300 × 300","water"],
+ ["05","letters_to_the_delta","Letters to the Delta","Handmade paper, cotton thread and bamboo","500 × 250 × 300","bamboo"],
+ ["06","salt_lines","Salt Lines","Salt, clay vessels and reclaimed timber","600 × 400 × 150","earth"],
+ ["07","breathing_bamboo","Breathing Bamboo","Bamboo, jute bindings and warm LED light","500 × 400 × 350","bamboo"],
+ ["08","the_weight_of_water","The Weight of Water","Brass vessels, steel cable and water","450 × 350 × 300","water"],
+ ["09","stitched_geography","Stitched Geography","Reclaimed saris, cotton and wooden frames","550 × 350 × 280","thread"],
+ ["10","seeds_of_tomorrow","Seeds of Tomorrow","Terracotta seed forms, soil and bamboo","500 × 400 × 220","earth"],
+ ["11","silent_loom","Silent Loom","Wooden loom parts, cotton yarn and steel","450 × 300 × 300","thread"],
+ ["12","tidal_threshold","Tidal Threshold","Reclaimed doors, river sand and blue light","600 × 350 × 320","water"],
+ ["13","clay_remembers","Clay Remembers","Earthenware, red earth and natural pigment","400 × 400 × 240","earth"],
+ ["14","songs_beneath_the_soil","Songs Beneath the Soil","Terracotta bells, jute cord and earth","450 × 450 × 300","earth"],
+ ["15","floating_homeland","Floating Homeland","Bamboo, woven reed, jute and mirrored steel","550 × 400 × 240","bamboo"],
+ ["16","after_the_harvest","After the Harvest","Rice straw, jute and bamboo","500 × 400 × 320","bamboo"],
+ ["17","red_thread_many_voices","Red Thread, Many Voices","Red cotton thread, muslin and steel","500 × 350 × 300","thread"],
+ ["18","urban_sediment","Urban Sediment","Salvaged bricks, metal, glass and concrete","500 × 400 × 260","water"],
+ ["20","light_through_muslin","Light Through Muslin","Muslin, bamboo and programmable LED light","450 × 450 × 350","thread"]
+];
+const g=document.getElementById('gallery'),reg=document.getElementById('register');
+let visible=works.map((_,i)=>i);
+works.forEach((w,i)=>{
+  const f=document.createElement('figure');f.className='work';f.dataset.k=w[5];
+  f.innerHTML=`<button type="button" aria-label="View ${w[2]} larger"><img src="img/${w[1]}.jpg" alt="${w[2]}: ${w[3].toLowerCase()}" loading="lazy"></button><figcaption><span class="no">${w[0]}</span><em>${w[2]}</em><small>${w[3]}</small><span class="dim">${w[4]} cm</span></figcaption>`;
+  f.querySelector('button').addEventListener('click',()=>open(i));
+  g.appendChild(f);
+  const tr=document.createElement('tr');
+  tr.innerHTML=`<td>${w[0]}</td><td class="t">${w[2]}</td><td class="m">${w[3]}</td><td class="d">${w[4]}</td>`;
+  reg.appendChild(tr);
+});
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  const k=b.dataset.f;
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+  [...g.children].forEach(f=>{f.hidden=!(k==='all'||f.dataset.k===k);});
+  visible=works.map((_,i)=>i).filter(i=>k==='all'||works[i][5]===k);
+}));
+const lb=document.getElementById('lb'),im=document.getElementById('lbImg'),T=document.getElementById('lbT'),M=document.getElementById('lbM');
+let pos=0,last=null;
+function show(p){pos=(p+visible.length)%visible.length;const w=works[visible[pos]];im.src=`img/${w[1]}.jpg`;im.alt=w[2];T.textContent=`${w[0]}. ${w[2]}`;M.textContent=`${w[3]} · Proposed size ${w[4]} cm · AI-generated installation concept`;}
+function open(i){last=document.activeElement;show(Math.max(0,visible.indexOf(i)));lb.hidden=false;document.getElementById('lbX').focus();}
+function close(){lb.hidden=true;if(last)last.focus();}
+document.getElementById('lbX').onclick=close;
+document.getElementById('lbP').onclick=()=>show(pos-1);
+document.getElementById('lbN').onclick=()=>show(pos+1);
+lb.addEventListener('click',e=>{if(e.target===lb)close();});
+document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(pos-1);if(e.key==='ArrowRight')show(pos+1);});
+</script>
+
+</body></html>
